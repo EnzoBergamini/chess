@@ -5,10 +5,22 @@
 #ifndef ECHEC_PIECE_H
 #define ECHEC_PIECE_H
 
+#include "Square.h"
+#include "Couleur.h"
+
+using namespace std;
 
 class Piece {
 protected:
     int id;
+    string name;
+    Couleur couleur;
+    Square position;
+
+public:
+    Piece(Couleur c,string name,int id, Square position);
+
+    void affiche();
 };
 
 

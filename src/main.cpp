@@ -5,11 +5,15 @@
 #include <iostream>
 
 #include "../include/Square.h"
-#include "../include/Echiquier.h"
+#include "../include/Piece.h"
 
 int main() {
-    Square square("G2");
 
-    std::cout << "ligne : " << square.getLine() << " colonne : " << square.getColumn() << std::endl;
+    Square pos("A6");
+    Piece p(white,"pion",1,pos);
+
+    p.affiche();
+
+
     return 0;
 }
