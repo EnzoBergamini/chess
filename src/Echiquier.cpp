@@ -63,6 +63,7 @@ Echiquier::Echiquier(){
         posePiece(p, p->getSquare());
     for (auto p : pieces[black])
         posePiece(p, p->getSquare());
+
 }
 
 Echiquier::~Echiquier(){
@@ -92,4 +93,12 @@ void Echiquier::affiche() {
         cout << "|\n  +-----+-----+-----+-----+-----+-----+-----+-----+";
         cout << endl;
     }
+}
+
+void Echiquier::movePiece(Square pos_start, Square pos_end){
+    cout << "line : " << pos_start.getLine() << " column : " << pos_start.getColumn() <<endl;
+    Piece *tpm_piece = this->echiquier[pos_start.getColumn()][pos_start.getLine()];
+    tpm_piece->displayInfo();
+    this->echiquier[pos_start.getColumn()][pos_start.getLine()] = nullptr;
+    this->echiquier[pos_end.getColumn()][pos_end.getLine()] = tpm_piece;
 }

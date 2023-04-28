@@ -33,6 +33,7 @@ public:
     void posePiece(Piece *p, Square pos);
     void allocMemEchiquier();
     void initEchiquier();
+    void movePiece(Square pos1, Square pos2);
 };
 
 

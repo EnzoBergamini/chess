@@ -20,3 +20,9 @@ void Piece::affiche(){
 Square Piece::getSquare() {
     return this->position;
 }
+
+void Piece::displayInfo(){
+    cout << "Piece : " << this->name << endl;
+    cout << "Couleur : " << this->couleur << endl;
+    cout << "Position : " << this->position.getCoordString() << endl;
+}

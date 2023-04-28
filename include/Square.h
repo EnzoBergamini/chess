@@ -26,6 +26,8 @@ public:
 
     int getColumn();
 
+    void affiche();
+
 };
 
 

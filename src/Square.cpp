@@ -12,14 +12,14 @@
 
 Square::Square(std::string coord) {
     this->coord = coord;
-    this->x = coord[0] - 'A' + 1;
-    this->y = (coord[1] - '1') + 1;
+    this->x = coord[0] - 'A';
+    this->y = (coord[1] - '1');
 }
 
 Square::Square(int x, int y) {
     this->x = x;
     this->y = y;
-    this->coord = std::string(1, x + 'A') + std::string(1, y + '1');
+    this->coord = std::string(1, (char) (x + 'A')) + std::string(1, (char) ( y + '1'));
 }
 
 std::string Square::getCoordString() {
@@ -32,4 +32,9 @@ int Square::getLine() {
 
 int Square::getColumn() {
     return this->x;
+}
+
+void Square::affiche() {
+    std::cout << this->coord << std::endl;
+    std::cout << "ligne : " << this->y << " et colonne : " << this->x << std::endl;
 }

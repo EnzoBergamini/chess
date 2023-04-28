@@ -22,6 +22,8 @@ public:
 
     void affiche();
 
+    void displayInfo();
+
     Square getSquare();
 };
 
