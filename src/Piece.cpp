@@ -14,5 +14,9 @@ Piece::Piece(Couleur c,string name,int id, Square position)
     : id(id), name(name), couleur(c), position(position){}
 
 void Piece::affiche(){
-    cout << "nom : " << name << " couleur : " << couleur << " position : " << position.getCoordString() << endl;
+    cout << name;
+}
+
+Square Piece::getSquare() {
+    return this->position;
 }

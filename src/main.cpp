@@ -6,14 +6,20 @@
 
 #include "../include/Square.h"
 #include "../include/Piece.h"
+#include "../include/Echiquier.h"
+#include "../include/Couleur.h"
+#include "../include/Rook.h"
+#include "../include/Pawn.h"
+#include "../include/Knight.h"
+#include "../include/Bishop.h"
+#include "../include/Queen.h"
+#include "../include/King.h"
 
 int main() {
 
-    Square pos("A6");
-    Piece p(white,"pion",1,pos);
+    Echiquier e;
 
-    p.affiche();
-
+    e.affiche();
 
     return 0;
 }

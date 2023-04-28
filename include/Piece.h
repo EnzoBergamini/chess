@@ -21,6 +21,8 @@ public:
     Piece(Couleur c,string name,int id, Square position);
 
     void affiche();
+
+    Square getSquare();
 };
 
 
