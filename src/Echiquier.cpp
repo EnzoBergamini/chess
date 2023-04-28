@@ -7,21 +7,30 @@
 
 #define BOARD_SIZE 8
 
-void Echiquier::posePiece(Piece *p, Square pos) {
-    this->echiquier[pos.getColumn()][pos.getLine()] = p;
-}
-
-Echiquier::Echiquier(){
+void Echiquier::allocMemEchiquier(){
     this->echiquier = new Piece**[BOARD_SIZE];
     for (int i = 0; i < BOARD_SIZE; ++i) {
         this->echiquier[i] = new Piece*[BOARD_SIZE];
     }
+}
 
+void Echiquier::initEchiquier(){
     for (int i = 0; i < BOARD_SIZE; ++i) {
         for (int j = 0; j < BOARD_SIZE; ++j) {
             this->echiquier[i][j] = nullptr;
         }
     }
+}
+
+void Echiquier::posePiece(Piece *p, Square pos) {
+    this->echiquier[pos.getColumn()][pos.getLine()] = p;
+}
+
+Echiquier::Echiquier(){
+
+    this->allocMemEchiquier();
+
+    this->initEchiquier();
 
     pieces[white] = {
             new Rook    (white,  0, Square(0,0)),

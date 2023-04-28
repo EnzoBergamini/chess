@@ -31,6 +31,8 @@ public:
     ~Echiquier();
     void affiche();
     void posePiece(Piece *p, Square pos);
+    void allocMemEchiquier();
+    void initEchiquier();
 };
 
 
