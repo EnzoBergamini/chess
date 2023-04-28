@@ -18,10 +18,11 @@
 int main() {
 
     Echiquier e;
+
     e.affiche();
 
-    e.movePiece(Square("A1"), Square("A3"));
+    e.movePiece(Square(1,0), Square("d4"));
 
-
+    e.affiche();
     return 0;
 }

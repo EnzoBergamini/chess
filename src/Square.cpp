@@ -1,5 +1,5 @@
 //
-// Created by Enzo Bergamini on 24/04/2023.
+// Created bline Enzo Bergamini on 24/04/2023.
 //
 
 #include "../include/Square.h"
@@ -10,31 +10,19 @@
 #define BOARD_SIZE 8
 
 
-Square::Square(std::string coord) {
-    this->coord = coord;
-    this->x = coord[0] - 'A';
-    this->y = (coord[1] - '1');
+Square::Square(int line, int column)
+        : line(line), column(column){}
+
+Square::Square(string s){
+    column = s[0] - 'a';
+    line = s[1] - '0' - 1;
 }
 
-Square::Square(int x, int y) {
-    this->x = x;
-    this->y = y;
-    this->coord = std::string(1, (char) (x + 'A')) + std::string(1, (char) ( y + '1'));
+int Square::getColumn(){ return column;}
+
+int Square::getLine(){ return line;}
+
+void Square::display(){
+    cout << "Colonne : " << this->column << " ligne : " << this->line << endl;
 }
 
-std::string Square::getCoordString() {
-    return this->coord;
-}
-
-int Square::getLine() {
-    return this->y;
-}
-
-int Square::getColumn() {
-    return this->x;
-}
-
-void Square::affiche() {
-    std::cout << this->coord << std::endl;
-    std::cout << "ligne : " << this->y << " et colonne : " << this->x << std::endl;
-}

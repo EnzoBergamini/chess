@@ -24,6 +24,8 @@ public:
 
     void displayInfo();
 
+    void setSquare(Square pos);
+
     Square getSquare();
 };
 

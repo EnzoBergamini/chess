@@ -23,7 +23,7 @@ void Echiquier::initEchiquier(){
 }
 
 void Echiquier::posePiece(Piece *p, Square pos) {
-    this->echiquier[pos.getColumn()][pos.getLine()] = p;
+    this->echiquier[pos.getLine()][pos.getColumn()] = p;
 }
 
 Echiquier::Echiquier(){
@@ -51,7 +51,7 @@ Echiquier::Echiquier(){
             new King     (black, 12, Square(7,4)),
             new Bishop     (black, 13, Square(7,5)),
             new Knight(black, 14, Square(7,6)),
-            new Rook    (black, 15, Square(7,7))
+            new Rook    (black, 15, Square(7,7)),
     };
 
     for (size_t i=0;i<8;i++) {
@@ -60,9 +60,9 @@ Echiquier::Echiquier(){
     }
 
     for (auto p : pieces[white])
-        posePiece(p, p->getSquare());
+        this->posePiece(p, p->getSquare());
     for (auto p : pieces[black])
-        posePiece(p, p->getSquare());
+        this->posePiece(p, p->getSquare());
 
 }
 
@@ -82,6 +82,9 @@ void Echiquier::affiche() {
         cout << i+1 << " "; // numérotation ligne dans affichage
         for (int j(0);j<BOARD_SIZE;j++) {
             cout << "|" ;
+//            cout << "\u0020\u0020";
+//            cout << i << "/" << j;
+//            cout << "\u0020" << " ";
             if (echiquier[i][j]) {
                 cout << "\u0020\u0020";  //U+0020 est un esapce utf-8 taille police
                 echiquier[i][j]->affiche();
@@ -96,9 +99,7 @@ void Echiquier::affiche() {
 }
 
 void Echiquier::movePiece(Square pos_start, Square pos_end){
-    cout << "line : " << pos_start.getLine() << " column : " << pos_start.getColumn() <<endl;
-    Piece *tpm_piece = this->echiquier[pos_start.getColumn()][pos_start.getLine()];
-    tpm_piece->displayInfo();
-    this->echiquier[pos_start.getColumn()][pos_start.getLine()] = nullptr;
-    this->echiquier[pos_end.getColumn()][pos_end.getLine()] = tpm_piece;
+    Piece *tmp_piece = this->echiquier[pos_start.getLine()][pos_start.getColumn()];
+    this->posePiece(nullptr, pos_start);
+    this->posePiece(tmp_piece, pos_end);
 }

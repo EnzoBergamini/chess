@@ -1,5 +1,5 @@
 //
-// Created by Enzo Bergamini on 24/04/2023.
+// Created bline Enzo Bergamini on 24/04/2023.
 //
 
 #ifndef ECHEC_SQUARE_H
@@ -8,26 +8,24 @@
 #include <string>
 #include <vector>
 
+using namespace std;
+
 
 class Square {
 private:
-    int x;
-    int y;
-    std::string coord;
+    int line;
+    int column;
 
 public:
-    Square(std::string coord);
+    Square(string coord);
 
-    Square(int x, int y);
-
-    std::string getCoordString();
+    Square(int line, int column);
 
     int getLine();
 
     int getColumn();
 
-    void affiche();
-
+    void display();
 };
 
 
