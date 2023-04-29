@@ -4,3 +4,4 @@ bin/*
 bin/
 echec.dSYM/*
 echec.dSYM/
+.DS_Store
