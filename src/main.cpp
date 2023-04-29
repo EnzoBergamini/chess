@@ -14,15 +14,11 @@
 #include "../include/Bishop.h"
 #include "../include/Queen.h"
 #include "../include/King.h"
+#include "../include/Jeu.h"
 
 int main() {
-
-    Echiquier e;
-
-    e.affiche();
-
-    e.movePiece(Square(1,0), Square("d4"));
-
-    e.affiche();
+    Jeu jeu;
+    jeu.affiche();
+    jeu.coup();
     return 0;
 }
