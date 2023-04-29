@@ -67,6 +67,10 @@ Echiquier::Echiquier(){
 }
 
 Echiquier::~Echiquier(){
+    for (auto& p : pieces[white])
+        delete p;
+    for (auto& p : pieces[black])
+        delete p;
     for (int i = 0; i < BOARD_SIZE; ++i) {
         delete[] this->echiquier[i];
     }
