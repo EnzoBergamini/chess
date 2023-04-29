@@ -8,10 +8,10 @@ King::King(Couleur color,int id,Square pos)
     : Piece(color,(color == white) ? "\u265A" : "\u2654",id,pos){
 }
 
-bool King::isLegalMove(Square pos){
+bool King::isLegalMove(Square dest){
     cout << "King::isLegalMove" << endl;
-    if ((abs(pos.getColumn() - this->position.getColumn()) > 1)
-        || (abs(pos.getLine() - this->position.getLine()) > 1)){
+    if ((abs(dest.getColumn() - this->position.getColumn()) > 1)
+        || (abs(dest.getLine() - this->position.getLine()) > 1)){
         return false;
     }
     return true;

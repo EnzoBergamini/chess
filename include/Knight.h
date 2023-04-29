@@ -13,6 +13,8 @@
 class Knight : public Piece{
 public:
     Knight(Couleur c,int id,Square pos);
+
+    bool isLegalMove(Square dest);
 };
 
 
