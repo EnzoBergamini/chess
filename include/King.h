@@ -9,9 +9,15 @@
 #include "Couleur.h"
 #include "Square.h"
 
+#include <iostream>
+
+using namespace std;
+
 class King : public Piece{
 public:
     King(Couleur c,int id,Square pos);
+
+    bool isLegalMove(Square pos);
 };
 
 
