@@ -14,6 +14,7 @@ class Queen : public Piece{
 public:
     Queen(Couleur c,int id,Square pos);
 
+    bool isLegalMove(Square dest);
 };
 
 

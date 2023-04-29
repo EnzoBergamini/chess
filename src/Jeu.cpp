@@ -44,7 +44,6 @@ bool Jeu::coup() {
           return false;
      }
 
-
     chessboard->movePiece(
             start,
             end
