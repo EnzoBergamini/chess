@@ -30,6 +30,8 @@ public:
 
     Square getSquare();
 
+    Couleur getColor();
+
     virtual bool isLegalMove(Square dest);
 };
 

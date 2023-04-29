@@ -23,6 +23,10 @@ Square Piece::getSquare() {
     return this->position;
 }
 
+Couleur Piece::getColor() {
+    return this->couleur;
+}
+
 void Piece::setSquare(Square pos){
     this->position = pos;
 }
