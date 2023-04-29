@@ -23,11 +23,13 @@ bool isLegalInput(string const & input){
 bool Jeu::coup() {
     string input;
     getline(cin, input);
-    if (isLegalInput(input)){
-        cout << "l'input est legal : " << input << endl;
+    while (!isLegalInput(input)){
+        cout << "La coup n'est pas valide !" << endl;
+        cout << "Coup (eg. a1a8) ? " << endl;
+        getline(cin, input);
+        cout << input << endl;
     }
-    else{
-        cout << "l'input n'est pas valide : " << input << endl;
-    }
+    chessboard->movePiece(Square(input.substr(0,2)), Square(input.substr(2,2)));
+    chessboard->affiche();
     return true;
 }
