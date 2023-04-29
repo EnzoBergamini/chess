@@ -21,6 +21,7 @@ public:
     ~Jeu();
     void affiche();
     bool coup();
+    bool isPathClear(Square start, Square end);
     bool movePiece(Square start, Square end);
 };
 

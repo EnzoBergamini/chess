@@ -27,6 +27,10 @@ Couleur Piece::getColor() {
     return this->couleur;
 }
 
+string Piece::getName() {
+    return this->name;
+}
+
 void Piece::setSquare(Square pos){
     this->position = pos;
 }

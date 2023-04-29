@@ -4,6 +4,7 @@
 
 #include "../include/Jeu.h"
 #include <regex>
+#include <typeindex>
 
 Jeu::Jeu() : chessboard(new Echiquier()) {}
 
@@ -26,7 +27,7 @@ bool Jeu::coup() {
     getline(cin, input);
 
     while (!isLegalInput(input)){
-        cout << "La coup n'est pas valide !" << endl;
+        cout << "L'input n'est pas valide'" << endl;
         cout << "Coup ? " << endl;
         getline(cin, input);
         cout << input << endl;
@@ -39,8 +40,98 @@ bool Jeu::coup() {
     return true;
 }
 
+bool Jeu::isPathClear(Square start, Square end){
+    int start_line = start.getLine();
+    int start_column = start.getColumn();
+    int end_line = end.getLine();
+    int end_column = end.getColumn();
+
+    // si le chemin est horizontale
+    if (start_line == end_line){
+        int line = start_line;
+        if (start_column < end_column){
+            for (int i = start_column + 1 ; i < end_column ; ++i) {
+                if (this->chessboard->getPiece(Square(line, i)) != nullptr){
+                    return false;
+                }
+            }
+        }else{
+            for (int i = end_column + 1 ; i < start_column ; ++i) {
+                if (this->chessboard->getPiece(Square(line, i)) != nullptr){
+                    return false;
+                }
+            }
+        }
+    }
+
+    // si le chemin est verticale
+    if (start_column == end_column){
+        int column = start_column;
+        if (start_line < end_line){
+            for (int i = start_line + 1 ; i < end_line ; ++i) {
+                if (this->chessboard->getPiece(Square(i, column)) != nullptr){
+                    return false;
+                }
+            }
+        }else{
+            for (int i = end_line + 1 ; i < start_line ; ++i) {
+                if (this->chessboard->getPiece(Square(i, column)) != nullptr){
+                    return false;
+                }
+            }
+        }
+    }
+
+    // si le chemin est diagonal
+    if (abs(start_line - end_line) == abs(start_column - end_column)){
+        int line = start_line;
+        int column = start_column;
+        if (start_line < end_line){
+            if (start_column < end_column){
+                for (int i = start_line + 1 ; i < end_line ; ++i) {
+                    ++line;
+                    ++column;
+                    if (this->chessboard->getPiece(Square(line, column)) != nullptr){
+                        return false;
+                    }
+                }
+            }else{
+                for (int i = start_line + 1 ; i < end_line ; ++i) {
+                    ++line;
+                    --column;
+                    if (this->chessboard->getPiece(Square(line, column)) != nullptr){
+                        return false;
+                    }
+                }
+            }
+        }else{
+            if (start_column < end_column){
+                for (int i = end_line + 1 ; i < start_line ; ++i) {
+                    --line;
+                    ++column;
+                    if (this->chessboard->getPiece(Square(line, column)) != nullptr){
+                        return false;
+                    }
+                }
+            }else{
+                for (int i = end_line + 1 ; i < start_line ; ++i) {
+                    --line;
+                    --column;
+                    if (this->chessboard->getPiece(Square(line, column)) != nullptr){
+                        return false;
+                    }
+                }
+            }
+        }
+    }
+
+    return true;
+}
+
 bool Jeu::movePiece(Square start, Square end) {
     Piece *moving_piece = chessboard->getPiece(start);
+    Piece *destination_piece = chessboard->getPiece(end);
+
     if (moving_piece == nullptr){
         cout << "Il n'y a pas de piece a cette position" << endl;
         return false;
@@ -49,7 +140,34 @@ bool Jeu::movePiece(Square start, Square end) {
         return false;
     }
 
-    Piece *destination_piece = chessboard->getPiece(end);
+    const char *class_name = typeid(*moving_piece).name() + 1;
+
+    if (strcmp(class_name, "Pawn") == 0
+        || strcmp(class_name, "King") == 0
+        || strcmp(class_name, "Queen") == 0
+        || strcmp(class_name, "Bishop") == 0
+        || strcmp(class_name, "Rook") == 0){
+
+        cout << "vérification de chemin" << endl;
+
+        if (destination_piece != nullptr){
+            if (destination_piece->getColor() == moving_piece->getColor()){
+                cout << "Il y a deja une piece de la meme couleur a cette position" << endl;
+                return false;
+            }
+        }else if (!this->isPathClear(start, end)){
+            cout << "Le chemin n'est pas libre" << endl;
+            return false;
+        }
+    }else if (strcmp(class_name, "Knight") == 0){
+        cout << "peut sauter pions" << endl;
+        if (destination_piece != nullptr){
+            if (destination_piece->getColor() == moving_piece->getColor()){
+                cout << "Il y a deja une piece de la meme couleur a cette position" << endl;
+                return false;
+            }
+        }
+    }
 
     if (destination_piece != nullptr){
         if (destination_piece->getColor() == moving_piece->getColor()){

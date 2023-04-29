@@ -9,8 +9,11 @@ Rook::Rook(Couleur color, int id, Square pos) :
 Piece(color, (color == white) ? "\u265C" : "\u2656", id, pos) {}
 
 bool Rook::isLegalMove(Square dest) {
-    if (dest.getLine() != this->position.getLine() && dest.getColumn() != this->position.getColumn()){
+    Square start = this->position;
+
+    if (dest.getLine() != start.getLine() && dest.getColumn() != start.getColumn()){
         return false;
     }
+
     return true;
 }
