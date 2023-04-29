@@ -29,7 +29,11 @@ bool Jeu::coup() {
         getline(cin, input);
         cout << input << endl;
     }
-    chessboard->movePiece(Square(input.substr(0,2)), Square(input.substr(2,2)));
+    chessboard->movePiece(
+            Square(input.substr(0,2)),
+            Square(input.substr(2,2))
+            );
+
     chessboard->affiche();
     return true;
 }
