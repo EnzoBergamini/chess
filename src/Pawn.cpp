@@ -7,9 +7,8 @@
 Pawn::Pawn(Couleur color, int id, Square pos) :
         Piece(color, (color == white) ? "\u265F" : "\u2659", id, pos) {}
 
-bool Pawn::isLegalMovment(Square dest) {
-    if (!Piece::isInBoard(dest)
-    || dest.getColumn() != this->position.getColumn()
+bool Pawn::isLegalMove(Square dest) {
+    if (dest.getColumn() != this->position.getColumn()
     || dest.getLine() < this->position.getLine()
     || dest.getLine() > this->position.getLine() + 1
     ){

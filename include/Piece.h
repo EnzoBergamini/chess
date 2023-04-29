@@ -20,7 +20,7 @@ protected:
 public:
     Piece(Couleur c,string name,int id, Square position);
 
-    ~Piece();
+    virtual ~Piece();
 
     void affiche();
 
@@ -30,7 +30,7 @@ public:
 
     Square getSquare();
 
-    bool isInBoard(Square dest);
+    virtual bool isLegalMove(Square dest);
 };
 
 

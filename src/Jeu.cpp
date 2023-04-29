@@ -39,7 +39,7 @@ bool Jeu::coup() {
      if (piece == nullptr){
           cout << "Il n'y a pas de piece a cette position" << endl;
           return false;
-     }else if(!piece->isInBoard(end)){
+     }else if(!piece->isLegalMove(end)){
           cout << "Le mouvement n'est pas valide" << endl;
           return false;
      }

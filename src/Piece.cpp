@@ -35,11 +35,7 @@ void Piece::displayInfo(){
     position.display();
 }
 
-bool Piece::isInBoard(Square dest){
-    if (dest.getColumn() < 0 || dest.getColumn() > 7 || dest.getLine() < 0 || dest.getLine() > 7){
-        cout << "La case de destination n'est pas sur l'echiquier" << endl;
-        return false;
-    }
+bool Piece::isLegalMove(Square dest) {
     return true;
 }
 
