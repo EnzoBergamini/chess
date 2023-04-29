@@ -22,6 +22,7 @@ bool isLegalInput(string const & input){
 
 bool Jeu::coup() {
     string input;
+
     getline(cin, input);
 
     while (!isLegalInput(input)){
@@ -34,19 +35,28 @@ bool Jeu::coup() {
     Square start = Square(input.substr(0,2));
     Square end = Square(input.substr(2,2));
 
-    Piece *piece = chessboard->getPiece(start);
+    this->movePiece(start, end);
+    return true;
+}
 
-     if (piece == nullptr){
-          cout << "Il n'y a pas de piece a cette position" << endl;
-          return false;
-     }else if(!piece->isLegalMove(end)){
-          cout << "Le mouvement n'est pas valide" << endl;
-          return false;
-     }
+bool Jeu::movePiece(Square start, Square end) {
+    Piece *moving_piece = chessboard->getPiece(start);
+    if (moving_piece == nullptr){
+        cout << "Il n'y a pas de piece a cette position" << endl;
+        return false;
+    }else if(!moving_piece->isLegalMove(end)){
+        cout << "Le mouvement n'est pas valide" << endl;
+        return false;
+    }
 
-    chessboard->movePiece(
-            start,
-            end
-            );
+    Piece *destination_piece = chessboard->getPiece(end);
+
+    if (destination_piece != nullptr){
+        if (destination_piece->getColor() == moving_piece->getColor()){
+            cout << "Il y a deja une piece de la meme couleur a cette position" << endl;
+            return false;
+        }
+    }
+    chessboard->movePiece(start, end);
     return true;
 }

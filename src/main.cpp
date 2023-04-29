@@ -19,7 +19,9 @@
 int main() {
     Jeu jeu;
     jeu.affiche();
-    jeu.coup();
-    jeu.affiche();
+    while(true){
+        jeu.coup();
+        jeu.affiche();
+    }
     return 0;
 }
