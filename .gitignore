@@ -1,3 +1,6 @@
-obj
-bin
-echec.dSYM
+obj/*
+obj/
+bin/*
+bin/
+echec.dSYM/*
+echec.dSYM/
