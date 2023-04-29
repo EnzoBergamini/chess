@@ -23,8 +23,12 @@ void Echiquier::initEchiquier(){
 }
 
 void Echiquier::posePiece(Piece *p, Square pos) {
-    p->setSquare(pos);
-    this->echiquier[pos.getLine()][pos.getColumn()] = p;
+    if(p != nullptr){
+        p->setSquare(pos);
+        this->echiquier[pos.getLine()][pos.getColumn()] = p;
+    }else{
+        this->echiquier[pos.getLine()][pos.getColumn()] = nullptr;
+    }
 }
 
 Echiquier::Echiquier(){
@@ -107,4 +111,8 @@ void Echiquier::movePiece(Square pos_start, Square pos_end){
     Piece *tmp_piece = this->echiquier[pos_start.getLine()][pos_start.getColumn()];
     this->posePiece(nullptr, pos_start);
     this->posePiece(tmp_piece, pos_end);
+}
+
+Piece *Echiquier::getPiece(Square pos){
+    return this->echiquier[pos.getLine()][pos.getColumn()];
 }
