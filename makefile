@@ -1,7 +1,6 @@
 CC := g++
 CFLAGS ?= -Wall -Werror -g -std=c++11
 LDLIBS ?= -lm
-
 EXEC = chess
 
 INCLUDE_PATH ?= ./include

@@ -20,6 +20,8 @@ protected:
 public:
     Piece(Couleur c,string name,int id, Square position);
 
+    ~Piece();
+
     void affiche();
 
     void displayInfo();
@@ -27,6 +29,8 @@ public:
     void setSquare(Square pos);
 
     Square getSquare();
+
+    bool isInBoard(Square dest);
 };
 
 

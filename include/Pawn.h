@@ -12,6 +12,7 @@
 class Pawn : public Piece{
 public:
     Pawn(Couleur color, int id, Square pos);
+    bool isLegalMovment(Square dest);
 };
 
 
