@@ -18,10 +18,11 @@
 
 int main() {
     Jeu jeu;
-    jeu.affiche();
-    while(true){
-        jeu.coup();
+    bool stop = false;
+
+    do {
         jeu.affiche();
-    }
+        stop = jeu.coup();
+    } while (stop);
     return 0;
 }

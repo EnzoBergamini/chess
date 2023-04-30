@@ -3,10 +3,12 @@
 //
 
 #include "../include/Jeu.h"
+
 #include <regex>
 #include <typeindex>
+#include <string>
 
-Jeu::Jeu() : chessboard(new Echiquier()) {}
+Jeu::Jeu() : chessboard(new Echiquier()), current_player(white) {}
 
 Jeu::~Jeu() {
     delete chessboard;
@@ -17,26 +19,47 @@ void Jeu::affiche() {
 }
 
 bool isLegalInput(string const & input){
-    regex pattern("[a-h][1-8][a-h][1-8]");
+    regex pattern("([a-h][1-8][a-h][1-8])|(/quit)|(/draw)|(resign)");
     return regex_match(input, pattern);
 }
 
 bool Jeu::coup() {
     string input;
+    bool stop = false;
 
-    getline(cin, input);
+    cout << "C'est au joueur " << ((current_player == white) ? "blanc" : "noir") << " de jouer" << endl;
 
-    while (!isLegalInput(input)){
-        cout << "L'input n'est pas valide'" << endl;
-        cout << "Coup ? " << endl;
+    do {
+        cout << "Coup ? (eg a2a3) ";
         getline(cin, input);
-        cout << input << endl;
-    }
 
-    Square start = Square(input.substr(0,2));
-    Square end = Square(input.substr(2,2));
+        while (!isLegalInput(input)) {
+            cout << "L'input n'est pas valide" << endl;
+            cout << "Coup ? (eg a2a3) " << endl;
+            getline(cin, input);
+        }
 
-    this->movePiece(start, end);
+        if (input == "/quit"){
+            return false;
+        } else if (input == "/draw"){
+            cout << "Match nul" << endl;
+            return false;
+        } else if (input == "/resign") {
+            cout << "Vous avez abandonné" << endl;
+            return false;
+        }
+
+
+        stop = this->movePiece(Square(input.substr(0,2)),
+                               Square(input.substr(2,2))
+                               );
+
+    } while (!stop);
+
+    cout << "-> Déplacement " << this->chessboard->getPiece(Square(input.substr(2,2)))->getName() << " en " << input << endl;
+
+    this->current_player = (this->current_player == white) ? black : white;
+
     return true;
 }
 
@@ -129,10 +152,14 @@ bool Jeu::isPathClear(Square start, Square end){
 }
 
 bool Jeu::movePiece(Square start, Square end) {
+
     Piece *moving_piece = chessboard->getPiece(start);
     Piece *destination_piece = chessboard->getPiece(end);
 
-
+    if (moving_piece->getColor() != current_player){
+        cout << "Ce n'est pas votre piece !" << endl;
+        return false;
+    }
 
     /*===== Vérification si la piece existe ======*/
     if (moving_piece == nullptr){
@@ -183,4 +210,13 @@ bool Jeu::movePiece(Square start, Square end) {
     this->chessboard->movePiece(start, end);
 
     return true;
+}
+
+
+void Jeu::setPlayer(Couleur c){
+    this->current_player = c;
+}
+
+Couleur Jeu::getPlayer(){
+    return this->current_player;
 }
