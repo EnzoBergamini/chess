@@ -31,11 +31,13 @@ bool Jeu::coup() {
     do {
         cout << "Coup ? (eg a2a3) ";
         getline(cin, input);
+        cout << "input : " << input << endl;
 
         while (!isLegalInput(input)) {
             cout << "L'input n'est pas valide" << endl;
             cout << "Coup ? (eg a2a3) " << endl;
             getline(cin, input);
+            cout << "input : " << input << endl;
         }
 
         if (input == "/quit"){
