@@ -156,14 +156,14 @@ bool Jeu::movePiece(Square start, Square end) {
     Piece *moving_piece = chessboard->getPiece(start);
     Piece *destination_piece = chessboard->getPiece(end);
 
-    if (moving_piece->getColor() != current_player){
-        cout << "Ce n'est pas votre piece !" << endl;
-        return false;
-    }
-
     /*===== Vérification si la piece existe ======*/
     if (moving_piece == nullptr){
         cout << "Il n'y a pas de piece a cette position" << endl;
+        return false;
+    }
+
+    if (moving_piece->getColor() != current_player){
+        cout << "Ce n'est pas votre piece !" << endl;
         return false;
     }
 

@@ -5,7 +5,7 @@
 #include "../include/King.h"
 
 King::King(Couleur color,int id,Square pos)
-    : Piece(color,(color == white) ? "\u265A" : "\u2654",id,pos){
+    : Piece(color,(color == black) ? "\u265A" : "\u2654",id,pos){
 }
 
 bool King::isLegalMove(Square dest, bool isCatch){

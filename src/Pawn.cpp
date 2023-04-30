@@ -5,7 +5,7 @@
 #include "../include/Pawn.h"
 
 Pawn::Pawn(Couleur color, int id, Square pos) :
-        Piece(color, (color == white) ? "\u265F" : "\u2659", id, pos) {}
+        Piece(color, (color == black) ? "\u265F" : "\u2659", id, pos) {}
 
 bool Pawn::isLegalMove(Square dest, bool isCatch) {
     if (isCatch){
