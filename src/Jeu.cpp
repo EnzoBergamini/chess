@@ -141,31 +141,17 @@ bool Jeu::movePiece(Square start, Square end) {
     }
 
     const char *class_name = typeid(*moving_piece).name() + 1;
+    cout << class_name << endl;
 
     if (strcmp(class_name, "Pawn") == 0
         || strcmp(class_name, "King") == 0
         || strcmp(class_name, "Queen") == 0
         || strcmp(class_name, "Bishop") == 0
-        || strcmp(class_name, "Rook") == 0){
+        || strcmp(class_name, "Rook") == 0){ // si la piece est un pion, un roi, une reine, un fou ou une tour (ne peut pas sauter par dessus les autres pieces)
 
-        cout << "vérification de chemin" << endl;
-
-        if (destination_piece != nullptr){
-            if (destination_piece->getColor() == moving_piece->getColor()){
-                cout << "Il y a deja une piece de la meme couleur a cette position" << endl;
-                return false;
-            }
-        }else if (!this->isPathClear(start, end)){
+        if (!this->isPathClear(start, end)){
             cout << "Le chemin n'est pas libre" << endl;
             return false;
-        }
-    }else if (strcmp(class_name, "Knight") == 0){
-        cout << "peut sauter pions" << endl;
-        if (destination_piece != nullptr){
-            if (destination_piece->getColor() == moving_piece->getColor()){
-                cout << "Il y a deja une piece de la meme couleur a cette position" << endl;
-                return false;
-            }
         }
     }
 
@@ -173,8 +159,12 @@ bool Jeu::movePiece(Square start, Square end) {
         if (destination_piece->getColor() == moving_piece->getColor()){
             cout << "Il y a deja une piece de la meme couleur a cette position" << endl;
             return false;
+        } else{
+            chessboard->movePiece(start, end);
+            return true;
         }
+    }else{
+        chessboard->movePiece(start, end);
+        return true;
     }
-    chessboard->movePiece(start, end);
-    return true;
 }
