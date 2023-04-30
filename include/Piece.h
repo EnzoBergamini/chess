@@ -16,6 +16,7 @@ protected:
     string name;
     Couleur couleur;
     Square position;
+    size_t move_count;
 
 public:
     Piece(Couleur c,string name,int id, Square position);
@@ -35,6 +36,10 @@ public:
     Couleur getColor();
 
     virtual bool isLegalMove(Square dest, bool isCatch = false);
+
+    void incrementMoveCount();
+
+    size_t getMoveCount();
 };
 
 

@@ -11,7 +11,7 @@
 using namespace std;
 
 Piece::Piece(Couleur c,string name,int id, Square position)
-    : id(id), name(name), couleur(c), position(position){}
+    : id(id), name(name), couleur(c), position(position), move_count(0){}
 
 Piece::~Piece(){}
 
@@ -45,5 +45,13 @@ void Piece::displayInfo(){
 
 bool Piece::isLegalMove(Square dest, bool isCatch) {
     return true;
+}
+
+void Piece::incrementMoveCount() {
+    this->move_count++;
+}
+
+size_t Piece::getMoveCount() {
+    return this->move_count;
 }
 

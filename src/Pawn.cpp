@@ -36,6 +36,11 @@ bool Pawn::isLegalMove(Square dest, bool isCatch) {
                  && dest.getLine() == this->position.getLine() + 1) // avance d'une case
                 ){
                 return true;
+            }else if (this->getMoveCount() == 0
+                      && dest.getColumn() == this->position.getColumn() // deplacement vertical
+                      && dest.getLine() == this->position.getLine() + 2 // avance de deux cases
+                      ){
+                return true;
             }else{
                 return false;
             }
@@ -43,6 +48,11 @@ bool Pawn::isLegalMove(Square dest, bool isCatch) {
             if ((dest.getColumn() == this->position.getColumn() // deplacement vertical
                  && dest.getLine() == this->position.getLine() - 1) // avance d'une case
                 ){
+                return true;
+            }else if (this->getMoveCount() == 0
+                      && dest.getColumn() == this->position.getColumn() // deplacement vertical
+                      && dest.getLine() == this->position.getLine() - 2 // avance de deux cases
+                    ){
                 return true;
             }else{
                 return false;

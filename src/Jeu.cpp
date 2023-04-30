@@ -5,8 +5,6 @@
 #include "../include/Jeu.h"
 
 #include <regex>
-#include <typeindex>
-#include <string>
 
 Jeu::Jeu() : chessboard(new Echiquier()), current_player(white) {}
 
@@ -209,6 +207,7 @@ bool Jeu::movePiece(Square start, Square end) {
     }
 
     this->chessboard->movePiece(start, end);
+    moving_piece->incrementMoveCount();
 
     return true;
 }
