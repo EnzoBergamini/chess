@@ -17,7 +17,7 @@ class King : public Piece{
 public:
     King(Couleur c,int id,Square pos);
 
-    bool isLegalMove(Square dest);
+    bool isLegalMove(Square dest, bool isCatch = false);
 };
 
 

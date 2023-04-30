@@ -43,7 +43,7 @@ void Piece::displayInfo(){
     position.display();
 }
 
-bool Piece::isLegalMove(Square dest) {
+bool Piece::isLegalMove(Square dest, bool isCatch) {
     return true;
 }
 

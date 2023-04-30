@@ -34,7 +34,7 @@ public:
 
     Couleur getColor();
 
-    virtual bool isLegalMove(Square dest);
+    virtual bool isLegalMove(Square dest, bool isCatch = false);
 };
 
 

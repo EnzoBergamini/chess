@@ -12,7 +12,7 @@ class Rook : public Piece{
 public:
     Rook(Couleur color,int id, Square pos);
 
-    bool isLegalMove(Square dest);
+    bool isLegalMove(Square dest, bool isCatch = false);
 
 };
 

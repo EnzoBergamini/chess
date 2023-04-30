@@ -7,7 +7,7 @@
 Queen::Queen(Couleur color,int id,Square pos)
     : Piece(color,(color == white) ? "\u265B" : "\u2655",id,pos){}
 
-bool Queen::isLegalMove(Square dest){
+bool Queen::isLegalMove(Square dest, bool isCatch){
     if (abs(dest.getColumn() - this->position.getColumn()) == abs(dest.getLine() - this->position.getLine())){
         return true;
     }

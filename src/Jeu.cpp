@@ -132,39 +132,55 @@ bool Jeu::movePiece(Square start, Square end) {
     Piece *moving_piece = chessboard->getPiece(start);
     Piece *destination_piece = chessboard->getPiece(end);
 
+
+
+    /*===== Vérification si la piece existe ======*/
     if (moving_piece == nullptr){
         cout << "Il n'y a pas de piece a cette position" << endl;
-        return false;
-    }else if(!moving_piece->isLegalMove(end)){
-        cout << "Le mouvement n'est pas valide" << endl;
         return false;
     }
 
     const char *class_name = typeid(*moving_piece).name() + 1;
-    cout << class_name << endl;
+
+    /*===== Vérification de la validité des coups ======*/
+    if (destination_piece != nullptr){
+        if (destination_piece->getColor() != moving_piece->getColor()){
+            if (strcmp(class_name, "Pawn") == 0){
+                if (!moving_piece->isLegalMove(end, true)) {
+                    cout << "Le coup n'est pas valide" << endl;
+                    return false;
+                }
+            }else{
+                if (!moving_piece->isLegalMove(end)) {
+                    cout << "Le coup n'est pas valide" << endl;
+                    return false;
+                }
+            }
+        } else{
+            cout << "Il y a deja une piece de la meme couleur a cette position" << endl;
+            return false;
+        }
+    }else{
+        if (!moving_piece->isLegalMove(end)) {
+            cout << "Le coup n'est pas valide" << endl;
+            return false;
+        }
+    }
+
+    /*===== Vérification si le chemin est libre ======*/
 
     if (strcmp(class_name, "Pawn") == 0
         || strcmp(class_name, "King") == 0
         || strcmp(class_name, "Queen") == 0
         || strcmp(class_name, "Bishop") == 0
         || strcmp(class_name, "Rook") == 0){ // si la piece est un pion, un roi, une reine, un fou ou une tour (ne peut pas sauter par dessus les autres pieces)
-
         if (!this->isPathClear(start, end)){
             cout << "Le chemin n'est pas libre" << endl;
             return false;
         }
     }
 
-    if (destination_piece != nullptr){
-        if (destination_piece->getColor() == moving_piece->getColor()){
-            cout << "Il y a deja une piece de la meme couleur a cette position" << endl;
-            return false;
-        } else{
-            chessboard->movePiece(start, end);
-            return true;
-        }
-    }else{
-        chessboard->movePiece(start, end);
-        return true;
-    }
+    this->chessboard->movePiece(start, end);
+
+    return true;
 }

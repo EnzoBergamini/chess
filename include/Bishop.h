@@ -13,7 +13,7 @@ class Bishop : public Piece{
 public:
     Bishop(Couleur c,int id,Square pos);
 
-    bool isLegalMove(Square dest);
+    bool isLegalMove(Square dest, bool isCatch = false);
 
 };
 
