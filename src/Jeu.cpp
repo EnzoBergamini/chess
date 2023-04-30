@@ -11,6 +11,7 @@
 Jeu::Jeu() : chessboard(new Echiquier()), current_player(white) {}
 
 Jeu::~Jeu() {
+    cout << this->chessboard->canonicalPosition() << endl;
     delete chessboard;
 }
 

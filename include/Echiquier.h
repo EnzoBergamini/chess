@@ -35,6 +35,8 @@ public:
     void initEchiquier();
     void movePiece(Square pos1, Square pos2);
     Piece *getPiece(Square pos);
+    string pgnPieceName(string const name, bool view_pawn, bool view_color);
+    string canonicalPosition();
 };
 
 
