@@ -220,6 +220,9 @@ void Jeu::displayEndGame(string result) {
     cout << this->chessboard->canonicalPosition() << " " << result << endl;
 }
 
+bool Jeu::isKingInCheck(Couleur c){
+    return true;
+}
 
 void Jeu::setPlayer(Couleur c){
     this->current_player = c;

@@ -28,6 +28,7 @@ public:
     bool isPathClear(Square start, Square end);
     bool movePiece(Square start, Square end);
     void displayEndGame(string result);
+    bool isKingInCheck(Couleur c);
 };
 
 

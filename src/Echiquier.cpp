@@ -26,6 +26,10 @@ void Echiquier::posePiece(Piece *p, Square pos) {
     if(p != nullptr){
         p->setSquare(pos);
         this->echiquier[pos.getLine()][pos.getColumn()] = p;
+        Piece *p2 = this->echiquier[pos.getLine()][pos.getColumn()];
+        if (p2 != nullptr) {
+            p2->setCatch(true);
+        }
     }else{
         this->echiquier[pos.getLine()][pos.getColumn()] = nullptr;
     }

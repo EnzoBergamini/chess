@@ -11,7 +11,7 @@
 using namespace std;
 
 Piece::Piece(Couleur c,string name,int id, Square position)
-    : id(id), name(name), couleur(c), position(position), move_count(0){}
+    : id(id), name(name), couleur(c), position(position), move_count(0), is_catch(false){}
 
 Piece::~Piece(){}
 
@@ -31,8 +31,16 @@ string Piece::getName() {
     return this->name;
 }
 
+bool Piece::getCatch() {
+    return this->is_catch;
+}
+
 void Piece::setSquare(Square pos){
     this->position = pos;
+}
+
+void Piece::setCatch(bool isCatch) {
+    this->is_catch = isCatch;
 }
 
 void Piece::displayInfo(){
