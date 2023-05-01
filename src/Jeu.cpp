@@ -204,14 +204,6 @@ bool Jeu::movePiece(Square start, Square end) {
         }
     }
 
-    /*===== Vérification si le joueur se place en echec ======*/
-
-    if (this->isCheckMove(start, end ,this->getPlayer())){
-        cout << "Le coup n'est pas valide vous etes en echec" << endl;
-        return false;
-    }
-
-
     /*===== Vérification si le chemin est libre ======*/
 
     if (strcmp(class_name, "Pawn") == 0
@@ -223,6 +215,13 @@ bool Jeu::movePiece(Square start, Square end) {
             cout << "Le chemin n'est pas libre" << endl;
             return false;
         }
+    }
+
+    /*===== Vérification si le joueur se place en echec ======*/
+
+    if (this->isCheckMove(start, end ,this->getPlayer())){
+        cout << "Le coup n'est pas valide vous etes en echec" << endl;
+        return false;
     }
 
     this->chessboard->movePiece(start, end);
