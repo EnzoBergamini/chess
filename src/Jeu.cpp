@@ -9,7 +9,6 @@
 Jeu::Jeu() : chessboard(new Echiquier()), current_player(white) {}
 
 Jeu::~Jeu() {
-    cout << this->chessboard->canonicalPosition() << endl;
     delete chessboard;
 }
 
@@ -18,7 +17,7 @@ void Jeu::affiche() {
 }
 
 bool isLegalInput(string const & input){
-    regex pattern("([a-h][1-8][a-h][1-8])|(/quit)|(/draw)|(resign)");
+    regex pattern("^ *[a-h][1-8][a-h][1-8] *$|^ */(quit|draw|resign) *$");
     return regex_match(input, pattern);
 }
 
@@ -29,9 +28,7 @@ bool Jeu::coup() {
     cout << "C'est au joueur " << ((current_player == white) ? "blanc" : "noir") << " de jouer" << endl;
 
     do {
-        cout << "Coup ? (eg a2a3) ";
         getline(cin, input);
-        cout << "input : " << input << endl;
 
         while (!isLegalInput(input)) {
             cout << "L'input n'est pas valide" << endl;
@@ -41,12 +38,17 @@ bool Jeu::coup() {
         }
 
         if (input == "/quit"){
+            this->displayEndGame("?-?");
             return false;
         } else if (input == "/draw"){
-            cout << "Match nul" << endl;
+            this->displayEndGame("1/2-1/2");
             return false;
         } else if (input == "/resign") {
-            cout << "Vous avez abandonné" << endl;
+            if (this->getPlayer() == white){
+                this->displayEndGame("0-1");
+            }else{
+                this->displayEndGame("1-0");
+            }
             return false;
         }
 
@@ -212,6 +214,10 @@ bool Jeu::movePiece(Square start, Square end) {
     moving_piece->incrementMoveCount();
 
     return true;
+}
+
+void Jeu::displayEndGame(string result) {
+    cout << this->chessboard->canonicalPosition() << " " << result << endl;
 }
 
 

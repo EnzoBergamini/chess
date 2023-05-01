@@ -5,7 +5,4 @@ bin/
 echec.dSYM/*
 echec.dSYM/
 .DS_Store
-data/*
-data/
-test-level.sh
 test.log
