@@ -28,5 +28,7 @@ public:
     void display();
 };
 
+bool operator==(const Square &sq1, const Square &sq2);
+
 
 #endif //ECHEC_SQUARE_H

@@ -26,3 +26,7 @@ void Square::display(){
     cout << "Colonne : " << this->column << " ligne : " << this->line << endl;
 }
 
+bool operator==(const Square &sq1, const Square &sq2){
+    return (sq1.getLine() == sq2.getLine()) && (sq1.getColumn() == sq2.getColumn());
+}
+
