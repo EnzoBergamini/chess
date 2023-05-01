@@ -18,15 +18,15 @@ Square::Square(string s){
     line = s[1] - '0' - 1;
 }
 
-int Square::getColumn(){ return column;}
+int Square::getColumn() const { return column;}
 
-int Square::getLine(){ return line;}
+int Square::getLine() const { return line;}
 
 void Square::display(){
     cout << "Colonne : " << this->column << " ligne : " << this->line << endl;
 }
 
-bool operator==(const Square &sq1, const Square &sq2){
-    return (sq1.getLine() == sq2.getLine()) && (sq1.getColumn() == sq2.getColumn());
+bool Square::operator==(const Square &other) const{
+    return (this->line == other.getLine() && this->column == other.getColumn());
 }
 

@@ -21,14 +21,15 @@ public:
 
     Square(int line, int column);
 
-    int getLine();
+    int getLine() const;
 
-    int getColumn();
+    int getColumn() const;
 
     void display();
+
+    bool operator==(const Square &other) const;
 };
 
-bool operator==(const Square &sq1, const Square &sq2);
 
 
 #endif //ECHEC_SQUARE_H
