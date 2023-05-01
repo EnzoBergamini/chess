@@ -6,6 +6,8 @@
 
 #include <regex>
 
+#define BOARD_SIZE 8
+
 Jeu::Jeu() : chessboard(new Echiquier()), current_player(white) {}
 
 Jeu::~Jeu() {
@@ -52,6 +54,9 @@ bool Jeu::coup() {
             return false;
         }
 
+        if(this->isKingInCheck(this->current_player)){
+            cout << "Le roi de couleur " << this->current_player << "est en echec" << endl;
+        }
 
         stop = this->movePiece(Square(input.substr(0,2)),
                                Square(input.substr(2,2))
@@ -221,7 +226,25 @@ void Jeu::displayEndGame(string result) {
 }
 
 bool Jeu::isKingInCheck(Couleur c){
-    return true;
+    Square king_square = this->chessboard->getKingSquare(c);
+    if (king_square == Square(-1, -1)){
+        cerr << "Le roi n'a pas ete trouve" << endl;
+        exit(1);
+    }
+
+    for (int i = 0 ; i < BOARD_SIZE ; ++i){
+        for (int j = 0 ; j < BOARD_SIZE ; ++j){
+            Square square(i, j);
+            Piece *piece = this->chessboard->getPiece(square);
+            if (piece != nullptr && piece->getColor() != c){
+                if (piece->isLegalMove(king_square)){
+                    return true;
+                }
+            }
+        }
+    }
+
+    return false;
 }
 
 void Jeu::setPlayer(Couleur c){

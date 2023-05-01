@@ -165,3 +165,10 @@ string Echiquier::canonicalPosition(){
     }
     return output;
 }
+
+Square Echiquier::getKingSquare(Couleur color){
+    for (auto p : this->pieces[color])
+        if (p->getName() == "\u2654" || p->getName() == "\u265A")
+            return p->getSquare();
+    return Square(-1,-1);
+}
