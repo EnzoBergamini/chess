@@ -30,6 +30,7 @@ public:
     void displayEndGame(string result);
     bool isKingInCheck(Couleur c);
     bool isCapturable(Square square, Couleur c);
+    bool isCheckMove(Square start, Square end ,Couleur c);
 };
 
 

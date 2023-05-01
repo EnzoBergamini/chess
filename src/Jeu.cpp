@@ -61,6 +61,7 @@ bool Jeu::coup() {
             stop = this->movePiece(Square(input.substr(0,2)),
                                    Square(input.substr(2,2))
             );
+
         }while(this->isKingInCheck(this->current_player));
 
     } while (!stop);
@@ -186,13 +187,6 @@ bool Jeu::movePiece(Square start, Square end) {
                     cout << "Le coup n'est pas valide" << endl;
                     return false;
                 }
-            }else if(strcmp(class_name, "king") == 0){
-                if(!moving_piece->isLegalMove(end)
-                || this->isCapturable(end, moving_piece->getColor())
-                ){
-                    cout << "Le coup n'est pas valide" << endl;
-                    return false;
-                }
             }else{
                 if (!moving_piece->isLegalMove(end)) {
                     cout << "Le coup n'est pas valide" << endl;
@@ -209,6 +203,14 @@ bool Jeu::movePiece(Square start, Square end) {
             return false;
         }
     }
+
+    /*===== Vérification si le joueur se place en echec ======*/
+
+    if (this->isCheckMove(start, end ,this->getPlayer())){
+        cout << "Le coup n'est pas valide vous etes en echec" << endl;
+        return false;
+    }
+
 
     /*===== Vérification si le chemin est libre ======*/
 
@@ -249,8 +251,16 @@ bool Jeu::isCapturable(Square square, Couleur c){
             Square current_square(i, j);
             Piece *piece = this->chessboard->getPiece(current_square);
             if (piece != nullptr && piece->getColor() != c){
-                if (piece->isLegalMove(square)){
-                    return true;
+                if (strcmp(typeid(*piece).name() + 1, "Knight") == 0){
+                    if (piece->isLegalMove(square)){
+                        return true;
+                    }
+                }else{
+                    if (piece->isLegalMove(square, true)
+                        && this->isPathClear(current_square, square)
+                    ){
+                        return true;
+                    }
                 }
             }
         }
@@ -265,4 +275,16 @@ void Jeu::setPlayer(Couleur c){
 
 Couleur Jeu::getPlayer(){
     return this->current_player;
+}
+
+bool Jeu::isCheckMove(Square start, Square end ,Couleur c){
+    this->chessboard->movePiece(start, end);
+
+    if(this->isKingInCheck(c)){
+        this->chessboard->movePiece(end, start);
+        return true;
+    }else{
+        this->chessboard->movePiece(end, start);
+        return false;
+    }
 }
