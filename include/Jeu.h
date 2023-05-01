@@ -29,6 +29,7 @@ public:
     bool movePiece(Square start, Square end);
     void displayEndGame(string result);
     bool isKingInCheck(Couleur c);
+    bool isCapturable(Square square, Couleur c);
 };
 
 

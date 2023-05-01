@@ -30,37 +30,38 @@ bool Jeu::coup() {
     cout << "C'est au joueur " << ((current_player == white) ? "blanc" : "noir") << " de jouer" << endl;
 
     do {
-        getline(cin, input);
-
-        while (!isLegalInput(input)) {
-            cout << "L'input n'est pas valide" << endl;
-            cout << "Coup ? (eg a2a3) " << endl;
-            getline(cin, input);
-            cout << "input : " << input << endl;
-        }
-
-        if (input == "/quit"){
-            this->displayEndGame("?-?");
-            return false;
-        } else if (input == "/draw"){
-            this->displayEndGame("1/2-1/2");
-            return false;
-        } else if (input == "/resign") {
-            if (this->getPlayer() == white){
-                this->displayEndGame("0-1");
-            }else{
-                this->displayEndGame("1-0");
+        do {
+            if (this->isKingInCheck(this->current_player)){
+                cout << "Le roi est en échec" << endl;
             }
-            return false;
-        }
+            getline(cin, input);
 
-        if(this->isKingInCheck(this->current_player)){
-            cout << "Le roi de couleur " << this->current_player << "est en echec" << endl;
-        }
+            while (!isLegalInput(input)) {
+                cout << "L'input n'est pas valide" << endl;
+                cout << "Coup ? (eg a2a3) " << endl;
+                getline(cin, input);
+                cout << "input : " << input << endl;
+            }
 
-        stop = this->movePiece(Square(input.substr(0,2)),
-                               Square(input.substr(2,2))
-                               );
+            if (input == "/quit"){
+                this->displayEndGame("?-?");
+                return false;
+            } else if (input == "/draw"){
+                this->displayEndGame("1/2-1/2");
+                return false;
+            } else if (input == "/resign") {
+                if (this->getPlayer() == white){
+                    this->displayEndGame("0-1");
+                }else{
+                    this->displayEndGame("1-0");
+                }
+                return false;
+            }
+
+            stop = this->movePiece(Square(input.substr(0,2)),
+                                   Square(input.substr(2,2))
+            );
+        }while(this->isKingInCheck(this->current_player));
 
     } while (!stop);
 
@@ -185,6 +186,13 @@ bool Jeu::movePiece(Square start, Square end) {
                     cout << "Le coup n'est pas valide" << endl;
                     return false;
                 }
+            }else if(strcmp(class_name, "king") == 0){
+                if(!moving_piece->isLegalMove(end)
+                || this->isCapturable(end, moving_piece->getColor())
+                ){
+                    cout << "Le coup n'est pas valide" << endl;
+                    return false;
+                }
             }else{
                 if (!moving_piece->isLegalMove(end)) {
                     cout << "Le coup n'est pas valide" << endl;
@@ -232,12 +240,16 @@ bool Jeu::isKingInCheck(Couleur c){
         exit(1);
     }
 
+    return this->isCapturable(king_square, c);
+}
+
+bool Jeu::isCapturable(Square square, Couleur c){
     for (int i = 0 ; i < BOARD_SIZE ; ++i){
         for (int j = 0 ; j < BOARD_SIZE ; ++j){
-            Square square(i, j);
-            Piece *piece = this->chessboard->getPiece(square);
+            Square current_square(i, j);
+            Piece *piece = this->chessboard->getPiece(current_square);
             if (piece != nullptr && piece->getColor() != c){
-                if (piece->isLegalMove(king_square)){
+                if (piece->isLegalMove(square)){
                     return true;
                 }
             }
