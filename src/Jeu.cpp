@@ -8,7 +8,7 @@
 
 #define BOARD_SIZE 8
 
-Jeu::Jeu() : chessboard(new Echiquier()), current_player(white) {}
+Jeu::Jeu() : chessboard(new Echiquier()), current_player(white), last_move("") {}
 
 Jeu::~Jeu() {
     delete chessboard;
@@ -66,6 +66,7 @@ bool Jeu::coup() {
 
     } while (!stop);
 
+    this->setLastMove(input);
     cout << "-> Déplacement " << this->chessboard->getPiece(Square(input.substr(2,2)))->getName() << " en " << input << endl;
 
     this->current_player = (this->current_player == white) ? black : white;
@@ -178,7 +179,19 @@ bool Jeu::movePiece(Square start, Square end) {
     }
 
     const char *class_name = typeid(*moving_piece).name() + 1;
-    
+
+    /*===== Vérification si c'est une prise en passant ======*/
+
+    if (strcmp(class_name, "Pawn") == 0){
+        if (this->isTakingInPassing(start, end)){
+            cout << "Prise en passant" << endl;
+            this->chessboard->posePiece(nullptr, Square(this->getLastMove().substr(2,2)));
+            this->chessboard->movePiece(start, end);
+            moving_piece->incrementMoveCount();
+            return true;
+        }
+    }
+
 
     /*===== Vérification de la validité des coups ======*/
     if (destination_piece != nullptr){
@@ -304,4 +317,35 @@ bool Jeu::isCheckMove(Square start, Square end ,Couleur c){
         }
         return false;
     }
+}
+
+bool Jeu::isTakingInPassing(Square start, Square end){
+    if (this->getLastMove() == ""){
+        return false;
+    }
+    Square last_move_start = Square(this->getLastMove().substr(0, 2));
+    Square last_move_end = Square(this->getLastMove().substr(2, 2));
+
+    Piece *last_move_piece = this->chessboard->getPiece(last_move_end);
+
+    if (last_move_piece != nullptr && strcmp(typeid(*last_move_piece).name() + 1, "Pawn") == 0){
+        if (last_move_piece->getMoveCount() == 1){
+            if (last_move_start.getLine() == last_move_end.getLine() + 2
+                || last_move_start.getLine() == last_move_end.getLine() - 2){
+                if (last_move_piece->getSquare().getColumn() == end.getColumn()){
+                    return true;
+                }
+            }
+        }
+    }
+
+    return false;
+}
+
+void Jeu::setLastMove(string move) {
+    this->last_move = move;
+}
+
+string Jeu::getLastMove() {
+    return this->last_move;
 }

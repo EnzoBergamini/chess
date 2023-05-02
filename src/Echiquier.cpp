@@ -173,3 +173,4 @@ Square Echiquier::getKingSquare(Couleur color){
 void Echiquier::setPiece(Piece *p, Square pos){
     this->echiquier[pos.getLine()][pos.getColumn()] = p;
 }
+

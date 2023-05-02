@@ -18,6 +18,7 @@ class Jeu {
 private:
     Echiquier *chessboard;
     Couleur current_player;
+    string last_move;
 public:
     Jeu();
     ~Jeu();
@@ -31,6 +32,9 @@ public:
     bool isKingInCheck(Couleur c);
     bool isCapturable(Square square, Couleur c);
     bool isCheckMove(Square start, Square end ,Couleur c);
+    bool isTakingInPassing(Square start, Square end);
+    void setLastMove(string move);
+    string getLastMove();
 };
 
 
