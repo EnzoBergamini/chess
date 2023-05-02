@@ -332,7 +332,9 @@ bool Jeu::isTakingInPassing(Square start, Square end){
         if (last_move_piece->getMoveCount() == 1){
             if (last_move_start.getLine() == last_move_end.getLine() + 2
                 || last_move_start.getLine() == last_move_end.getLine() - 2){
-                if (last_move_piece->getSquare().getColumn() == end.getColumn()){
+                if (last_move_piece->getSquare().getColumn() == end.getColumn()
+                    && abs(start.getLine() - end.getLine()) == abs(start.getColumn() - end.getColumn()) // si le pion se deplace en diagonale
+                    ){
                     return true;
                 }
             }
