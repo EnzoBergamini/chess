@@ -25,14 +25,8 @@ void Echiquier::initEchiquier(){
 void Echiquier::posePiece(Piece *p, Square pos) {
     if(p != nullptr){
         p->setSquare(pos);
-        this->echiquier[pos.getLine()][pos.getColumn()] = p;
-        Piece *p2 = this->echiquier[pos.getLine()][pos.getColumn()];
-        if (p2 != nullptr) {
-            p2->setCatch(true);
-        }
-    }else{
-        this->echiquier[pos.getLine()][pos.getColumn()] = nullptr;
     }
+    this->setPiece(p, pos);
 }
 
 Echiquier::Echiquier(){
@@ -111,10 +105,13 @@ void Echiquier::affiche() {
     }
 }
 
-void Echiquier::movePiece(Square pos_start, Square pos_end){
-    Piece *tmp_piece = this->echiquier[pos_start.getLine()][pos_start.getColumn()];
+void Echiquier::movePiece(Square pos_start, Square pos_end) {
+    Piece *end_piece = this->getPiece(pos_end);
+    if (end_piece != nullptr){
+        end_piece->setCatch(true);
+    }
+    this->posePiece(this->getPiece(pos_start), pos_end);
     this->posePiece(nullptr, pos_start);
-    this->posePiece(tmp_piece, pos_end);
 }
 
 Piece *Echiquier::getPiece(Square pos){
@@ -171,4 +168,8 @@ Square Echiquier::getKingSquare(Couleur color){
         if (p->getName() == "\u2654" || p->getName() == "\u265A")
             return p->getSquare();
     return Square(-1,-1);
+}
+
+void Echiquier::setPiece(Piece *p, Square pos){
+    this->echiquier[pos.getLine()][pos.getColumn()] = p;
 }

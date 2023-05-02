@@ -38,6 +38,7 @@ public:
     string pgnPieceName(string const name, bool view_pawn, bool view_color);
     string canonicalPosition();
     Square getKingSquare(Couleur color);
+    void setPiece(Piece *p, Square pos);
 };
 
 
