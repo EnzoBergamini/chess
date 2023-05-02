@@ -8,7 +8,8 @@
 
 #define BOARD_SIZE 8
 
-Jeu::Jeu() : chessboard(new Echiquier()), current_player(white), last_move("") {}
+Jeu::Jeu() : chessboard(new Echiquier()),
+current_player(white), last_move("") {}
 
 Jeu::~Jeu() {
     delete chessboard;
@@ -320,11 +321,11 @@ bool Jeu::isCheckMove(Square start, Square end ,Couleur c){
 }
 
 bool Jeu::isTakingInPassing(Square start, Square end){
-    if (this->getLastMove() == ""){
+    if (this->getLastMove().empty() || this->getLastMove().size() < 4){
         return false;
     }
-    Square last_move_start = Square(this->getLastMove().substr(0, 2));
-    Square last_move_end = Square(this->getLastMove().substr(2, 2));
+    Square last_move_start = this->getLastMove().substr(0,2);
+    Square last_move_end = this->getLastMove().substr(2,2);
 
     Piece *last_move_piece = this->chessboard->getPiece(last_move_end);
 
@@ -344,7 +345,7 @@ bool Jeu::isTakingInPassing(Square start, Square end){
     return false;
 }
 
-void Jeu::setLastMove(string move) {
+void Jeu::setLastMove(string move){
     this->last_move = move;
 }
 
