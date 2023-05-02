@@ -178,6 +178,7 @@ bool Jeu::movePiece(Square start, Square end) {
     }
 
     const char *class_name = typeid(*moving_piece).name() + 1;
+    
 
     /*===== Vérification de la validité des coups ======*/
     if (destination_piece != nullptr){
@@ -277,13 +278,30 @@ Couleur Jeu::getPlayer(){
 }
 
 bool Jeu::isCheckMove(Square start, Square end ,Couleur c){
+    Piece *start_piece = this->chessboard->getPiece(start);
+    Piece *end_piece = this->chessboard->getPiece(end);
+
     this->chessboard->movePiece(start, end);
 
     if(this->isKingInCheck(c)){
-        this->chessboard->movePiece(end, start);
+        this->chessboard->posePiece(start_piece, start);
+        this->chessboard->posePiece(end_piece, end);
+        if (start_piece != nullptr){
+            start_piece->setSquare(start);
+        }
+        if (end_piece != nullptr){
+            end_piece->setSquare(end);
+        }
         return true;
     }else{
-        this->chessboard->movePiece(end, start);
+        this->chessboard->posePiece(start_piece, start);
+        this->chessboard->posePiece(end_piece, end);
+        if (start_piece != nullptr){
+            start_piece->setSquare(start);
+        }
+        if (end_piece != nullptr){
+            end_piece->setSquare(end);
+        }
         return false;
     }
 }
