@@ -20,7 +20,7 @@ void Jeu::affiche() {
 }
 
 bool isLegalInput(string const & input){
-    regex pattern("^ *[a-h][1-8][a-h][1-8] *$|^ */(quit|draw|resign) *$");
+    regex pattern("^ *[a-h][1-8][a-h][1-8] *$|^ */(quit|draw|resign) *$|^ *(O|o|0)-(O|o|0) *$");
     return regex_match(input, pattern);
 }
 
@@ -57,18 +57,26 @@ bool Jeu::coup() {
                     this->displayEndGame("1-0");
                 }
                 return false;
+            }else if (input == "O-O"){
+                cout << "Petit roque" << endl;
+                stop = this->smallRookMove(this->current_player);
+            }else if (input == "O-O-O"){
+                if (this->current_player == white){
+                    stop = this->movePiece(Square(0,4), Square(0,2));
+                }else{
+                    stop = this->movePiece(Square(7,4), Square(7,2));
+                }
+            }else{
+                stop = this->movePiece(Square(input.substr(0,2)),
+                                       Square(input.substr(2,2))
+                );
             }
-
-            stop = this->movePiece(Square(input.substr(0,2)),
-                                   Square(input.substr(2,2))
-            );
 
         }while(this->isKingInCheck(this->current_player));
 
     } while (!stop);
 
     this->setLastMove(input);
-    cout << "-> Déplacement " << this->chessboard->getPiece(Square(input.substr(2,2)))->getName() << " en " << input << endl;
 
     this->current_player = (this->current_player == white) ? black : white;
 
@@ -163,7 +171,7 @@ bool Jeu::isPathClear(Square start, Square end){
     return true;
 }
 
-bool Jeu::movePiece(Square start, Square end) {
+bool Jeu::movePiece(Square start, Square end, bool isPassingThroughAllowed) {
 
     Piece *moving_piece = chessboard->getPiece(start);
     Piece *destination_piece = chessboard->getPiece(end);
@@ -195,27 +203,30 @@ bool Jeu::movePiece(Square start, Square end) {
 
 
     /*===== Vérification de la validité des coups ======*/
-    if (destination_piece != nullptr){
-        if (destination_piece->getColor() != moving_piece->getColor()){
-            if (strcmp(class_name, "Pawn") == 0){
-                if (!moving_piece->isLegalMove(end, true)) {
-                    cout << "Le coup n'est pas valide" << endl;
-                    return false;
+
+    if(!(strcmp(class_name, "King") == 0 && isPassingThroughAllowed)){
+        if (destination_piece != nullptr){
+            if (destination_piece->getColor() != moving_piece->getColor()){
+                if (strcmp(class_name, "Pawn") == 0){
+                    if (!moving_piece->isLegalMove(end, true)) {
+                        cout << "Le coup n'est pas valide : mouvement non valide" << endl;
+                        return false;
+                    }
+                }else{
+                    if (!moving_piece->isLegalMove(end)) {
+                        cout << "Le coup n'est pas valide : mouvement non valide" << endl;
+                        return false;
+                    }
                 }
-            }else{
-                if (!moving_piece->isLegalMove(end)) {
-                    cout << "Le coup n'est pas valide" << endl;
-                    return false;
-                }
+            } else{
+                cout << "Il y a deja une piece de la meme couleur a cette position" << endl;
+                return false;
             }
-        } else{
-            cout << "Il y a deja une piece de la meme couleur a cette position" << endl;
-            return false;
-        }
-    }else{
-        if (!moving_piece->isLegalMove(end)) {
-            cout << "Le coup n'est pas valide" << endl;
-            return false;
+        }else{
+            if (!moving_piece->isLegalMove(end)) {
+                cout << "Le coup n'est pas valide : mouvement non valide" << endl;
+                return false;
+            }
         }
     }
 
@@ -225,8 +236,8 @@ bool Jeu::movePiece(Square start, Square end) {
         || strcmp(class_name, "King") == 0
         || strcmp(class_name, "Queen") == 0
         || strcmp(class_name, "Bishop") == 0
-        || strcmp(class_name, "Rook") == 0){ // si la piece est un pion, un roi, une reine, un fou ou une tour (ne peut pas sauter par dessus les autres pieces)
-        if (!this->isPathClear(start, end)){
+        || strcmp(class_name, "Rook") == 0){
+        if (!this->isPathClear(start, end) && !isPassingThroughAllowed){
             cout << "Le chemin n'est pas libre" << endl;
             return false;
         }
@@ -351,4 +362,33 @@ void Jeu::setLastMove(string move){
 
 string Jeu::getLastMove() {
     return this->last_move;
+}
+
+bool Jeu::smallRookMove(Couleur c) {
+    if (c == white){
+        if(this->isPathClear(Square("e1"), Square("h1" ))
+            && this->chessboard->getPiece(Square("e1"))->getMoveCount() == 0
+            && this->chessboard->getPiece(Square("h1"))->getMoveCount() == 0){
+            if(!this->movePiece(Square("e1"), Square("g1"), true)){
+                cout << "Movement du roi impossible" << endl;
+                return false;
+            }
+            this->movePiece(Square("h1"), Square("f1"), true);
+            return true;
+        }
+    }else{
+        if(this->isPathClear(Square("e8"), Square("h8" ))
+           && this->chessboard->getPiece(Square("e8"))->getMoveCount() == 0
+           && this->chessboard->getPiece(Square("h8"))->getMoveCount() == 0){
+            if(!this->movePiece(Square("e8"), Square("g8"), true)){
+                cout << "Mouvement du roi impossible" << endl;
+                return false;
+            }
+            this->movePiece(Square("h8"), Square("f8"), true);
+            return true;
+        }
+    }
+
+    cout << "Petit roque impossible" << endl;
+    return false;
 }

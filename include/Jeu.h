@@ -27,7 +27,7 @@ public:
     void setPlayer(Couleur c);
     Couleur getPlayer();
     bool isPathClear(Square start, Square end);
-    bool movePiece(Square start, Square end);
+    bool movePiece(Square start, Square end, bool isPassingThroughAllowed = false);
     void displayEndGame(string result);
     bool isKingInCheck(Couleur c);
     bool isCapturable(Square square, Couleur c);
@@ -35,6 +35,8 @@ public:
     bool isTakingInPassing(Square start, Square end);
     void setLastMove(string move);
     string getLastMove();
+    bool smallRookMove(Couleur c);
+    bool bigRookMove(Couleur c);
 };
 
 
