@@ -37,6 +37,7 @@ public:
     string getLastMove();
     bool smallRookMove(Couleur c);
     bool bigRookMove(Couleur c);
+    bool isPromotion();
 };
 
 

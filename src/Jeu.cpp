@@ -58,6 +58,13 @@ bool isValidInput(string const & input){
         || isResignInput(input);
 }
 
+bool isValidPromotion(string const & input){
+    return isValidQueenPromotion(input)
+        || isValidRookPromotion(input)
+        || isValidBishopPromotion(input)
+        || isValidKnightPromotion(input);
+}
+
 bool Jeu::coup() {
     string input;
     bool stop = false;
@@ -287,6 +294,26 @@ bool Jeu::movePiece(Square start, Square end, bool isPassingThroughAllowed) {
     this->chessboard->movePiece(start, end);
     moving_piece->incrementMoveCount();
 
+    /*===== Vérification si il y a une promotion ======*/
+
+    if (this->isPromotion()){
+        cout << "[Promotion] choisir sa promotion (Q R B K) :" << endl;
+
+        string promotion;
+        Piece *promotion_piece = this->chessboard->getPiece(end);
+
+        getline(cin, promotion);
+
+        while (!isValidPromotion(promotion)){
+            cout << "L'input n'est pas valide" << endl;
+            cout << "Promotion ? (eg Q) " << endl;
+            getline(cin, promotion);
+        }
+
+        this->chessboard->promote(promotion_piece, promotion);
+
+    }
+
     return true;
 }
 
@@ -380,6 +407,7 @@ bool Jeu::isTakingInPassing(Square start, Square end){
                 || last_move_start.getLine() == last_move_end.getLine() - 2){
                 if (last_move_piece->getSquare().getColumn() == end.getColumn()
                     && abs(start.getLine() - end.getLine()) == abs(start.getColumn() - end.getColumn()) // si le pion se deplace en diagonale
+                    && abs(last_move_end.getLine() - end.getLine()) != 0 // si le pion ne se retouve par sur la meme ligne que le pion qui a bouge
                     ){
                     return true;
                 }
@@ -461,5 +489,28 @@ bool Jeu::bigRookMove(Couleur c) {
     }
 
     cout << "Grand roque impossible" << endl;
+    return false;
+}
+
+bool Jeu::isPromotion(){
+    for (int i = 0; i < 8; i++){
+        Piece *piece1 = this->chessboard->getPiece(Square(0, i));
+
+        if (piece1 != nullptr){
+            const char *class_name1 = typeid(*piece1).name() + 1;
+            if (strcmp(class_name1, "Pawn") == 0){
+                return true;
+            }
+        }
+
+        Piece *piece2 = this->chessboard->getPiece(Square(7, i));
+
+        if (piece2 != nullptr){
+            const char *class_name2 = typeid(*piece2).name() + 1;
+            if (strcmp(class_name2, "Pawn") == 0){
+                return true;
+            }
+        }
+    }
     return false;
 }

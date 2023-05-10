@@ -38,6 +38,10 @@ public:
 
     Couleur getColor();
 
+    int getId();
+
+    void setId(int id);
+
     bool getCatch();
 
     virtual bool isLegalMove(Square dest, bool isCatch = false);
@@ -45,6 +49,8 @@ public:
     void incrementMoveCount();
 
     size_t getMoveCount();
+
+    void setMoveCount(size_t count);
 };
 
 

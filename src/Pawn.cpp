@@ -60,3 +60,4 @@ bool Pawn::isLegalMove(Square dest, bool isCatch) {
         }
     }
 }
+

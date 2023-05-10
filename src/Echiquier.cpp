@@ -4,8 +4,29 @@
 
 #include "../include/Echiquier.h"
 
+#include <regex>
 
 #define BOARD_SIZE 8
+
+bool isValidQueenPromotion(string const & input){
+    regex pattern("(Q|q)\\s*");
+    return regex_match(input,pattern);
+}
+
+bool isValidRookPromotion(string const & input){
+    regex pattern("(R|r)\\s*");
+    return regex_match(input,pattern);
+}
+
+bool isValidBishopPromotion(string const & input){
+    regex pattern("(B|b)\\s*");
+    return regex_match(input,pattern);
+}
+
+bool isValidKnightPromotion(string const & input){
+    regex pattern("(N|n)\\s*");
+    return regex_match(input,pattern);
+}
 
 void Echiquier::allocMemEchiquier(){
     this->echiquier = new Piece**[BOARD_SIZE];
@@ -66,6 +87,49 @@ Echiquier::Echiquier(){
         this->posePiece(p, p->getSquare());
     for (auto p : pieces[black])
         this->posePiece(p, p->getSquare());
+
+}
+
+void Echiquier::promote(Piece *piece, string type){
+    if(isValidQueenPromotion(type)){
+        Queen *new_piece = new Queen(piece->getColor(), piece->getId(), piece->getSquare());
+        new_piece->setMoveCount(piece->getMoveCount());
+        new_piece->setCatch(piece->getCatch());
+
+        replace(pieces[piece->getColor()].begin(), pieces[piece->getColor()].end(), piece, (Piece *)new_piece);
+
+        this->posePiece(new_piece, new_piece->getSquare());
+
+    } else if(isValidRookPromotion(type)){
+        Rook *new_piece = new Rook(piece->getColor(), piece->getId(), piece->getSquare());
+        new_piece->setMoveCount(piece->getMoveCount());
+        new_piece->setCatch(piece->getCatch());
+
+        replace(pieces[piece->getColor()].begin(), pieces[piece->getColor()].end(), piece, (Piece *)new_piece);
+
+        this->posePiece(new_piece, new_piece->getSquare());
+
+    } else if(isValidBishopPromotion(type)){
+        Bishop *new_piece = new Bishop(piece->getColor(), piece->getId(), piece->getSquare());
+        new_piece->setMoveCount(piece->getMoveCount());
+        new_piece->setCatch(piece->getCatch());
+
+        replace(pieces[piece->getColor()].begin(), pieces[piece->getColor()].end(), piece, (Piece *)new_piece);
+
+        this->posePiece(new_piece, new_piece->getSquare());
+
+    } else{
+        Knight *new_piece = new Knight(piece->getColor(), piece->getId(), piece->getSquare());
+        new_piece->setMoveCount(piece->getMoveCount());
+        new_piece->setCatch(piece->getCatch());
+
+        replace(pieces[piece->getColor()].begin(), pieces[piece->getColor()].end(), piece, (Piece *)new_piece);
+
+        this->posePiece(new_piece, new_piece->getSquare());
+
+    }
+
+    delete piece;
 
 }
 

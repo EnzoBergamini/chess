@@ -39,7 +39,16 @@ public:
     string canonicalPosition();
     Square getKingSquare(Couleur color);
     void setPiece(Piece *p, Square pos);
+    void promote(Piece *p, string type);
 };
 
+
+bool isValidQueenPromotion(string const & input);
+
+bool isValidRookPromotion(string const & input);
+
+bool isValidBishopPromotion(string const & input);
+
+bool isValidKnightPromotion(string const & input);
 
 #endif //ECHEC_ECHIQUIER_H

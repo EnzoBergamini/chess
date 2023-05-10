@@ -63,3 +63,15 @@ size_t Piece::getMoveCount() {
     return this->move_count;
 }
 
+int Piece::getId() {
+    return this->id;
+}
+
+void Piece::setId(int id) {
+    this->id = id;
+}
+
+void Piece::setMoveCount(size_t count) {
+    this->move_count = count;
+}
+
