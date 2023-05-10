@@ -19,9 +19,43 @@ void Jeu::affiche() {
     chessboard->affiche();
 }
 
-bool isLegalInput(string const & input){
-    regex pattern("^ *[a-h][1-8][a-h][1-8] *$|^ */(quit|draw|resign) *$|^ *(O|o|0)-(O|o|0) *$");
-    return regex_match(input, pattern);
+bool isValidMoveInput(string const & input) {
+    regex mouvmtpattern("[a-h][1-8][a-h][1-8]\\s*");
+    return regex_match(input,mouvmtpattern);
+}
+
+bool isValidSmallRookMove(string const & input) {
+    regex pattern("(O|o|0)-(O|o|0)\\s*");
+    return regex_match(input,pattern);
+}
+
+bool isValidBigRookMove(string const & input) {
+    regex pattern("(O|o|0)-(O|o|0)-(O|o|0)\\s*");
+    return regex_match(input,pattern);
+}
+
+bool isQuitInput(string const & input){
+    regex pattern("/quit\\s*");
+    return regex_match(input,pattern);
+}
+
+bool isDrawInput(string const & input){
+    regex pattern("/draw\\s*");
+    return regex_match(input,pattern);
+}
+
+bool isResignInput(string const & input){
+    regex pattern("/resign\\s*");
+    return regex_match(input,pattern);
+}
+
+bool isValidInput(string const & input){
+    return isValidMoveInput(input)
+        || isValidSmallRookMove(input)
+        || isValidBigRookMove(input)
+        || isQuitInput(input)
+        || isDrawInput(input)
+        || isResignInput(input);
 }
 
 bool Jeu::coup() {
@@ -37,36 +71,35 @@ bool Jeu::coup() {
             }
             getline(cin, input);
 
-            while (!isLegalInput(input)) {
+            while (!isValidInput(input)) {
                 cout << "L'input n'est pas valide" << endl;
                 cout << "Coup ? (eg a2a3) " << endl;
                 getline(cin, input);
-                cout << "input : " << input << endl;
             }
 
-            if (input == "/quit"){
+            if (isQuitInput(input)){
+                cout << "quit" << endl;
                 this->displayEndGame("?-?");
                 return false;
-            } else if (input == "/draw"){
+            } else if (isDrawInput(input)){
+                cout << "draw" << endl;
                 this->displayEndGame("1/2-1/2");
                 return false;
-            } else if (input == "/resign") {
+            } else if (isResignInput(input)) {
+                cout << "resign" << endl;
                 if (this->getPlayer() == white){
                     this->displayEndGame("0-1");
                 }else{
                     this->displayEndGame("1-0");
                 }
                 return false;
-            }else if (input == "O-O"){
-                cout << "Petit roque" << endl;
+            }else if (isValidSmallRookMove(input)){
+                cout << "small rook move" << endl;
                 stop = this->smallRookMove(this->current_player);
-            }else if (input == "O-O-O"){
-                if (this->current_player == white){
-                    stop = this->movePiece(Square(0,4), Square(0,2));
-                }else{
-                    stop = this->movePiece(Square(7,4), Square(7,2));
-                }
+            }else if (isValidBigRookMove(input)){
+                cout << "big rook move" << endl;
             }else{
+                cout << "move" << endl;
                 stop = this->movePiece(Square(input.substr(0,2)),
                                        Square(input.substr(2,2))
                 );
