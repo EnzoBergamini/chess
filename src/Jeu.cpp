@@ -98,6 +98,7 @@ bool Jeu::coup() {
                 stop = this->smallRookMove(this->current_player);
             }else if (isValidBigRookMove(input)){
                 cout << "big rook move" << endl;
+                stop = this->bigRookMove(this->current_player);
             }else{
                 cout << "move" << endl;
                 stop = this->movePiece(Square(input.substr(0,2)),
@@ -427,5 +428,38 @@ bool Jeu::smallRookMove(Couleur c) {
     }
 
     cout << "Petit roque impossible" << endl;
+    return false;
+}
+
+bool Jeu::bigRookMove(Couleur c) {
+    if (c == white){
+        if(this->isPathClear(Square("e1"), Square("a1" ))
+            && this->chessboard->getPiece(Square("e1")) != nullptr
+            && this->chessboard->getPiece(Square("a1")) != nullptr
+            && this->chessboard->getPiece(Square("e1"))->getMoveCount() == 0
+            && this->chessboard->getPiece(Square("a1"))->getMoveCount() == 0){
+            if(!this->movePiece(Square("e1"), Square("c1"), true)){
+                cout << "Mouvement du roi impossible" << endl;
+                return false;
+            }
+            this->movePiece(Square("a1"), Square("d1"), true);
+            return true;
+        }
+    }else{
+        if(this->isPathClear(Square("e8"), Square("a8" ))
+            && this->chessboard->getPiece(Square("e8")) != nullptr
+            && this->chessboard->getPiece(Square("a8")) != nullptr
+            && this->chessboard->getPiece(Square("e8"))->getMoveCount() == 0
+            && this->chessboard->getPiece(Square("a8"))->getMoveCount() == 0){
+            if(!this->movePiece(Square("e8"), Square("c8"), true)){
+                cout << "Mouvement du roi impossible" << endl;
+                return false;
+            }
+            this->movePiece(Square("a8"), Square("d8"), true);
+            return true;
+        }
+    }
+
+    cout << "Grand roque impossible" << endl;
     return false;
 }
