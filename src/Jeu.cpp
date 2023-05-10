@@ -400,6 +400,8 @@ string Jeu::getLastMove() {
 bool Jeu::smallRookMove(Couleur c) {
     if (c == white){
         if(this->isPathClear(Square("e1"), Square("h1" ))
+            && this->chessboard->getPiece(Square("e1")) != nullptr
+            && this->chessboard->getPiece(Square("h1")) != nullptr
             && this->chessboard->getPiece(Square("e1"))->getMoveCount() == 0
             && this->chessboard->getPiece(Square("h1"))->getMoveCount() == 0){
             if(!this->movePiece(Square("e1"), Square("g1"), true)){
@@ -411,8 +413,10 @@ bool Jeu::smallRookMove(Couleur c) {
         }
     }else{
         if(this->isPathClear(Square("e8"), Square("h8" ))
-           && this->chessboard->getPiece(Square("e8"))->getMoveCount() == 0
-           && this->chessboard->getPiece(Square("h8"))->getMoveCount() == 0){
+            && this->chessboard->getPiece(Square("e8")) != nullptr
+            && this->chessboard->getPiece(Square("h8")) != nullptr
+            && this->chessboard->getPiece(Square("e8"))->getMoveCount() == 0
+            && this->chessboard->getPiece(Square("h8"))->getMoveCount() == 0){
             if(!this->movePiece(Square("e8"), Square("g8"), true)){
                 cout << "Mouvement du roi impossible" << endl;
                 return false;
