@@ -1,0 +1,128 @@
+\hypertarget{class_square}{}\doxysection{Square Class Reference}
+\label{class_square}\index{Square@{Square}}
+
+
+{\ttfamily \#include $<$Square.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_square_abad809ed5de56b748ce9ac1f89f32113}{Square}} (string coord)
+\item 
+\mbox{\hyperlink{class_square_a314d6f8841da7acb78bd2e8cd079ebc6}{Square}} (int \mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}}, int \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}})
+\item 
+int \mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{get\+Line}} () const
+\item 
+int \mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{get\+Column}} () const
+\item 
+void \mbox{\hyperlink{class_square_a4ebb68d15086673ac19fab67ac419083}{display}} ()
+\item 
+bool \mbox{\hyperlink{class_square_ae18fe910630c719a66a51099758e77fd}{operator==}} (const \mbox{\hyperlink{class_square}{Square}} \&other) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}}
+\item 
+int \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_square_abad809ed5de56b748ce9ac1f89f32113}\label{class_square_abad809ed5de56b748ce9ac1f89f32113}} 
+\index{Square@{Square}!Square@{Square}}
+\index{Square@{Square}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{Square()}{Square()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Square\+::\+Square (\begin{DoxyParamCaption}\item[{string}]{coord }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16                       \{}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}} = s[0] -\/ \textcolor{charliteral}{'a'};}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}} = s[1] -\/ \textcolor{charliteral}{'0'} -\/ 1;}
+\DoxyCodeLine{19 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_square_a314d6f8841da7acb78bd2e8cd079ebc6}\label{class_square_a314d6f8841da7acb78bd2e8cd079ebc6}} 
+\index{Square@{Square}!Square@{Square}}
+\index{Square@{Square}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{Square()}{Square()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Square\+::\+Square (\begin{DoxyParamCaption}\item[{int}]{line,  }\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14         : \mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}}(\mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}}), \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}}(\mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}})\{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_square_a4ebb68d15086673ac19fab67ac419083}\label{class_square_a4ebb68d15086673ac19fab67ac419083}} 
+\index{Square@{Square}!display@{display}}
+\index{display@{display}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Square\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                     \{}
+\DoxyCodeLine{26     cout << \textcolor{stringliteral}{"{}Colonne : "{}} << this-\/>\mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}} << \textcolor{stringliteral}{"{} ligne : "{}} << this-\/>\mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}} << endl;}
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}\label{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}} 
+\index{Square@{Square}!getColumn@{getColumn}}
+\index{getColumn@{getColumn}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{getColumn()}{getColumn()}}
+{\footnotesize\ttfamily int Square\+::get\+Column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}};\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_square_af6fc96300b5d4473325d843d628579cf}\label{class_square_af6fc96300b5d4473325d843d628579cf}} 
+\index{Square@{Square}!getLine@{getLine}}
+\index{getLine@{getLine}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{getLine()}{getLine()}}
+{\footnotesize\ttfamily int Square\+::get\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}};\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_square_ae18fe910630c719a66a51099758e77fd}\label{class_square_ae18fe910630c719a66a51099758e77fd}} 
+\index{Square@{Square}!operator==@{operator==}}
+\index{operator==@{operator==}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Square\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_square}{Square}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                                                 \{}
+\DoxyCodeLine{30     \textcolor{keywordflow}{return} (this-\/>\mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}} == other.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() \&\& this-\/>column == other.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}());}
+\DoxyCodeLine{31 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_square_a572fbccc549f148942d85208ce80605f}\label{class_square_a572fbccc549f148942d85208ce80605f}} 
+\index{Square@{Square}!column@{column}}
+\index{column@{column}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{column}{column}}
+{\footnotesize\ttfamily int Square\+::column\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_square_af37b0659384cd9b61d594f64da5641e8}\label{class_square_af37b0659384cd9b61d594f64da5641e8}} 
+\index{Square@{Square}!line@{line}}
+\index{line@{line}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily int Square\+::line\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_square_8h}{Square.\+h}}\item 
+src/\mbox{\hyperlink{_square_8cpp}{Square.\+cpp}}\end{DoxyCompactItemize}

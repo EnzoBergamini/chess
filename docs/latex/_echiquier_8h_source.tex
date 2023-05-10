@@ -1,0 +1,60 @@
+\hypertarget{_echiquier_8h_source}{}\doxysection{Echiquier.\+h}
+\label{_echiquier_8h_source}\index{include/Echiquier.h@{include/Echiquier.h}}
+\mbox{\hyperlink{_echiquier_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by Enzo Bergamini on 24/04/2023.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef ECHEC\_ECHIQUIER\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define ECHEC\_ECHIQUIER\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_piece_8h}{Piece.h}}"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_couleur_8h}{Couleur.h}}"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_king_8h}{King.h}}"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_queen_8h}{Queen.h}}"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_bishop_8h}{Bishop.h}}"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_knight_8h}{Knight.h}}"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_rook_8h}{Rook.h}}"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_pawn_8h}{Pawn.h}}"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{class_echiquier}{Echiquier}}}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26 \textcolor{keyword}{private}:}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_piece}{Piece}} ***\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}};}
+\DoxyCodeLine{28     vector<Piece *> \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[2];}
+\DoxyCodeLine{29 \textcolor{keyword}{public}:}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_echiquier_a0aab8ba63f69aa9425d4e4a9c5cc578a}{Echiquier}}();}
+\DoxyCodeLine{31     \mbox{\hyperlink{class_echiquier_af0b910349d14c53551997a8e5a9cbd3f}{\string~Echiquier}}();}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_echiquier_ac276fe23b8fc6aa6efc3762023ca780c}{affiche}}();}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(\mbox{\hyperlink{class_piece}{Piece}} *p, \mbox{\hyperlink{class_square}{Square}} pos);}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_echiquier_a0a86cb1648b282b23188bd8f3228f00f}{allocMemEchiquier}}();}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_echiquier_a89f34d19638e92c536e1c4a8a393e93b}{initEchiquier}}();}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_echiquier_a0a4e3467e774f3cd1efd22bb95067d2a}{movePiece}}(\mbox{\hyperlink{class_square}{Square}} pos1, \mbox{\hyperlink{class_square}{Square}} pos2);}
+\DoxyCodeLine{37     \mbox{\hyperlink{class_piece}{Piece}} *\mbox{\hyperlink{class_echiquier_a4b904d96330b0e9c9f61801a6316e4a8}{getPiece}}(\mbox{\hyperlink{class_square}{Square}} pos);}
+\DoxyCodeLine{38     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_echiquier_a3d1043f35aad8753e4a7bb4cf50c0cfe}{pgnPieceName}}(\textcolor{keywordtype}{string} \textcolor{keyword}{const} name, \textcolor{keywordtype}{bool} view\_pawn, \textcolor{keywordtype}{bool} view\_color);}
+\DoxyCodeLine{39     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_echiquier_a95b723dedb19611870202079b6219ebc}{canonicalPosition}}();}
+\DoxyCodeLine{40     \mbox{\hyperlink{class_square}{Square}} \mbox{\hyperlink{class_echiquier_a902679adc01ad653e6b1f26d532cc994}{getKingSquare}}(\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} color);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_echiquier_aa84fd99ba6d112b1c25274626788fd40}{setPiece}}(\mbox{\hyperlink{class_piece}{Piece}} *p, \mbox{\hyperlink{class_square}{Square}} pos);}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_echiquier_abc48262f09a9bafd2f44ae2fb775ca0c}{promote}}(\mbox{\hyperlink{class_piece}{Piece}} *p, \textcolor{keywordtype}{string} type);}
+\DoxyCodeLine{43 \};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keywordtype}{bool} \mbox{\hyperlink{_echiquier_8h_a98a825542e35f663a4d9845fe18ee023}{isValidQueenPromotion}}(\textcolor{keywordtype}{string} \textcolor{keyword}{const} \& input);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{keywordtype}{bool} \mbox{\hyperlink{_echiquier_8h_ae49b6bb3e1ae7023e417b1bd03045148}{isValidRookPromotion}}(\textcolor{keywordtype}{string} \textcolor{keyword}{const} \& input);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{keywordtype}{bool} \mbox{\hyperlink{_echiquier_8h_ac50d40083d2dca3f675a9267853411c2}{isValidBishopPromotion}}(\textcolor{keywordtype}{string} \textcolor{keyword}{const} \& input);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{keywordtype}{bool} \mbox{\hyperlink{_echiquier_8h_a19032eeb87a4ec79b0d9ce886ab75a03}{isValidKnightPromotion}}(\textcolor{keywordtype}{string} \textcolor{keyword}{const} \& input);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//ECHEC\_ECHIQUIER\_H}}
+
+\end{DoxyCode}

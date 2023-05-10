@@ -1,0 +1,158 @@
+\hypertarget{_jeu_8cpp}{}\doxysection{src/\+Jeu.cpp File Reference}
+\label{_jeu_8cpp}\index{src/Jeu.cpp@{src/Jeu.cpp}}
+{\ttfamily \#include \char`\"{}../include/\+Jeu.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_jeu_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\+\_\+\+SIZE}}~8
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_jeu_8cpp_a1e00530b569554cc5f19750d3330c281}{is\+Valid\+Move\+Input}} (string const \&input)
+\item 
+bool \mbox{\hyperlink{_jeu_8cpp_ad73d51b7f71e4d68ae802c3dbba844ca}{is\+Valid\+Small\+Rook\+Move}} (string const \&input)
+\item 
+bool \mbox{\hyperlink{_jeu_8cpp_a35898c86c806c3145ca1db207e14b51f}{is\+Valid\+Big\+Rook\+Move}} (string const \&input)
+\item 
+bool \mbox{\hyperlink{_jeu_8cpp_ad7227221b4de6dc9f805a6031a0e3e48}{is\+Quit\+Input}} (string const \&input)
+\item 
+bool \mbox{\hyperlink{_jeu_8cpp_a18473d9c77c3668e9acd8a8a9503e565}{is\+Draw\+Input}} (string const \&input)
+\item 
+bool \mbox{\hyperlink{_jeu_8cpp_a1af6c704c0f97292ab8db2cb5c435104}{is\+Resign\+Input}} (string const \&input)
+\item 
+bool \mbox{\hyperlink{_jeu_8cpp_a9d1265ac709651f7702c7a5ba0a11238}{is\+Valid\+Input}} (string const \&input)
+\item 
+bool \mbox{\hyperlink{_jeu_8cpp_af0669257f4d91e82b9c6f6afec907a40}{is\+Valid\+Promotion}} (string const \&input)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_jeu_8cpp_a1db39eb31d1315ce982608fe25587b6d}\label{_jeu_8cpp_a1db39eb31d1315ce982608fe25587b6d}} 
+\index{Jeu.cpp@{Jeu.cpp}!BOARD\_SIZE@{BOARD\_SIZE}}
+\index{BOARD\_SIZE@{BOARD\_SIZE}!Jeu.cpp@{Jeu.cpp}}
+\doxysubsubsection{\texorpdfstring{BOARD\_SIZE}{BOARD\_SIZE}}
+{\footnotesize\ttfamily \#define BOARD\+\_\+\+SIZE~8}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_jeu_8cpp_a18473d9c77c3668e9acd8a8a9503e565}\label{_jeu_8cpp_a18473d9c77c3668e9acd8a8a9503e565}} 
+\index{Jeu.cpp@{Jeu.cpp}!isDrawInput@{isDrawInput}}
+\index{isDrawInput@{isDrawInput}!Jeu.cpp@{Jeu.cpp}}
+\doxysubsubsection{\texorpdfstring{isDrawInput()}{isDrawInput()}}
+{\footnotesize\ttfamily bool is\+Draw\+Input (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42                                       \{}
+\DoxyCodeLine{43     regex pattern(\textcolor{stringliteral}{"{}/draw\(\backslash\)\(\backslash\)s*"{}});}
+\DoxyCodeLine{44     \textcolor{keywordflow}{return} regex\_match(input,pattern);}
+\DoxyCodeLine{45 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_jeu_8cpp_ad7227221b4de6dc9f805a6031a0e3e48}\label{_jeu_8cpp_ad7227221b4de6dc9f805a6031a0e3e48}} 
+\index{Jeu.cpp@{Jeu.cpp}!isQuitInput@{isQuitInput}}
+\index{isQuitInput@{isQuitInput}!Jeu.cpp@{Jeu.cpp}}
+\doxysubsubsection{\texorpdfstring{isQuitInput()}{isQuitInput()}}
+{\footnotesize\ttfamily bool is\+Quit\+Input (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                                       \{}
+\DoxyCodeLine{38     regex pattern(\textcolor{stringliteral}{"{}/quit\(\backslash\)\(\backslash\)s*"{}});}
+\DoxyCodeLine{39     \textcolor{keywordflow}{return} regex\_match(input,pattern);}
+\DoxyCodeLine{40 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_jeu_8cpp_a1af6c704c0f97292ab8db2cb5c435104}\label{_jeu_8cpp_a1af6c704c0f97292ab8db2cb5c435104}} 
+\index{Jeu.cpp@{Jeu.cpp}!isResignInput@{isResignInput}}
+\index{isResignInput@{isResignInput}!Jeu.cpp@{Jeu.cpp}}
+\doxysubsubsection{\texorpdfstring{isResignInput()}{isResignInput()}}
+{\footnotesize\ttfamily bool is\+Resign\+Input (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                                         \{}
+\DoxyCodeLine{48     regex pattern(\textcolor{stringliteral}{"{}/resign\(\backslash\)\(\backslash\)s*"{}});}
+\DoxyCodeLine{49     \textcolor{keywordflow}{return} regex\_match(input,pattern);}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_jeu_8cpp_a35898c86c806c3145ca1db207e14b51f}\label{_jeu_8cpp_a35898c86c806c3145ca1db207e14b51f}} 
+\index{Jeu.cpp@{Jeu.cpp}!isValidBigRookMove@{isValidBigRookMove}}
+\index{isValidBigRookMove@{isValidBigRookMove}!Jeu.cpp@{Jeu.cpp}}
+\doxysubsubsection{\texorpdfstring{isValidBigRookMove()}{isValidBigRookMove()}}
+{\footnotesize\ttfamily bool is\+Valid\+Big\+Rook\+Move (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                                               \{}
+\DoxyCodeLine{33     regex pattern(\textcolor{stringliteral}{"{}(O|o|0)-\/(O|o|0)-\/(O|o|0)\(\backslash\)\(\backslash\)s*"{}});}
+\DoxyCodeLine{34     \textcolor{keywordflow}{return} regex\_match(input,pattern);}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_jeu_8cpp_a9d1265ac709651f7702c7a5ba0a11238}\label{_jeu_8cpp_a9d1265ac709651f7702c7a5ba0a11238}} 
+\index{Jeu.cpp@{Jeu.cpp}!isValidInput@{isValidInput}}
+\index{isValidInput@{isValidInput}!Jeu.cpp@{Jeu.cpp}}
+\doxysubsubsection{\texorpdfstring{isValidInput()}{isValidInput()}}
+{\footnotesize\ttfamily bool is\+Valid\+Input (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                                        \{}
+\DoxyCodeLine{53     \textcolor{keywordflow}{return} \mbox{\hyperlink{_jeu_8cpp_a1e00530b569554cc5f19750d3330c281}{isValidMoveInput}}(input)}
+\DoxyCodeLine{54         || \mbox{\hyperlink{_jeu_8cpp_ad73d51b7f71e4d68ae802c3dbba844ca}{isValidSmallRookMove}}(input)}
+\DoxyCodeLine{55         || \mbox{\hyperlink{_jeu_8cpp_a35898c86c806c3145ca1db207e14b51f}{isValidBigRookMove}}(input)}
+\DoxyCodeLine{56         || \mbox{\hyperlink{_jeu_8cpp_ad7227221b4de6dc9f805a6031a0e3e48}{isQuitInput}}(input)}
+\DoxyCodeLine{57         || \mbox{\hyperlink{_jeu_8cpp_a18473d9c77c3668e9acd8a8a9503e565}{isDrawInput}}(input)}
+\DoxyCodeLine{58         || \mbox{\hyperlink{_jeu_8cpp_a1af6c704c0f97292ab8db2cb5c435104}{isResignInput}}(input);}
+\DoxyCodeLine{59 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_jeu_8cpp_a1e00530b569554cc5f19750d3330c281}\label{_jeu_8cpp_a1e00530b569554cc5f19750d3330c281}} 
+\index{Jeu.cpp@{Jeu.cpp}!isValidMoveInput@{isValidMoveInput}}
+\index{isValidMoveInput@{isValidMoveInput}!Jeu.cpp@{Jeu.cpp}}
+\doxysubsubsection{\texorpdfstring{isValidMoveInput()}{isValidMoveInput()}}
+{\footnotesize\ttfamily bool is\+Valid\+Move\+Input (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22                                             \{}
+\DoxyCodeLine{23     regex mouvmtpattern(\textcolor{stringliteral}{"{}[a-\/h][1-\/8][a-\/h][1-\/8]\(\backslash\)\(\backslash\)s*"{}});}
+\DoxyCodeLine{24     \textcolor{keywordflow}{return} regex\_match(input,mouvmtpattern);}
+\DoxyCodeLine{25 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_jeu_8cpp_af0669257f4d91e82b9c6f6afec907a40}\label{_jeu_8cpp_af0669257f4d91e82b9c6f6afec907a40}} 
+\index{Jeu.cpp@{Jeu.cpp}!isValidPromotion@{isValidPromotion}}
+\index{isValidPromotion@{isValidPromotion}!Jeu.cpp@{Jeu.cpp}}
+\doxysubsubsection{\texorpdfstring{isValidPromotion()}{isValidPromotion()}}
+{\footnotesize\ttfamily bool is\+Valid\+Promotion (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                                            \{}
+\DoxyCodeLine{62     \textcolor{keywordflow}{return} \mbox{\hyperlink{_echiquier_8cpp_a98a825542e35f663a4d9845fe18ee023}{isValidQueenPromotion}}(input)}
+\DoxyCodeLine{63         || \mbox{\hyperlink{_echiquier_8cpp_ae49b6bb3e1ae7023e417b1bd03045148}{isValidRookPromotion}}(input)}
+\DoxyCodeLine{64         || \mbox{\hyperlink{_echiquier_8cpp_ac50d40083d2dca3f675a9267853411c2}{isValidBishopPromotion}}(input)}
+\DoxyCodeLine{65         || \mbox{\hyperlink{_echiquier_8cpp_a19032eeb87a4ec79b0d9ce886ab75a03}{isValidKnightPromotion}}(input);}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_jeu_8cpp_ad73d51b7f71e4d68ae802c3dbba844ca}\label{_jeu_8cpp_ad73d51b7f71e4d68ae802c3dbba844ca}} 
+\index{Jeu.cpp@{Jeu.cpp}!isValidSmallRookMove@{isValidSmallRookMove}}
+\index{isValidSmallRookMove@{isValidSmallRookMove}!Jeu.cpp@{Jeu.cpp}}
+\doxysubsubsection{\texorpdfstring{isValidSmallRookMove()}{isValidSmallRookMove()}}
+{\footnotesize\ttfamily bool is\+Valid\+Small\+Rook\+Move (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27                                                 \{}
+\DoxyCodeLine{28     regex pattern(\textcolor{stringliteral}{"{}(O|o|0)-\/(O|o|0)\(\backslash\)\(\backslash\)s*"{}});}
+\DoxyCodeLine{29     \textcolor{keywordflow}{return} regex\_match(input,pattern);}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}

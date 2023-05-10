@@ -1,0 +1,143 @@
+\hypertarget{class_pawn}{}\doxysection{Pawn Class Reference}
+\label{class_pawn}\index{Pawn@{Pawn}}
+
+
+Gestion du pion du jeu d\textquotesingle{}échecs.  
+
+
+
+
+{\ttfamily \#include $<$Pawn.\+h$>$}
+
+Inheritance diagram for Pawn\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pawn}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pawn_ae3f368630f9c322ee6eee4f95c23b8d2}{Pawn}} (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} color, int \mbox{\hyperlink{class_piece_ac40cffee50da10a50361ff4791fdd528}{id}}, \mbox{\hyperlink{class_square}{Square}} pos)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_pawn}{Pawn}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pawn_aad03bbbc80bfbef0aaecaaeacfc43816}{is\+Legal\+Move}} (\mbox{\hyperlink{class_square}{Square}} dest, bool is\+Catch=false)
+\begin{DoxyCompactList}\small\item\em Permet de savoir si le mouvement et legal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Gestion du pion du jeu d\textquotesingle{}échecs. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pawn_ae3f368630f9c322ee6eee4f95c23b8d2}\label{class_pawn_ae3f368630f9c322ee6eee4f95c23b8d2}} 
+\index{Pawn@{Pawn}!Pawn@{Pawn}}
+\index{Pawn@{Pawn}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{Pawn()}{Pawn()}}
+{\footnotesize\ttfamily Pawn\+::\+Pawn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}}}]{color,  }\item[{int}]{id,  }\item[{\mbox{\hyperlink{class_square}{Square}}}]{pos }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \mbox{\hyperlink{class_pawn}{Pawn}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & Couleur de la pièce \\
+\hline
+{\em id} & Identifiant de la pièce \\
+\hline
+{\em position} & Position de la pièce \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7                                             :}
+\DoxyCodeLine{8         \mbox{\hyperlink{class_piece}{Piece}}(color, (color == \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a775364fe1f3fffe99686bf6d572a7370}{black}}) ? \textcolor{stringliteral}{"{}\(\backslash\)u265F"{}} : \textcolor{stringliteral}{"{}\(\backslash\)u2659"{}}, \textcolor{keywordtype}{id}, pos) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pawn_aad03bbbc80bfbef0aaecaaeacfc43816}\label{class_pawn_aad03bbbc80bfbef0aaecaaeacfc43816}} 
+\index{Pawn@{Pawn}!isLegalMove@{isLegalMove}}
+\index{isLegalMove@{isLegalMove}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{isLegalMove()}{isLegalMove()}}
+{\footnotesize\ttfamily bool Pawn\+::is\+Legal\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_square}{Square}}}]{dest,  }\item[{bool}]{is\+Catch = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Permet de savoir si le mouvement et legal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & case de destination \\
+\hline
+{\em is\+Catch} & Booleen qui permet de savoir si ont est en position de catch (cas special pour le pion) \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_piece_ab3632d34db33cadcb4588d4a2ed462a4}{Piece}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10                                                 \{}
+\DoxyCodeLine{11     \textcolor{keywordflow}{if} (isCatch)\{}
+\DoxyCodeLine{12         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_piece_aac2d0cbc937be575fd07f2e15872d5e7}{getColor}}() == \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7ade7bfe6c82a2aaaee276f752cdadf3a9}{white}})\{}
+\DoxyCodeLine{13             \textcolor{keywordflow}{if} ((dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() -\/ 1}
+\DoxyCodeLine{14                 \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() + 1) \textcolor{comment}{// diagonale gauche}}
+\DoxyCodeLine{15                 || (dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() + 1}
+\DoxyCodeLine{16                 \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() + 1) \textcolor{comment}{// diagonale droite}}
+\DoxyCodeLine{17                 )\{}
+\DoxyCodeLine{18                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{19             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{20                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{21             \}}
+\DoxyCodeLine{22         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{23             \textcolor{keywordflow}{if} ((dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() -\/ 1}
+\DoxyCodeLine{24                  \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() -\/ 1) \textcolor{comment}{// diagonale gauche}}
+\DoxyCodeLine{25                 || (dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() + 1}
+\DoxyCodeLine{26                     \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() -\/ 1) \textcolor{comment}{// diagonale droite}}
+\DoxyCodeLine{27                 )\{}
+\DoxyCodeLine{28                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{29             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{30                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{31             \}}
+\DoxyCodeLine{32         \}}
+\DoxyCodeLine{33     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{34         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_piece_aac2d0cbc937be575fd07f2e15872d5e7}{getColor}}() == \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7ade7bfe6c82a2aaaee276f752cdadf3a9}{white}})\{}
+\DoxyCodeLine{35             \textcolor{keywordflow}{if} ((dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() \textcolor{comment}{// deplacement vertical}}
+\DoxyCodeLine{36                  \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() + 1) \textcolor{comment}{// avance d'une case}}
+\DoxyCodeLine{37                 )\{}
+\DoxyCodeLine{38                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{39             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_piece_aff7b906b404884f191dde8cf6cea6fe5}{getMoveCount}}() == 0}
+\DoxyCodeLine{40                       \&\& dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() \textcolor{comment}{// deplacement vertical}}
+\DoxyCodeLine{41                       \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() + 2 \textcolor{comment}{// avance de deux cases}}
+\DoxyCodeLine{42                       )\{}
+\DoxyCodeLine{43                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{44             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{45                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{46             \}}
+\DoxyCodeLine{47         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{48             \textcolor{keywordflow}{if} ((dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() \textcolor{comment}{// deplacement vertical}}
+\DoxyCodeLine{49                  \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() -\/ 1) \textcolor{comment}{// avance d'une case}}
+\DoxyCodeLine{50                 )\{}
+\DoxyCodeLine{51                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{52             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_piece_aff7b906b404884f191dde8cf6cea6fe5}{getMoveCount}}() == 0}
+\DoxyCodeLine{53                       \&\& dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() \textcolor{comment}{// deplacement vertical}}
+\DoxyCodeLine{54                       \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() -\/ 2 \textcolor{comment}{// avance de deux cases}}
+\DoxyCodeLine{55                     )\{}
+\DoxyCodeLine{56                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{57             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{58                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{59             \}}
+\DoxyCodeLine{60         \}}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_pawn_8h}{Pawn.\+h}}\item 
+src/\mbox{\hyperlink{_pawn_8cpp}{Pawn.\+cpp}}\end{DoxyCompactItemize}

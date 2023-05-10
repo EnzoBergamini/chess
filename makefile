@@ -24,6 +24,9 @@ $(OBJECTS): $(OBJ_PATH)/%.o : $(SRC_PATH)/%.cpp
 	mkdir -p $(dir $@)
 	$(CC) -o $@ -c $< $(CFLAGS) -I$(INCLUDE_PATH)
 
+doc:
+	doxygen Doxyfile
+
 .PHONY: clean
 clean:
 	rm -fr $(OBJ_PATH)

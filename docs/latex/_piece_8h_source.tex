@@ -1,0 +1,61 @@
+\hypertarget{_piece_8h_source}{}\doxysection{Piece.\+h}
+\label{_piece_8h_source}\index{include/Piece.h@{include/Piece.h}}
+\mbox{\hyperlink{_piece_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef ECHEC\_PIECE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define ECHEC\_PIECE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_square_8h}{Square.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_couleur_8h}{Couleur.h}}"{}}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{class_piece}{Piece}} \{}
+\DoxyCodeLine{25 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_piece_ac40cffee50da10a50361ff4791fdd528}{id}}; }
+\DoxyCodeLine{28     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_piece_a4cfa0ffac54632f92ac06f50b72e9335}{name}}; }
+\DoxyCodeLine{30     \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} \mbox{\hyperlink{class_piece_abeb58424f566e8b3bcf514c731570cf8}{couleur}}; }
+\DoxyCodeLine{32     \mbox{\hyperlink{class_square}{Square}} \mbox{\hyperlink{class_piece_a3bfe047bbab090fa920f2ed4d8453a59}{position}}; }
+\DoxyCodeLine{34     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_piece_a5556d6a3db34ca7c6d486d2f9ceae0c9}{move\_count}}; }
+\DoxyCodeLine{36     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_piece_abf9583545849b0ad01cffeed5d9740e0}{is\_catch}}; }
+\DoxyCodeLine{38 \textcolor{keyword}{public}:}
+\DoxyCodeLine{46     \mbox{\hyperlink{class_piece}{Piece}}(\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} c,\textcolor{keywordtype}{string} \mbox{\hyperlink{class_piece_a4cfa0ffac54632f92ac06f50b72e9335}{name}},\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \mbox{\hyperlink{class_square}{Square}} \mbox{\hyperlink{class_piece_a3bfe047bbab090fa920f2ed4d8453a59}{position}});}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{51     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_piece_a5d7a4f6bade94cb33b6f634de8aa7918}{\string~Piece}}();}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_piece_a2cb195ab09042354c6694e1899143d0a}{affiche}}();}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_piece_a5c238a0319087a1e07313b70e735924a}{displayInfo}}();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{66     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_piece_a4ffe4b749f9b76942ae13d54dc79ae92}{incrementMoveCount}}();}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{74     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_piece_ab3632d34db33cadcb4588d4a2ed462a4}{isLegalMove}}(\mbox{\hyperlink{class_square}{Square}} dest, \textcolor{keywordtype}{bool} isCatch = \textcolor{keyword}{false});}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76     \textcolor{comment}{/*=========  GETTERS  =========*/}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{82     \mbox{\hyperlink{class_square}{Square}} \mbox{\hyperlink{class_piece_a62dde2259273255833993698723fcef1}{getSquare}}();}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{88     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_piece_ab96ac8ed4dc986e8ce7782479953f303}{getName}}();}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{94     \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} \mbox{\hyperlink{class_piece_aac2d0cbc937be575fd07f2e15872d5e7}{getColor}}();}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{100     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_piece_a6387d9f2422e00674ac7409b49ce2a8f}{getId}}();}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{106     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_piece_a8792a41b0b342674c6e19569c5aad3f6}{getCatch}}();}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{112     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_piece_aff7b906b404884f191dde8cf6cea6fe5}{getMoveCount}}();}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114     \textcolor{comment}{/*=========  SETTERS  =========*/}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{120     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_piece_a41141cc6e42ca4a47d57a2c16d6f7727}{setCatch}}(\textcolor{keywordtype}{bool} isCatch);}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{126     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_piece_aed26d90f2be60e333690705e7dc3a16b}{setMoveCount}}(\textcolor{keywordtype}{size\_t} count);}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{132     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_piece_a04d4fd15e74ac9b57485524ec9253bfd}{setId}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{138     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_piece_a9e7dcfadfc9403e2dd3f547e909b4a0d}{setSquare}}(\mbox{\hyperlink{class_square}{Square}} pos);}
+\DoxyCodeLine{139 \};}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//ECHEC\_PIECE\_H}}
+
+\end{DoxyCode}
