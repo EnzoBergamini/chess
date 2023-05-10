@@ -8,7 +8,7 @@ var class_echiquier =
     [ "getKingSquare", "class_echiquier.html#a902679adc01ad653e6b1f26d532cc994", null ],
     [ "getPiece", "class_echiquier.html#a4b904d96330b0e9c9f61801a6316e4a8", null ],
     [ "initEchiquier", "class_echiquier.html#a89f34d19638e92c536e1c4a8a393e93b", null ],
-    [ "movePiece", "class_echiquier.html#a0a4e3467e774f3cd1efd22bb95067d2a", null ],
+    [ "movePiece", "class_echiquier.html#a057559a46a8532d3cbe5af9c37ea273f", null ],
     [ "pgnPieceName", "class_echiquier.html#a3d1043f35aad8753e4a7bb4cf50c0cfe", null ],
     [ "posePiece", "class_echiquier.html#a0dd4f28bcf2a051e3dad13b4f5e977fd", null ],
     [ "promote", "class_echiquier.html#abc48262f09a9bafd2f44ae2fb775ca0c", null ],

@@ -165,7 +165,7 @@ Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   11</span>         : <a class="code hl_variable" href="class_jeu.html#a715c4bac91f71a61cc84e23ef96da2c6">chessboard</a>(<span class="keyword">new</span> <a class="code hl_class" href="class_echiquier.html">Echiquier</a>()),</div>
 <div class="line"><span class="lineno">   12</span><a class="code hl_variable" href="class_jeu.html#af17aacb513d0c796428b76941604ee7a">current_player</a>(<a class="code hl_enumvalue" href="_couleur_8h.html#aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b">white</a>), <a class="code hl_variable" href="class_jeu.html#a9914987ff4d45bd652f1bbb9dd584c74">last_move</a>(<span class="stringliteral">&quot;&quot;</span>) {}</div>
 <div class="ttc" id="a_couleur_8h_html_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b"><div class="ttname"><a href="_couleur_8h.html#aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b">white</a></div><div class="ttdeci">@ white</div><div class="ttdef"><b>Definition:</b> Couleur.h:23</div></div>
-<div class="ttc" id="aclass_echiquier_html"><div class="ttname"><a href="class_echiquier.html">Echiquier</a></div><div class="ttdef"><b>Definition:</b> Echiquier.h:25</div></div>
+<div class="ttc" id="aclass_echiquier_html"><div class="ttname"><a href="class_echiquier.html">Echiquier</a></div><div class="ttdoc">Gestion de l'échiquier du jeu d'échecs.</div><div class="ttdef"><b>Definition:</b> Echiquier.h:36</div></div>
 <div class="ttc" id="aclass_jeu_html_a715c4bac91f71a61cc84e23ef96da2c6"><div class="ttname"><a href="class_jeu.html#a715c4bac91f71a61cc84e23ef96da2c6">Jeu::chessboard</a></div><div class="ttdeci">Echiquier * chessboard</div><div class="ttdef"><b>Definition:</b> Jeu.h:19</div></div>
 <div class="ttc" id="aclass_jeu_html_a9914987ff4d45bd652f1bbb9dd584c74"><div class="ttname"><a href="class_jeu.html#a9914987ff4d45bd652f1bbb9dd584c74">Jeu::last_move</a></div><div class="ttdeci">string last_move</div><div class="ttdef"><b>Definition:</b> Jeu.h:21</div></div>
 <div class="ttc" id="aclass_jeu_html_af17aacb513d0c796428b76941604ee7a"><div class="ttname"><a href="class_jeu.html#af17aacb513d0c796428b76941604ee7a">Jeu::current_player</a></div><div class="ttdeci">Couleur current_player</div><div class="ttdef"><b>Definition:</b> Jeu.h:20</div></div>
@@ -210,7 +210,7 @@ Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">   18</span>                  {</div>
 <div class="line"><span class="lineno">   19</span>    <a class="code hl_variable" href="class_jeu.html#a715c4bac91f71a61cc84e23ef96da2c6">chessboard</a>-&gt;<a class="code hl_function" href="class_echiquier.html#ac276fe23b8fc6aa6efc3762023ca780c">affiche</a>();</div>
 <div class="line"><span class="lineno">   20</span>}</div>
-<div class="ttc" id="aclass_echiquier_html_ac276fe23b8fc6aa6efc3762023ca780c"><div class="ttname"><a href="class_echiquier.html#ac276fe23b8fc6aa6efc3762023ca780c">Echiquier::affiche</a></div><div class="ttdeci">void affiche()</div><div class="ttdef"><b>Definition:</b> Echiquier.cpp:147</div></div>
+<div class="ttc" id="aclass_echiquier_html_ac276fe23b8fc6aa6efc3762023ca780c"><div class="ttname"><a href="class_echiquier.html#ac276fe23b8fc6aa6efc3762023ca780c">Echiquier::affiche</a></div><div class="ttdeci">void affiche()</div><div class="ttdoc">Affiche l'échiquier.</div><div class="ttdef"><b>Definition:</b> Echiquier.cpp:147</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -261,7 +261,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  491</span>    cout &lt;&lt; <span class="stringliteral">&quot;Grand roque impossible&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  492</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  493</span>}</div>
-<div class="ttc" id="aclass_echiquier_html_a4b904d96330b0e9c9f61801a6316e4a8"><div class="ttname"><a href="class_echiquier.html#a4b904d96330b0e9c9f61801a6316e4a8">Echiquier::getPiece</a></div><div class="ttdeci">Piece * getPiece(Square pos)</div><div class="ttdef"><b>Definition:</b> Echiquier.cpp:181</div></div>
+<div class="ttc" id="aclass_echiquier_html_a4b904d96330b0e9c9f61801a6316e4a8"><div class="ttname"><a href="class_echiquier.html#a4b904d96330b0e9c9f61801a6316e4a8">Echiquier::getPiece</a></div><div class="ttdeci">Piece * getPiece(Square pos)</div><div class="ttdoc">Renvoi la pièce à la position pos.</div><div class="ttdef"><b>Definition:</b> Echiquier.cpp:181</div></div>
 <div class="ttc" id="aclass_jeu_html_ac6acda0559f65a6f26c676ff02b0b974"><div class="ttname"><a href="class_jeu.html#ac6acda0559f65a6f26c676ff02b0b974">Jeu::movePiece</a></div><div class="ttdeci">bool movePiece(Square start, Square end, bool isPassingThroughAllowed=false)</div><div class="ttdef"><b>Definition:</b> Jeu.cpp:215</div></div>
 <div class="ttc" id="aclass_jeu_html_ad26b2d6af00290bc8af7ed9a257f6783"><div class="ttname"><a href="class_jeu.html#ad26b2d6af00290bc8af7ed9a257f6783">Jeu::isPathClear</a></div><div class="ttdeci">bool isPathClear(Square start, Square end)</div><div class="ttdef"><b>Definition:</b> Jeu.cpp:127</div></div>
 <div class="ttc" id="aclass_square_html"><div class="ttname"><a href="class_square.html">Square</a></div><div class="ttdoc">Gestion des coordonnées des cases du jeu d'échecs.</div><div class="ttdef"><b>Definition:</b> Square.h:24</div></div>
@@ -374,7 +374,7 @@ Private Attributes</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  320</span>                                      {</div>
 <div class="line"><span class="lineno">  321</span>    cout &lt;&lt; this-&gt;<a class="code hl_variable" href="class_jeu.html#a715c4bac91f71a61cc84e23ef96da2c6">chessboard</a>-&gt;<a class="code hl_function" href="class_echiquier.html#a95b723dedb19611870202079b6219ebc">canonicalPosition</a>() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; result &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  322</span>}</div>
-<div class="ttc" id="aclass_echiquier_html_a95b723dedb19611870202079b6219ebc"><div class="ttname"><a href="class_echiquier.html#a95b723dedb19611870202079b6219ebc">Echiquier::canonicalPosition</a></div><div class="ttdeci">string canonicalPosition()</div><div class="ttdef"><b>Definition:</b> Echiquier.cpp:215</div></div>
+<div class="ttc" id="aclass_echiquier_html_a95b723dedb19611870202079b6219ebc"><div class="ttname"><a href="class_echiquier.html#a95b723dedb19611870202079b6219ebc">Echiquier::canonicalPosition</a></div><div class="ttdeci">string canonicalPosition()</div><div class="ttdoc">Génère la représentation canonique de la position de l'échiquier.</div><div class="ttdef"><b>Definition:</b> Echiquier.cpp:215</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -508,7 +508,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  367</span>    <a class="code hl_class" href="class_piece.html">Piece</a> *start_piece = this-&gt;<a class="code hl_variable" href="class_jeu.html#a715c4bac91f71a61cc84e23ef96da2c6">chessboard</a>-&gt;<a class="code hl_function" href="class_echiquier.html#a4b904d96330b0e9c9f61801a6316e4a8">getPiece</a>(start);</div>
 <div class="line"><span class="lineno">  368</span>    <a class="code hl_class" href="class_piece.html">Piece</a> *end_piece = this-&gt;<a class="code hl_variable" href="class_jeu.html#a715c4bac91f71a61cc84e23ef96da2c6">chessboard</a>-&gt;<a class="code hl_function" href="class_echiquier.html#a4b904d96330b0e9c9f61801a6316e4a8">getPiece</a>(end);</div>
 <div class="line"><span class="lineno">  369</span> </div>
-<div class="line"><span class="lineno">  370</span>    this-&gt;<a class="code hl_variable" href="class_jeu.html#a715c4bac91f71a61cc84e23ef96da2c6">chessboard</a>-&gt;<a class="code hl_function" href="class_echiquier.html#a0a4e3467e774f3cd1efd22bb95067d2a">movePiece</a>(start, end);</div>
+<div class="line"><span class="lineno">  370</span>    this-&gt;<a class="code hl_variable" href="class_jeu.html#a715c4bac91f71a61cc84e23ef96da2c6">chessboard</a>-&gt;<a class="code hl_function" href="class_echiquier.html#a057559a46a8532d3cbe5af9c37ea273f">movePiece</a>(start, end);</div>
 <div class="line"><span class="lineno">  371</span> </div>
 <div class="line"><span class="lineno">  372</span>    <span class="keywordflow">if</span>(this-&gt;<a class="code hl_function" href="class_jeu.html#a48d36f429e1f4b8bcfa761c1b9ff0569">isKingInCheck</a>(c)){</div>
 <div class="line"><span class="lineno">  373</span>        this-&gt;<a class="code hl_variable" href="class_jeu.html#a715c4bac91f71a61cc84e23ef96da2c6">chessboard</a>-&gt;<a class="code hl_function" href="class_echiquier.html#a0dd4f28bcf2a051e3dad13b4f5e977fd">posePiece</a>(start_piece, start);</div>
@@ -532,8 +532,8 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  391</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  392</span>    }</div>
 <div class="line"><span class="lineno">  393</span>}</div>
-<div class="ttc" id="aclass_echiquier_html_a0a4e3467e774f3cd1efd22bb95067d2a"><div class="ttname"><a href="class_echiquier.html#a0a4e3467e774f3cd1efd22bb95067d2a">Echiquier::movePiece</a></div><div class="ttdeci">void movePiece(Square pos1, Square pos2)</div><div class="ttdef"><b>Definition:</b> Echiquier.cpp:172</div></div>
-<div class="ttc" id="aclass_echiquier_html_a0dd4f28bcf2a051e3dad13b4f5e977fd"><div class="ttname"><a href="class_echiquier.html#a0dd4f28bcf2a051e3dad13b4f5e977fd">Echiquier::posePiece</a></div><div class="ttdeci">void posePiece(Piece *p, Square pos)</div><div class="ttdef"><b>Definition:</b> Echiquier.cpp:46</div></div>
+<div class="ttc" id="aclass_echiquier_html_a057559a46a8532d3cbe5af9c37ea273f"><div class="ttname"><a href="class_echiquier.html#a057559a46a8532d3cbe5af9c37ea273f">Echiquier::movePiece</a></div><div class="ttdeci">void movePiece(Square pos_start, Square pos_end)</div><div class="ttdoc">Déplace une pièce sur l'échiquier.</div><div class="ttdef"><b>Definition:</b> Echiquier.cpp:172</div></div>
+<div class="ttc" id="aclass_echiquier_html_a0dd4f28bcf2a051e3dad13b4f5e977fd"><div class="ttname"><a href="class_echiquier.html#a0dd4f28bcf2a051e3dad13b4f5e977fd">Echiquier::posePiece</a></div><div class="ttdeci">void posePiece(Piece *p, Square pos)</div><div class="ttdoc">Pose une pièce p sur l'échiquier a la position pos.</div><div class="ttdef"><b>Definition:</b> Echiquier.cpp:46</div></div>
 <div class="ttc" id="aclass_piece_html_a9e7dcfadfc9403e2dd3f547e909b4a0d"><div class="ttname"><a href="class_piece.html#a9e7dcfadfc9403e2dd3f547e909b4a0d">Piece::setSquare</a></div><div class="ttdeci">void setSquare(Square pos)</div><div class="ttdoc">Applique sur l'attribut position de la piece la position passée en paramètre.</div><div class="ttdef"><b>Definition:</b> Piece.cpp:38</div></div>
 </div><!-- fragment -->
 </div>
@@ -562,7 +562,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  330</span> </div>
 <div class="line"><span class="lineno">  331</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="class_jeu.html#a559baba616925526a5063e49b0afeb60">isCapturable</a>(king_square, c);</div>
 <div class="line"><span class="lineno">  332</span>}</div>
-<div class="ttc" id="aclass_echiquier_html_a902679adc01ad653e6b1f26d532cc994"><div class="ttname"><a href="class_echiquier.html#a902679adc01ad653e6b1f26d532cc994">Echiquier::getKingSquare</a></div><div class="ttdeci">Square getKingSquare(Couleur color)</div><div class="ttdef"><b>Definition:</b> Echiquier.cpp:230</div></div>
+<div class="ttc" id="aclass_echiquier_html_a902679adc01ad653e6b1f26d532cc994"><div class="ttname"><a href="class_echiquier.html#a902679adc01ad653e6b1f26d532cc994">Echiquier::getKingSquare</a></div><div class="ttdeci">Square getKingSquare(Couleur color)</div><div class="ttdoc">Renvoie la case occupée par le roi de la couleur spécifiée.</div><div class="ttdef"><b>Definition:</b> Echiquier.cpp:230</div></div>
 <div class="ttc" id="aclass_jeu_html_a559baba616925526a5063e49b0afeb60"><div class="ttname"><a href="class_jeu.html#a559baba616925526a5063e49b0afeb60">Jeu::isCapturable</a></div><div class="ttdeci">bool isCapturable(Square square, Couleur c)</div><div class="ttdef"><b>Definition:</b> Jeu.cpp:334</div></div>
 </div><!-- fragment -->
 </div>
@@ -835,7 +835,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  236</span>        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_function" href="class_jeu.html#a7931eb442cd878b6215cef315215d880">isTakingInPassing</a>(start, end)){</div>
 <div class="line"><span class="lineno">  237</span>            cout &lt;&lt; <span class="stringliteral">&quot;Prise en passant&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><span class="lineno">  238</span>            this-&gt;<a class="code hl_variable" href="class_jeu.html#a715c4bac91f71a61cc84e23ef96da2c6">chessboard</a>-&gt;<a class="code hl_function" href="class_echiquier.html#a0dd4f28bcf2a051e3dad13b4f5e977fd">posePiece</a>(<span class="keyword">nullptr</span>, <a class="code hl_class" href="class_square.html">Square</a>(this-&gt;<a class="code hl_function" href="class_jeu.html#a132bdee75aba6a2cee73c4dea59c300c">getLastMove</a>().substr(2,2)));</div>
-<div class="line"><span class="lineno">  239</span>            this-&gt;<a class="code hl_variable" href="class_jeu.html#a715c4bac91f71a61cc84e23ef96da2c6">chessboard</a>-&gt;<a class="code hl_function" href="class_echiquier.html#a0a4e3467e774f3cd1efd22bb95067d2a">movePiece</a>(start, end);</div>
+<div class="line"><span class="lineno">  239</span>            this-&gt;<a class="code hl_variable" href="class_jeu.html#a715c4bac91f71a61cc84e23ef96da2c6">chessboard</a>-&gt;<a class="code hl_function" href="class_echiquier.html#a057559a46a8532d3cbe5af9c37ea273f">movePiece</a>(start, end);</div>
 <div class="line"><span class="lineno">  240</span>            moving_piece-&gt;<a class="code hl_function" href="class_piece.html#a4ffe4b749f9b76942ae13d54dc79ae92">incrementMoveCount</a>();</div>
 <div class="line"><span class="lineno">  241</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  242</span>        }</div>
@@ -890,7 +890,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  291</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  292</span>    }</div>
 <div class="line"><span class="lineno">  293</span> </div>
-<div class="line"><span class="lineno">  294</span>    this-&gt;<a class="code hl_variable" href="class_jeu.html#a715c4bac91f71a61cc84e23ef96da2c6">chessboard</a>-&gt;<a class="code hl_function" href="class_echiquier.html#a0a4e3467e774f3cd1efd22bb95067d2a">movePiece</a>(start, end);</div>
+<div class="line"><span class="lineno">  294</span>    this-&gt;<a class="code hl_variable" href="class_jeu.html#a715c4bac91f71a61cc84e23ef96da2c6">chessboard</a>-&gt;<a class="code hl_function" href="class_echiquier.html#a057559a46a8532d3cbe5af9c37ea273f">movePiece</a>(start, end);</div>
 <div class="line"><span class="lineno">  295</span>    moving_piece-&gt;<a class="code hl_function" href="class_piece.html#a4ffe4b749f9b76942ae13d54dc79ae92">incrementMoveCount</a>();</div>
 <div class="line"><span class="lineno">  296</span> </div>
 <div class="line"><span class="lineno">  297</span>    <span class="comment">/*===== Vérification si il y a une promotion ======*/</span></div>
@@ -916,7 +916,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  317</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  318</span>}</div>
 <div class="ttc" id="a_jeu_8cpp_html_af0669257f4d91e82b9c6f6afec907a40"><div class="ttname"><a href="_jeu_8cpp.html#af0669257f4d91e82b9c6f6afec907a40">isValidPromotion</a></div><div class="ttdeci">bool isValidPromotion(string const &amp;input)</div><div class="ttdef"><b>Definition:</b> Jeu.cpp:61</div></div>
-<div class="ttc" id="aclass_echiquier_html_abc48262f09a9bafd2f44ae2fb775ca0c"><div class="ttname"><a href="class_echiquier.html#abc48262f09a9bafd2f44ae2fb775ca0c">Echiquier::promote</a></div><div class="ttdeci">void promote(Piece *p, string type)</div><div class="ttdef"><b>Definition:</b> Echiquier.cpp:93</div></div>
+<div class="ttc" id="aclass_echiquier_html_abc48262f09a9bafd2f44ae2fb775ca0c"><div class="ttname"><a href="class_echiquier.html#abc48262f09a9bafd2f44ae2fb775ca0c">Echiquier::promote</a></div><div class="ttdeci">void promote(Piece *p, string type)</div><div class="ttdoc">Promouvoir un pion en une reine, tour, fou ou cavalier.</div><div class="ttdef"><b>Definition:</b> Echiquier.cpp:93</div></div>
 <div class="ttc" id="aclass_jeu_html_a0e27c8c3b8cd0a3ea77ebd2b6890a07d"><div class="ttname"><a href="class_jeu.html#a0e27c8c3b8cd0a3ea77ebd2b6890a07d">Jeu::isCheckMove</a></div><div class="ttdeci">bool isCheckMove(Square start, Square end, Couleur c)</div><div class="ttdef"><b>Definition:</b> Jeu.cpp:366</div></div>
 <div class="ttc" id="aclass_jeu_html_a7931eb442cd878b6215cef315215d880"><div class="ttname"><a href="class_jeu.html#a7931eb442cd878b6215cef315215d880">Jeu::isTakingInPassing</a></div><div class="ttdeci">bool isTakingInPassing(Square start, Square end)</div><div class="ttdef"><b>Definition:</b> Jeu.cpp:395</div></div>
 <div class="ttc" id="aclass_jeu_html_a7a5c9660f07d005d06295cb45f0f1a7f"><div class="ttname"><a href="class_jeu.html#a7a5c9660f07d005d06295cb45f0f1a7f">Jeu::isPromotion</a></div><div class="ttdeci">bool isPromotion()</div><div class="ttdef"><b>Definition:</b> Jeu.cpp:495</div></div>

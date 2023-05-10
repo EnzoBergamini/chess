@@ -2,37 +2,42 @@
 \label{class_echiquier}\index{Echiquier@{Echiquier}}
 
 
+Gestion de l\textquotesingle{}échiquier du jeu d\textquotesingle{}échecs.  
+
+
+
+
 {\ttfamily \#include $<$Echiquier.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_echiquier_a0aab8ba63f69aa9425d4e4a9c5cc578a}{Echiquier}} ()
-\item 
-\mbox{\hyperlink{class_echiquier_af0b910349d14c53551997a8e5a9cbd3f}{$\sim$\+Echiquier}} ()
-\item 
-void \mbox{\hyperlink{class_echiquier_ac276fe23b8fc6aa6efc3762023ca780c}{affiche}} ()
-\item 
-void \mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{pose\+Piece}} (\mbox{\hyperlink{class_piece}{Piece}} $\ast$p, \mbox{\hyperlink{class_square}{Square}} pos)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_echiquier}{Echiquier}} et allocation de la mémoire pour les pieces. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_echiquier_a0a86cb1648b282b23188bd8f3228f00f}{alloc\+Mem\+Echiquier}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Alloue la mémoire pour l\textquotesingle{}échiquier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_echiquier_af0b910349d14c53551997a8e5a9cbd3f}{$\sim$\+Echiquier}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \mbox{\hyperlink{class_echiquier}{Echiquier}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_echiquier_ac276fe23b8fc6aa6efc3762023ca780c}{affiche}} ()
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}échiquier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{pose\+Piece}} (\mbox{\hyperlink{class_piece}{Piece}} $\ast$p, \mbox{\hyperlink{class_square}{Square}} pos)
+\begin{DoxyCompactList}\small\item\em Pose une pièce p sur l\textquotesingle{}échiquier a la position pos. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_echiquier_a89f34d19638e92c536e1c4a8a393e93b}{init\+Echiquier}} ()
-\item 
-void \mbox{\hyperlink{class_echiquier_a0a4e3467e774f3cd1efd22bb95067d2a}{move\+Piece}} (\mbox{\hyperlink{class_square}{Square}} pos1, \mbox{\hyperlink{class_square}{Square}} pos2)
-\item 
-\mbox{\hyperlink{class_piece}{Piece}} $\ast$ \mbox{\hyperlink{class_echiquier_a4b904d96330b0e9c9f61801a6316e4a8}{get\+Piece}} (\mbox{\hyperlink{class_square}{Square}} pos)
-\item 
+\begin{DoxyCompactList}\small\item\em Initialise l\textquotesingle{}échiquier avec des pointeurs null et sue les pièces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_echiquier_a057559a46a8532d3cbe5af9c37ea273f}{move\+Piece}} (\mbox{\hyperlink{class_square}{Square}} pos\+\_\+start, \mbox{\hyperlink{class_square}{Square}} pos\+\_\+end)
+\begin{DoxyCompactList}\small\item\em Déplace une pièce sur l\textquotesingle{}échiquier. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_echiquier_a3d1043f35aad8753e4a7bb4cf50c0cfe}{pgn\+Piece\+Name}} (string const name, bool view\+\_\+pawn, bool view\+\_\+color)
-\item 
+\begin{DoxyCompactList}\small\item\em Renvoie le nom PGN de la pièce correspondant à un symbole Unicode donné. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_echiquier_a95b723dedb19611870202079b6219ebc}{canonical\+Position}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Génère la représentation canonique de la position de l\textquotesingle{}échiquier. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_square}{Square}} \mbox{\hyperlink{class_echiquier_a902679adc01ad653e6b1f26d532cc994}{get\+King\+Square}} (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} color)
-\item 
+\begin{DoxyCompactList}\small\item\em Renvoie la case occupée par le roi de la couleur spécifiée. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_piece}{Piece}} $\ast$ \mbox{\hyperlink{class_echiquier_a4b904d96330b0e9c9f61801a6316e4a8}{get\+Piece}} (\mbox{\hyperlink{class_square}{Square}} pos)
+\begin{DoxyCompactList}\small\item\em Renvoi la pièce à la position pos. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_echiquier_aa84fd99ba6d112b1c25274626788fd40}{set\+Piece}} (\mbox{\hyperlink{class_piece}{Piece}} $\ast$p, \mbox{\hyperlink{class_square}{Square}} pos)
-\item 
+\begin{DoxyCompactList}\small\item\em Place une pièce à la position spécifiée sur l\textquotesingle{}échiquier. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_echiquier_abc48262f09a9bafd2f44ae2fb775ca0c}{promote}} (\mbox{\hyperlink{class_piece}{Piece}} $\ast$p, string type)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Promouvoir un pion en une reine, tour, fou ou cavalier. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,6 +47,9 @@ vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{clas
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Gestion de l\textquotesingle{}échiquier du jeu d\textquotesingle{}échecs. 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_echiquier_a0aab8ba63f69aa9425d4e4a9c5cc578a}\label{class_echiquier_a0aab8ba63f69aa9425d4e4a9c5cc578a}} 
 \index{Echiquier@{Echiquier}!Echiquier@{Echiquier}}
@@ -50,6 +58,10 @@ vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{clas
 {\footnotesize\ttfamily Echiquier\+::\+Echiquier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
+
+Constructeur de la classe \mbox{\hyperlink{class_echiquier}{Echiquier}} et allocation de la mémoire pour les pieces. 
+
+\texorpdfstring{$<$}{<} Vecteur de pointeurs des pièces de l\textquotesingle{}échiquier 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{53                     \{}
 \DoxyCodeLine{54 }
@@ -99,6 +111,10 @@ vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{clas
 {\footnotesize\ttfamily Echiquier\+::$\sim$\+Echiquier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
+
+Destructeur de la classe \mbox{\hyperlink{class_echiquier}{Echiquier}}. 
+
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{136                      \{}
 \DoxyCodeLine{137     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& p : \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}}])}
@@ -120,6 +136,10 @@ vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{clas
 \index{affiche@{affiche}!Echiquier@{Echiquier}}
 \doxysubsubsection{\texorpdfstring{affiche()}{affiche()}}
 {\footnotesize\ttfamily void Echiquier\+::affiche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche l\textquotesingle{}échiquier. 
 
 
 \begin{DoxyCode}{0}
@@ -156,6 +176,10 @@ vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{clas
 {\footnotesize\ttfamily void Echiquier\+::alloc\+Mem\+Echiquier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
+
+Alloue la mémoire pour l\textquotesingle{}échiquier. 
+
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{31                                  \{}
 \DoxyCodeLine{32     this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_piece}{Piece}}**[\mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}];}
@@ -171,6 +195,15 @@ vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{clas
 \doxysubsubsection{\texorpdfstring{canonicalPosition()}{canonicalPosition()}}
 {\footnotesize\ttfamily string Echiquier\+::canonical\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Génère la représentation canonique de la position de l\textquotesingle{}échiquier. 
+
+Cette méthode renvoie une chaîne de caractères contenant la représentation canonique de la position actuelle de l\textquotesingle{}échiquier. Les pièces sont représentées par leur nom en notation PGN, avec les pions indiqués par la lettre \char`\"{}\+P\char`\"{} et les couleurs par les lettres \char`\"{}w\char`\"{} pour les pièces blanches et \char`\"{}b\char`\"{} pour les pièces noires. Les pièces sont représentées ligne par ligne, en partant de la première rangée jusqu\textquotesingle{}à la dernière.
+
+\begin{DoxyReturn}{Returns}
+Une chaîne de caractères contenant la représentation canonique de la position. 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{215                                    \{}
@@ -196,6 +229,20 @@ vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{clas
 {\footnotesize\ttfamily \mbox{\hyperlink{class_square}{Square}} Echiquier\+::get\+King\+Square (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}}}]{color }\end{DoxyParamCaption})}
 
 
+
+Renvoie la case occupée par le roi de la couleur spécifiée. 
+
+Cette méthode recherche le roi de la couleur spécifiée dans l\textquotesingle{}échiquier et renvoie la case où il se trouve. Si le roi n\textquotesingle{}est pas présent sur l\textquotesingle{}échiquier, une case invalide est renvoyée (avec les coordonnées x et y égales à -\/1).
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & La couleur du roi recherché (blanc ou noir). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La case où se trouve le roi de la couleur spécifiée. 
+\end{DoxyReturn}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{230                                             \{}
 \DoxyCodeLine{231     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} p : this-\/>\mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[color])}
@@ -212,6 +259,18 @@ vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{clas
 {\footnotesize\ttfamily \mbox{\hyperlink{class_piece}{Piece}} $\ast$ Echiquier\+::get\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_square}{Square}}}]{pos }\end{DoxyParamCaption})}
 
 
+
+Renvoi la pièce à la position pos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & La position de la pièce \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le pointeur vers la pièce à la position pos 
+\end{DoxyReturn}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{181                                     \{}
 \DoxyCodeLine{182     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}}[pos.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}()][pos.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}()];}
@@ -225,6 +284,10 @@ vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{clas
 {\footnotesize\ttfamily void Echiquier\+::init\+Echiquier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
+
+Initialise l\textquotesingle{}échiquier avec des pointeurs null et sue les pièces. 
+
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{38                              \{}
 \DoxyCodeLine{39     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}; ++i) \{}
@@ -235,12 +298,25 @@ vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{clas
 \DoxyCodeLine{44 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_echiquier_a0a4e3467e774f3cd1efd22bb95067d2a}\label{class_echiquier_a0a4e3467e774f3cd1efd22bb95067d2a}} 
+\mbox{\Hypertarget{class_echiquier_a057559a46a8532d3cbe5af9c37ea273f}\label{class_echiquier_a057559a46a8532d3cbe5af9c37ea273f}} 
 \index{Echiquier@{Echiquier}!movePiece@{movePiece}}
 \index{movePiece@{movePiece}!Echiquier@{Echiquier}}
 \doxysubsubsection{\texorpdfstring{movePiece()}{movePiece()}}
-{\footnotesize\ttfamily void Echiquier\+::move\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_square}{Square}}}]{pos1,  }\item[{\mbox{\hyperlink{class_square}{Square}}}]{pos2 }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Echiquier\+::move\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_square}{Square}}}]{pos\+\_\+start,  }\item[{\mbox{\hyperlink{class_square}{Square}}}]{pos\+\_\+end }\end{DoxyParamCaption})}
 
+
+
+Déplace une pièce sur l\textquotesingle{}échiquier. 
+
+Cette fonction déplace une pièce de la position {\ttfamily pos\+\_\+start} à la position {\ttfamily pos\+\_\+end} sur l\textquotesingle{}échiquier. Si une pièce se trouve déjà à la position {\ttfamily pos\+\_\+end}, elle est capturée.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+\_\+start} & La position de départ de la pièce à déplacer. \\
+\hline
+{\em pos\+\_\+end} & La position d\textquotesingle{}arrivée de la pièce à déplacer. \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{172                                                           \{}
@@ -259,6 +335,24 @@ vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{clas
 \doxysubsubsection{\texorpdfstring{pgnPieceName()}{pgnPieceName()}}
 {\footnotesize\ttfamily string Echiquier\+::pgn\+Piece\+Name (\begin{DoxyParamCaption}\item[{string const}]{name,  }\item[{bool}]{view\+\_\+pawn,  }\item[{bool}]{view\+\_\+color }\end{DoxyParamCaption})}
 
+
+
+Renvoie le nom PGN de la pièce correspondant à un symbole Unicode donné. 
+
+Cette fonction prend en entrée un symbole Unicode représentant une pièce d\textquotesingle{}échecs et renvoie son nom PGN (Portable Game Notation). Le paramètre {\ttfamily view\+\_\+pawn} permet de contrôler l\textquotesingle{}affichage ou non du pion, et le paramètre {\ttfamily view\+\_\+color} permet de contrôler l\textquotesingle{}affichage ou non de la couleur.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Le symbole Unicode représentant la pièce d\textquotesingle{}échecs. \\
+\hline
+{\em view\+\_\+pawn} & Un booléen indiquant si le pion doit être affiché ou non. \\
+\hline
+{\em view\+\_\+color} & Un booléen indiquant si la couleur doit être affichée ou non.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le nom PGN de la pièce correspondant au symbole Unicode donné, ou une chaîne vide si le symbole ne correspond à aucune pièce. 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{185                                                                                 \{}
@@ -299,6 +393,17 @@ vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{clas
 {\footnotesize\ttfamily void Echiquier\+::pose\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{class_square}{Square}}}]{pos }\end{DoxyParamCaption})}
 
 
+
+Pose une pièce p sur l\textquotesingle{}échiquier a la position pos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pointeur de la pièce à poser \\
+\hline
+{\em pos} & Position de la pièce à poser \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{46                                               \{}
 \DoxyCodeLine{47     \textcolor{keywordflow}{if}(p != \textcolor{keyword}{nullptr})\{}
@@ -314,6 +419,17 @@ vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{clas
 \doxysubsubsection{\texorpdfstring{promote()}{promote()}}
 {\footnotesize\ttfamily void Echiquier\+::promote (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}} $\ast$}]{p,  }\item[{string}]{type }\end{DoxyParamCaption})}
 
+
+
+Promouvoir un pion en une reine, tour, fou ou cavalier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & Un pointeur vers la pièce pion à promouvoir. \\
+\hline
+{\em type} & Une chaîne de caractères représentant le type de pièce de promotion souhaité (Q, R, B ou N). \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{93                                                 \{}
@@ -367,6 +483,19 @@ vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{clas
 {\footnotesize\ttfamily void Echiquier\+::set\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_piece}{Piece}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{class_square}{Square}}}]{pos }\end{DoxyParamCaption})}
 
 
+
+Place une pièce à la position spécifiée sur l\textquotesingle{}échiquier. 
+
+Cette méthode place la pièce spécifiée à la position spécifiée sur l\textquotesingle{}échiquier. Si une autre pièce occupait déjà cette position, elle est ecrasée.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Un pointeur vers la pièce à placer. \\
+\hline
+{\em pos} & La position où placer la pièce. \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{237                                             \{}
 \DoxyCodeLine{238     this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}}[pos.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}()][pos.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}()] = p;}
@@ -388,7 +517,7 @@ vector$<$ \mbox{\hyperlink{class_piece}{Piece}} $\ast$ $>$ \mbox{\hyperlink{clas
 \doxysubsubsection{\texorpdfstring{pieces}{pieces}}
 {\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_piece}{Piece}} $\ast$$>$ Echiquier\+::pieces\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
 
-
+\texorpdfstring{$<$}{<} Tableau 2D de pointeurs de pièces 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

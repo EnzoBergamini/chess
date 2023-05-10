@@ -42,6 +42,11 @@ public:
     Square(int line, int column);
 
     /**
+     * @brief Affiche les coordonnées de la case
+     */
+    void display();
+
+    /**
      * @brief Renvoie la ligne de la case
      */
     int getLine() const;
@@ -50,11 +55,6 @@ public:
      * @brief Renvoie la colonne de la case
      */
     int getColumn() const;
-
-    /**
-     * @brief Affiche les coordonnées de la case
-     */
-    void display();
 
     /**
      * @brief Surcharge de l'opérateur ==

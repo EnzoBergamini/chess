@@ -1,5 +1,10 @@
 \hypertarget{_echiquier_8h}{}\doxysection{include/\+Echiquier.h File Reference}
 \label{_echiquier_8h}\index{include/Echiquier.h@{include/Echiquier.h}}
+
+
+Gestion de l\textquotesingle{}échiquier du jeu d\textquotesingle{}échecs.  
+
+
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
@@ -15,18 +20,29 @@
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_echiquier}{Echiquier}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gestion de l\textquotesingle{}échiquier du jeu d\textquotesingle{}échecs. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{_echiquier_8h_a98a825542e35f663a4d9845fe18ee023}{is\+Valid\+Queen\+Promotion}} (string const \&input)
-\item 
+\begin{DoxyCompactList}\small\item\em Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format de promotion de la reine. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{_echiquier_8h_ae49b6bb3e1ae7023e417b1bd03045148}{is\+Valid\+Rook\+Promotion}} (string const \&input)
-\item 
+\begin{DoxyCompactList}\small\item\em Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format de promotion de la tour. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{_echiquier_8h_ac50d40083d2dca3f675a9267853411c2}{is\+Valid\+Bishop\+Promotion}} (string const \&input)
-\item 
+\begin{DoxyCompactList}\small\item\em Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format de promotion du fou. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{_echiquier_8h_a19032eeb87a4ec79b0d9ce886ab75a03}{is\+Valid\+Knight\+Promotion}} (string const \&input)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em si la chaîne de caractères d\textquotesingle{}entrée correspond au format de promotion du cavalier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gestion de l\textquotesingle{}échiquier du jeu d\textquotesingle{}échecs. 
+
+\begin{DoxyAuthor}{Author}
+BERGAMINI Enzo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/05/2023 
+\end{DoxyDate}
 
 
 \doxysubsection{Function Documentation}
@@ -36,6 +52,18 @@ bool \mbox{\hyperlink{_echiquier_8h_a19032eeb87a4ec79b0d9ce886ab75a03}{is\+Valid
 \doxysubsubsection{\texorpdfstring{isValidBishopPromotion()}{isValidBishopPromotion()}}
 {\footnotesize\ttfamily bool is\+Valid\+Bishop\+Promotion (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
 
+
+
+Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format de promotion du fou. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Chaîne de caractères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la chaîne de caractères correspond au format de promotion du fou, sinon False. 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{21                                                  \{}
@@ -51,6 +79,18 @@ bool \mbox{\hyperlink{_echiquier_8h_a19032eeb87a4ec79b0d9ce886ab75a03}{is\+Valid
 {\footnotesize\ttfamily bool is\+Valid\+Knight\+Promotion (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
 
 
+
+si la chaîne de caractères d\textquotesingle{}entrée correspond au format de promotion du cavalier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Chaîne de caractères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la chaîne de caractères correspond au format de promotion du cavalier, sinon False. 
+\end{DoxyReturn}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{26                                                  \{}
 \DoxyCodeLine{27     regex pattern(\textcolor{stringliteral}{"{}(N|n)\(\backslash\)\(\backslash\)s*"{}});}
@@ -65,6 +105,18 @@ bool \mbox{\hyperlink{_echiquier_8h_a19032eeb87a4ec79b0d9ce886ab75a03}{is\+Valid
 {\footnotesize\ttfamily bool is\+Valid\+Queen\+Promotion (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
 
 
+
+Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format de promotion de la reine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Chaîne de caractères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la chaîne de caractères correspond au format de promotion de la reine, sinon 
+\end{DoxyReturn}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{11                                                 \{}
 \DoxyCodeLine{12     regex pattern(\textcolor{stringliteral}{"{}(Q|q)\(\backslash\)\(\backslash\)s*"{}});}
@@ -78,6 +130,18 @@ bool \mbox{\hyperlink{_echiquier_8h_a19032eeb87a4ec79b0d9ce886ab75a03}{is\+Valid
 \doxysubsubsection{\texorpdfstring{isValidRookPromotion()}{isValidRookPromotion()}}
 {\footnotesize\ttfamily bool is\+Valid\+Rook\+Promotion (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
 
+
+
+Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format de promotion de la tour. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Chaîne de caractères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la chaîne de caractères correspond au format de promotion de la tour, sinon False. 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{16                                                \{}
