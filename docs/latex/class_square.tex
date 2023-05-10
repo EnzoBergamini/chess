@@ -2,23 +2,28 @@
 \label{class_square}\index{Square@{Square}}
 
 
+Gestion des coordonnées des cases du jeu d\textquotesingle{}échecs.  
+
+
+
+
 {\ttfamily \#include $<$Square.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_square_abad809ed5de56b748ce9ac1f89f32113}{Square}} (string coord)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_square}{Square}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_square_a314d6f8841da7acb78bd2e8cd079ebc6}{Square}} (int \mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}}, int \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}})
-\item 
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_square}{Square}}. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{get\+Line}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Renvoie la ligne de la case. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{get\+Column}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Renvoie la colonne de la case. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_square_a4ebb68d15086673ac19fab67ac419083}{display}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Affiche les coordonnées de la case. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_square_ae18fe910630c719a66a51099758e77fd}{operator==}} (const \mbox{\hyperlink{class_square}{Square}} \&other) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur ==. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -28,6 +33,9 @@ int \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Gestion des coordonnées des cases du jeu d\textquotesingle{}échecs. 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_square_abad809ed5de56b748ce9ac1f89f32113}\label{class_square_abad809ed5de56b748ce9ac1f89f32113}} 
 \index{Square@{Square}!Square@{Square}}
@@ -35,6 +43,15 @@ int \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}}
 \doxysubsubsection{\texorpdfstring{Square()}{Square()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Square\+::\+Square (\begin{DoxyParamCaption}\item[{string}]{coord }\end{DoxyParamCaption})}
 
+
+
+Constructeur de la classe \mbox{\hyperlink{class_square}{Square}}. 
+
+\texorpdfstring{$<$}{<} Colonne de la case 
+\begin{DoxyParams}{Parameters}
+{\em coord} & Coordonnées de la case en notation algébrique (ex\+: \char`\"{}a1\char`\"{}) \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{16                       \{}
@@ -50,6 +67,17 @@ int \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}}
 {\footnotesize\ttfamily Square\+::\+Square (\begin{DoxyParamCaption}\item[{int}]{line,  }\item[{int}]{column }\end{DoxyParamCaption})}
 
 
+
+Constructeur de la classe \mbox{\hyperlink{class_square}{Square}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & Ligne de la case \\
+\hline
+{\em column} & Colonne de la case \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{14         : \mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}}(\mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}}), \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}}(\mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}})\{\}}
 
@@ -62,6 +90,10 @@ int \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}}
 \index{display@{display}!Square@{Square}}
 \doxysubsubsection{\texorpdfstring{display()}{display()}}
 {\footnotesize\ttfamily void Square\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche les coordonnées de la case. 
 
 
 \begin{DoxyCode}{0}
@@ -77,6 +109,10 @@ int \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}}
 {\footnotesize\ttfamily int Square\+::get\+Column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
+
+Renvoie la colonne de la case. 
+
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{21 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}};\}}
 
@@ -86,6 +122,10 @@ int \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}}
 \index{getLine@{getLine}!Square@{Square}}
 \doxysubsubsection{\texorpdfstring{getLine()}{getLine()}}
 {\footnotesize\ttfamily int Square\+::get\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Renvoie la ligne de la case. 
 
 
 \begin{DoxyCode}{0}
@@ -98,6 +138,18 @@ int \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}}
 \doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
 {\footnotesize\ttfamily bool Square\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_square}{Square}} \&}]{other }\end{DoxyParamCaption}) const}
 
+
+
+Surcharge de l\textquotesingle{}opérateur ==. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Case à comparer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si les cases sont égales, false sinon 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{29                                                 \{}
@@ -114,7 +166,7 @@ int \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}}
 \doxysubsubsection{\texorpdfstring{column}{column}}
 {\footnotesize\ttfamily int Square\+::column\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_square_af37b0659384cd9b61d594f64da5641e8}\label{class_square_af37b0659384cd9b61d594f64da5641e8}} 
+\texorpdfstring{$<$}{<} Ligne de la case \mbox{\Hypertarget{class_square_af37b0659384cd9b61d594f64da5641e8}\label{class_square_af37b0659384cd9b61d594f64da5641e8}} 
 \index{Square@{Square}!line@{line}}
 \index{line@{line}!Square@{Square}}
 \doxysubsubsection{\texorpdfstring{line}{line}}

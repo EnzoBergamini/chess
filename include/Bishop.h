@@ -6,6 +6,7 @@
  * @author BERGAMINI Enzo
  * @date 11/05/2023
 */
+
 #ifndef ECHEC_BISHOP_H
 #define ECHEC_BISHOP_H
 
