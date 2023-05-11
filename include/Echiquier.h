@@ -58,7 +58,7 @@ public:
     /**
      * @brief Affiche l'échiquier
      */
-    void affiche();
+    void affiche() const;
 
     /**
      * @brief Pose une pièce p sur l'échiquier a la position pos
@@ -66,7 +66,7 @@ public:
      * @param p Pointeur de la pièce à poser
      * @param pos Position de la pièce à poser
      */
-    void posePiece(Piece *p, Square pos);
+    void posePiece(Piece *p, const Square& pos);
 
     /**
      * @brief Initialise l'échiquier avec des pointeurs null et sue les pièces
@@ -82,7 +82,7 @@ public:
      * @param pos_start La position de départ de la pièce à déplacer.
      * @param pos_end  La position d'arrivée de la pièce à déplacer.
      */
-    void movePiece(Square pos_start, Square pos_end);
+    void movePiece(const Square& pos_start, const Square& pos_end);
 
     /**
      * @brief Renvoie le nom PGN de la pièce correspondant à un symbole Unicode donné.
@@ -96,7 +96,7 @@ public:
      *
      * @return Le nom PGN de la pièce correspondant au symbole Unicode donné, ou une chaîne vide si le symbole ne correspond à aucune pièce.
      */
-    string pgnPieceName(string const name, bool view_pawn, bool view_color);
+    string pgnPieceName(string const name, bool view_pawn, bool view_color) const;
 
     /**
      * @brief Génère la représentation canonique de la position de l'échiquier.
@@ -110,7 +110,7 @@ public:
      *
      * @return Une chaîne de caractères contenant la représentation canonique de la position.
      */
-    string canonicalPosition();
+    string canonicalPosition() const;
 
     /**
      * @brief Renvoie la case occupée par le roi de la couleur spécifiée.
@@ -122,14 +122,14 @@ public:
      * @param color La couleur du roi recherché (blanc ou noir).
      * @return La case où se trouve le roi de la couleur spécifiée.
      */
-    Square getKingSquare(Couleur color);
+    Square getKingSquare(Couleur const color) const;
 
     /**
      * @brief Renvoi la pièce à la position pos
      * @param pos La position de la pièce
      * @return Le pointeur vers la pièce à la position pos
      */
-    Piece *getPiece(Square pos);
+    Piece *getPiece(const Square& pos) const;
 
     /*=========  SETTERS  =========*/
 
@@ -142,14 +142,14 @@ public:
      * @param p Un pointeur vers la pièce à placer.
      * @param pos La position où placer la pièce.
      */
-    void setPiece(Piece *p, Square pos);
+    void setPiece(Piece *p, const Square& pos);
 
     /**
      * @brief Promouvoir un pion en une reine, tour, fou ou cavalier.
      * @param piece Un pointeur vers la pièce pion à promouvoir.
      * @param type Une chaîne de caractères représentant le type de pièce de promotion souhaité (Q, R, B ou N).
      */
-    void promote(Piece *p, string type);
+    void promote(Piece *p, const string& type);
 };
 
 #endif //ECHEC_ECHIQUIER_H

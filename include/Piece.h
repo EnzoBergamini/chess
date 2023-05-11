@@ -135,7 +135,7 @@ public:
      * @brief Applique sur l'attribut position de la piece la position passée en paramètre
      * @param pos Nouvelle position de la pièce
      */
-    void setSquare(Square& pos);
+    void setSquare(const Square& pos);
 };
 
 #endif //ECHEC_PIECE_H

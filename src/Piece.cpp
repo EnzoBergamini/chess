@@ -37,7 +37,7 @@ bool Piece::getCatch() const{
     return this->is_catch;
 }
 
-void Piece::setSquare(Square& pos){
+void Piece::setSquare(const Square& pos){
     this->position = pos;
 }
 

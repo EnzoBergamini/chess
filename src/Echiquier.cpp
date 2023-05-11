@@ -24,7 +24,7 @@ void Echiquier::initEchiquier(){
     }
 }
 
-void Echiquier::posePiece(Piece *p, Square pos) {
+void Echiquier::posePiece(Piece *p, const Square& pos) {
     if(p != nullptr){
         p->setSquare(pos);
     }
@@ -71,7 +71,7 @@ Echiquier::Echiquier(){
 
 }
 
-void Echiquier::promote(Piece *piece, string type){
+void Echiquier::promote(Piece *piece, const string& type){
     if(isValidQueenPromotion(type)){
         Queen *new_piece = new Queen(piece->getColor(), piece->getId(), piece->getSquare());
         new_piece->setMoveCount(piece->getMoveCount());
@@ -125,7 +125,7 @@ Echiquier::~Echiquier(){
     delete[] this->echiquier;
 }
 
-void Echiquier::affiche() {
+void Echiquier::affiche() const {
     string space5 = string(5,' ');
     cout << endl;
     cout << "     a     b     c     d     e     f     g     h    "<< endl;
@@ -150,7 +150,7 @@ void Echiquier::affiche() {
     }
 }
 
-void Echiquier::movePiece(Square pos_start, Square pos_end) {
+void Echiquier::movePiece(const Square& pos_start, const Square& pos_end) {
     Piece *end_piece = this->getPiece(pos_end);
     if (end_piece != nullptr){
         end_piece->setCatch(true);
@@ -159,11 +159,11 @@ void Echiquier::movePiece(Square pos_start, Square pos_end) {
     this->posePiece(nullptr, pos_start);
 }
 
-Piece *Echiquier::getPiece(Square pos){
+Piece *Echiquier::getPiece(const Square& pos) const{
     return this->echiquier[pos.getLine()][pos.getColumn()];
 }
 
-string Echiquier::pgnPieceName(string const name, bool view_pawn, bool view_color){
+string Echiquier::pgnPieceName(string const name, bool view_pawn, bool view_color) const {
 
     string psymb;
     if      (name=="\u2656") psymb="R";  // Rook W
@@ -193,7 +193,7 @@ string Echiquier::pgnPieceName(string const name, bool view_pawn, bool view_colo
     else return "";
 }
 
-string Echiquier::canonicalPosition(){
+string Echiquier::canonicalPosition() const{
     string output;
     for (size_t row(1); row<=BOARD_SIZE; row++){
         for (char col('a');col<='h';col++) {
@@ -208,14 +208,14 @@ string Echiquier::canonicalPosition(){
     return output;
 }
 
-Square Echiquier::getKingSquare(Couleur color){
+Square Echiquier::getKingSquare(Couleur const color) const{
     for (auto p : this->pieces[color])
         if (p->getName() == "\u2654" || p->getName() == "\u265A")
             return p->getSquare();
     return Square(-1,-1);
 }
 
-void Echiquier::setPiece(Piece *p, Square pos){
+void Echiquier::setPiece(Piece *p, const Square& pos){
     this->echiquier[pos.getLine()][pos.getColumn()] = p;
 }
 
