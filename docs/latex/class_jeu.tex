@@ -2,47 +2,52 @@
 \label{class_jeu}\index{Jeu@{Jeu}}
 
 
+Gestion de l\textquotesingle{}architecture du jeu d\textquotesingle{}échecs.  
+
+
+
+
 {\ttfamily \#include $<$Jeu.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_jeu_acc5795ee00edf75516d3dfe65be3e6d6}{Jeu}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_jeu}{Jeu}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_jeu_a9cd19e73df169d7f09397be61ba8548c}{$\sim$\+Jeu}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \mbox{\hyperlink{class_jeu}{Jeu}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jeu_a7931f8054847abc19e33e73967a3807e}{affiche}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}échiquier. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jeu_a4b1fafb4d4cd869152ee21928ba4ebac}{coup}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em cette fonction permet de gérer les coups des joueurs en alternance. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jeu_a9487fe843bcf9a4d72a95b6b0b34f6d7}{set\+Player}} (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} c)
-\item 
+\begin{DoxyCompactList}\small\item\em Affection de la couleur du joueur courant. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} \mbox{\hyperlink{class_jeu_a4b4894260450f5f2bbc03e45cf0700be}{get\+Player}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Récupération de la couleur du joueur courant. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jeu_ad26b2d6af00290bc8af7ed9a257f6783}{is\+Path\+Clear}} (\mbox{\hyperlink{class_square}{Square}} start, \mbox{\hyperlink{class_square}{Square}} end)
-\item 
+\begin{DoxyCompactList}\small\item\em Vérifie si le chemin entre deux cases est libre de toute pièce Cette méthode vérifie si le chemin entre la case de départ et la case d\textquotesingle{}arrivée est libre de toute pièce. Si le chemin est libre, la méthode renvoie true, sinon elle renvoie false. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jeu_ac6acda0559f65a6f26c676ff02b0b974}{move\+Piece}} (\mbox{\hyperlink{class_square}{Square}} start, \mbox{\hyperlink{class_square}{Square}} end, bool is\+Passing\+Through\+Allowed=false)
-\item 
+\begin{DoxyCompactList}\small\item\em Déplace une pièce d\textquotesingle{}une case de départ à une case d\textquotesingle{}arrivée sur l\textquotesingle{}échiquier. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jeu_a5544a97d33de71a3c4c4e3178cae49ce}{display\+End\+Game}} (string result)
-\item 
+\begin{DoxyCompactList}\small\item\em Affiche un message de fin de partie avec le résultat et arrête le jeu. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jeu_a48d36f429e1f4b8bcfa761c1b9ff0569}{is\+King\+In\+Check}} (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} c)
-\item 
+\begin{DoxyCompactList}\small\item\em Vérifie si le roi du joueur de la couleur donnée est en échec. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jeu_a559baba616925526a5063e49b0afeb60}{is\+Capturable}} (\mbox{\hyperlink{class_square}{Square}} square, \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} c)
-\item 
+\begin{DoxyCompactList}\small\item\em Vérifie si une piece a une position donnée est capturable. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jeu_a0e27c8c3b8cd0a3ea77ebd2b6890a07d}{is\+Check\+Move}} (\mbox{\hyperlink{class_square}{Square}} start, \mbox{\hyperlink{class_square}{Square}} end, \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} c)
-\item 
+\begin{DoxyCompactList}\small\item\em Vérifie si le mouvement d\textquotesingle{}une piece (le roi) va le mettre en échec. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jeu_a7931eb442cd878b6215cef315215d880}{is\+Taking\+In\+Passing}} (\mbox{\hyperlink{class_square}{Square}} start, \mbox{\hyperlink{class_square}{Square}} end)
-\item 
+\begin{DoxyCompactList}\small\item\em Vérifie si le mouvement est une prise en passant. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jeu_abf303084e90899bd6d43ccda5b7d27be}{set\+Last\+Move}} (string move)
-\item 
+\begin{DoxyCompactList}\small\item\em Affecte la valeur de l\textquotesingle{}attribut last\+Move. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_jeu_a132bdee75aba6a2cee73c4dea59c300c}{get\+Last\+Move}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Récupère la valeur de l\textquotesingle{}attribut last\+Move. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jeu_a15e0697f4489a45f0e2b491f496dccf6}{small\+Rook\+Move}} (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} c)
-\item 
+\begin{DoxyCompactList}\small\item\em Vérifie si le mouvement est un petit roque. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jeu_a7a3242f4e4be91309c4be796ed01b938}{big\+Rook\+Move}} (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} c)
-\item 
+\begin{DoxyCompactList}\small\item\em Vérifie si le mouvement est un grand roque. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_jeu_a7a5c9660f07d005d06295cb45f0f1a7f}{is\+Promotion}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Vérifie si le mouvement est une promotion. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -54,6 +59,9 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Gestion de l\textquotesingle{}architecture du jeu d\textquotesingle{}échecs. 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_jeu_acc5795ee00edf75516d3dfe65be3e6d6}\label{class_jeu_acc5795ee00edf75516d3dfe65be3e6d6}} 
 \index{Jeu@{Jeu}!Jeu@{Jeu}}
@@ -62,6 +70,10 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 {\footnotesize\ttfamily Jeu\+::\+Jeu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
+
+Constructeur de la classe \mbox{\hyperlink{class_jeu}{Jeu}}. 
+
+\texorpdfstring{$<$}{<} Dernier coup joué 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{11          : \mbox{\hyperlink{class_jeu_a715c4bac91f71a61cc84e23ef96da2c6}{chessboard}}(\textcolor{keyword}{new} \mbox{\hyperlink{class_echiquier}{Echiquier}}()),}
 \DoxyCodeLine{12 \mbox{\hyperlink{class_jeu_af17aacb513d0c796428b76941604ee7a}{current\_player}}(\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}}), \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\_move}}(\textcolor{stringliteral}{"{}"{}}) \{\}}
@@ -72,6 +84,10 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 \index{````~Jeu@{$\sim$Jeu}!Jeu@{Jeu}}
 \doxysubsubsection{\texorpdfstring{$\sim$Jeu()}{~Jeu()}}
 {\footnotesize\ttfamily Jeu\+::$\sim$\+Jeu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur de la classe \mbox{\hyperlink{class_jeu}{Jeu}}. 
 
 
 \begin{DoxyCode}{0}
@@ -90,6 +106,10 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 {\footnotesize\ttfamily void Jeu\+::affiche (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
+
+Affiche l\textquotesingle{}échiquier. 
+
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{18                   \{}
 \DoxyCodeLine{19     \mbox{\hyperlink{class_jeu_a715c4bac91f71a61cc84e23ef96da2c6}{chessboard}}-\/>\mbox{\hyperlink{class_echiquier_ac276fe23b8fc6aa6efc3762023ca780c}{affiche}}();}
@@ -102,6 +122,18 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 \doxysubsubsection{\texorpdfstring{bigRookMove()}{bigRookMove()}}
 {\footnotesize\ttfamily bool Jeu\+::big\+Rook\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}}}]{c }\end{DoxyParamCaption})}
 
+
+
+Vérifie si le mouvement est un grand roque. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & couleur du joueur effectuant le roque \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si le mouvement est un grand roque, false sinon 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{462                                \{}
@@ -144,6 +176,15 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 \doxysubsubsection{\texorpdfstring{coup()}{coup()}}
 {\footnotesize\ttfamily bool Jeu\+::coup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+cette fonction permet de gérer les coups des joueurs en alternance. 
+
+Elle affiche un message indiquant à quel joueur il est de jouer. Elle demande à l\textquotesingle{}utilisateur de saisir une chaîne de caractères représentant un coup valide. Elle vérifie que la saisie est valide et effectue le coup demandé en utilisant les méthodes appropriées de la classe \mbox{\hyperlink{class_jeu}{Jeu}}. Si le roi du joueur qui vient de jouer est en échec, elle affiche un message et permet à ce joueur de saisir un autre coup valide. Si l\textquotesingle{}utilisateur saisit \char`\"{}quit\char`\"{}, elle affiche un message de fin de partie avec le résultat \char`\"{}?-\/?\char`\"{} et retourne false pour arrêter le jeu. Si l\textquotesingle{}utilisateur saisit \char`\"{}draw\char`\"{}, elle affiche un message de fin de partie avec le résultat \char`\"{}1/2-\/1/2\char`\"{} et retourne false pour arrêter le jeu. Si l\textquotesingle{}utilisateur saisit \char`\"{}resign\char`\"{}, elle affiche un message de fin de partie avec le résultat approprié en fonction du joueur qui a abandonné et retourne false pour arrêter le jeu. Si l\textquotesingle{}utilisateur saisit un coup de roque petit ou grand valide, elle effectue ce coup en utilisant les méthodes appropriées de la classe \mbox{\hyperlink{class_jeu}{Jeu}}.
+
+\begin{DoxyReturn}{Returns}
+true si le coup a été joué, false si le coup n\textquotesingle{}a pas été joué (fin de partie ou saisie invalide) 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{68                \{}
@@ -213,6 +254,23 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 {\footnotesize\ttfamily void Jeu\+::display\+End\+Game (\begin{DoxyParamCaption}\item[{string}]{result }\end{DoxyParamCaption})}
 
 
+
+Affiche un message de fin de partie avec le résultat et arrête le jeu. 
+
+Affiche la position finale de l\textquotesingle{}échiquier et le résultat de la partie. le résultat est donné sous la forme d\textquotesingle{}une chaîne de caractères\+:
+\begin{DoxyItemize}
+\item \char`\"{}1-\/0\char`\"{} si les blancs ont gagné
+\item \char`\"{}0-\/1\char`\"{} si les noirs ont gagné
+\item \char`\"{}1/2-\/1/2\char`\"{} si la partie est nulle
+\item \char`\"{}?-\/?\char`\"{} si la partie est arrêtée avant la fin et la position finale de l\textquotesingle{}échiquier est donnée sous forme canonique\+: -\/\char`\"{}w\+R,w\+N,,w\+Q,w\+K,w\+B,w\+N,w\+R,w\+P,w\+P,w\+P,,w\+P,w\+P,w\+P,w\+P,,,,,,,,,,,,w\+P,,,,w\+B,,,,b\+P,,b\+B,,,,,,,,b\+P,,,b\+P,b\+P,b\+P,,b\+P,,b\+P,b\+P,b\+R,b\+N,,b\+Q,b\+K,b\+B,b\+N,b\+R,\char`\"{}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & Résultat de la partie \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{320                                       \{}
 \DoxyCodeLine{321     cout << this-\/>\mbox{\hyperlink{class_jeu_a715c4bac91f71a61cc84e23ef96da2c6}{chessboard}}-\/>\mbox{\hyperlink{class_echiquier_a95b723dedb19611870202079b6219ebc}{canonicalPosition}}() << \textcolor{stringliteral}{"{} "{}} << result << endl;}
@@ -225,6 +283,13 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 \doxysubsubsection{\texorpdfstring{getLastMove()}{getLastMove()}}
 {\footnotesize\ttfamily string Jeu\+::get\+Last\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Récupère la valeur de l\textquotesingle{}attribut last\+Move. 
+
+\begin{DoxyReturn}{Returns}
+le dernier mouvement effectué 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{425                         \{}
@@ -239,6 +304,13 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 {\footnotesize\ttfamily \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} Jeu\+::get\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
+
+Récupération de la couleur du joueur courant. 
+
+\begin{DoxyReturn}{Returns}
+Couleur (blanc ou white) 
+\end{DoxyReturn}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{362                       \{}
 \DoxyCodeLine{363     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_jeu_af17aacb513d0c796428b76941604ee7a}{current\_player}};}
@@ -251,6 +323,20 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 \doxysubsubsection{\texorpdfstring{isCapturable()}{isCapturable()}}
 {\footnotesize\ttfamily bool Jeu\+::is\+Capturable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_square}{Square}}}]{square,  }\item[{\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}}}]{c }\end{DoxyParamCaption})}
 
+
+
+Vérifie si une piece a une position donnée est capturable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em square} & position de la piece pour laquelle on veut savoir si elle est capturable \\
+\hline
+{\em c} & couleur de la piece pour laquelle on veut savoir si elle est capturable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si la piece est capturable, false sinon 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{334                                               \{}
@@ -284,6 +370,22 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 \doxysubsubsection{\texorpdfstring{isCheckMove()}{isCheckMove()}}
 {\footnotesize\ttfamily bool Jeu\+::is\+Check\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_square}{Square}}}]{start,  }\item[{\mbox{\hyperlink{class_square}{Square}}}]{end,  }\item[{\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}}}]{c }\end{DoxyParamCaption})}
 
+
+
+Vérifie si le mouvement d\textquotesingle{}une piece (le roi) va le mettre en échec. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & position de la piece avant le mouvement \\
+\hline
+{\em end} & position de la piece apres le mouvement \\
+\hline
+{\em c} & couleur de la piece\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si le mouvement met le roi en échec, false sinon 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{366                                                         \{}
@@ -323,6 +425,18 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 {\footnotesize\ttfamily bool Jeu\+::is\+King\+In\+Check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}}}]{c }\end{DoxyParamCaption})}
 
 
+
+Vérifie si le roi du joueur de la couleur donnée est en échec. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Couleur du joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si le roi est en échec, false sinon 
+\end{DoxyReturn}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{324                                 \{}
 \DoxyCodeLine{325     \mbox{\hyperlink{class_square}{Square}} king\_square = this-\/>\mbox{\hyperlink{class_jeu_a715c4bac91f71a61cc84e23ef96da2c6}{chessboard}}-\/>\mbox{\hyperlink{class_echiquier_a902679adc01ad653e6b1f26d532cc994}{getKingSquare}}(c);}
@@ -341,6 +455,20 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 \doxysubsubsection{\texorpdfstring{isPathClear()}{isPathClear()}}
 {\footnotesize\ttfamily bool Jeu\+::is\+Path\+Clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_square}{Square}}}]{start,  }\item[{\mbox{\hyperlink{class_square}{Square}}}]{end }\end{DoxyParamCaption})}
 
+
+
+Vérifie si le chemin entre deux cases est libre de toute pièce Cette méthode vérifie si le chemin entre la case de départ et la case d\textquotesingle{}arrivée est libre de toute pièce. Si le chemin est libre, la méthode renvoie true, sinon elle renvoie false. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & La case de départ du chemin \\
+\hline
+{\em end} & La case d\textquotesingle{}arrivée du chemin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si le chemin est libre de toute pièce, false sinon 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{127                                              \{}
@@ -439,6 +567,13 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 {\footnotesize\ttfamily bool Jeu\+::is\+Promotion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
+
+Vérifie si le mouvement est une promotion. 
+
+\begin{DoxyReturn}{Returns}
+true si le mouvement est une promotion, false sinon 
+\end{DoxyReturn}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{495                      \{}
 \DoxyCodeLine{496     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 8; i++)\{}
@@ -470,6 +605,17 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 \doxysubsubsection{\texorpdfstring{isTakingInPassing()}{isTakingInPassing()}}
 {\footnotesize\ttfamily bool Jeu\+::is\+Taking\+In\+Passing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_square}{Square}}}]{start,  }\item[{\mbox{\hyperlink{class_square}{Square}}}]{end }\end{DoxyParamCaption})}
 
+
+
+Vérifie si le mouvement est une prise en passant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & position de la piece avant le mouvement \\
+\hline
+{\em end} & position de la piece apres le mouvement \\
+\hline
+\end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{395                                                    \{}
@@ -505,6 +651,35 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 \doxysubsubsection{\texorpdfstring{movePiece()}{movePiece()}}
 {\footnotesize\ttfamily bool Jeu\+::move\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_square}{Square}}}]{start,  }\item[{\mbox{\hyperlink{class_square}{Square}}}]{end,  }\item[{bool}]{is\+Passing\+Through\+Allowed = {\ttfamily false} }\end{DoxyParamCaption})}
 
+
+
+Déplace une pièce d\textquotesingle{}une case de départ à une case d\textquotesingle{}arrivée sur l\textquotesingle{}échiquier. 
+
+Cette méthode déplace une pièce sur l\textquotesingle{}échiquier en effectuant les vérifications suivantes \+:
+\begin{DoxyItemize}
+\item La pièce à déplacer existe-\/t-\/elle sur la case de départ ?
+\item La pièce à déplacer appartient-\/elle au joueur courant ?
+\item Le mouvement est-\/il valide pour ce type de pièce ?
+\item Le chemin est-\/il libre (sauf si is\+Passing\+Through\+Allowed est vrai) ?
+\item Le mouvement ne met-\/il pas le joueur en échec ?
+\item Le mouvement est-\/il une prise en passant ?
+\item Le mouvement implique t-\/il une promotion ?
+\end{DoxyItemize}
+
+Si toutes les conditions sont remplies, la méthode effectue le déplacement et vérifie s\textquotesingle{}il y a une prise en passant ou une promotion à réaliser.
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & La case de départ de la pièce à déplacer. \\
+\hline
+{\em end} & La case d\textquotesingle{}arrivée de la pièce. \\
+\hline
+{\em is\+Passing\+Through\+Allowed} & Indique si le passage à travers d\textquotesingle{}autres pièces est autorisé. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retourne true si le déplacement est réussi, sinon false. 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{215                                                                           \{}
@@ -620,6 +795,15 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 {\footnotesize\ttfamily void Jeu\+::set\+Last\+Move (\begin{DoxyParamCaption}\item[{string}]{move }\end{DoxyParamCaption})}
 
 
+
+Affecte la valeur de l\textquotesingle{}attribut last\+Move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & le dernier mouvement effectué \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{421                                 \{}
 \DoxyCodeLine{422     this-\/>\mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\_move}} = move;}
@@ -633,6 +817,15 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 {\footnotesize\ttfamily void Jeu\+::set\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}}}]{c }\end{DoxyParamCaption})}
 
 
+
+Affection de la couleur du joueur courant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Couleur (blanc ou white) \\
+\hline
+\end{DoxyParams}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{358                             \{}
 \DoxyCodeLine{359     this-\/>\mbox{\hyperlink{class_jeu_af17aacb513d0c796428b76941604ee7a}{current\_player}} = c;}
@@ -645,6 +838,18 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 \doxysubsubsection{\texorpdfstring{smallRookMove()}{smallRookMove()}}
 {\footnotesize\ttfamily bool Jeu\+::small\+Rook\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}}}]{c }\end{DoxyParamCaption})}
 
+
+
+Vérifie si le mouvement est un petit roque. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & couleur du joueur effectuant le roque \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si le mouvement est un petit roque, false sinon 
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{429                                  \{}
@@ -696,13 +901,13 @@ string \mbox{\hyperlink{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}{last\+\_\+m
 \doxysubsubsection{\texorpdfstring{current\_player}{current\_player}}
 {\footnotesize\ttfamily \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7}{Couleur}} Jeu\+::current\+\_\+player\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}\label{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}} 
+\texorpdfstring{$<$}{<} Pointeur sur l\textquotesingle{}échiquier \mbox{\Hypertarget{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}\label{class_jeu_a9914987ff4d45bd652f1bbb9dd584c74}} 
 \index{Jeu@{Jeu}!last\_move@{last\_move}}
 \index{last\_move@{last\_move}!Jeu@{Jeu}}
 \doxysubsubsection{\texorpdfstring{last\_move}{last\_move}}
 {\footnotesize\ttfamily string Jeu\+::last\+\_\+move\hspace{0.3cm}{\ttfamily [private]}}
 
-
+\texorpdfstring{$<$}{<} Couleur du joueur courant 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

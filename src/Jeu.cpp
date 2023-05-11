@@ -4,8 +4,6 @@
 
 #include "../include/Jeu.h"
 
-#include <regex>
-
 #define BOARD_SIZE 8
 
 Jeu::Jeu() : chessboard(new Echiquier()),
@@ -17,52 +15,6 @@ Jeu::~Jeu() {
 
 void Jeu::affiche() {
     chessboard->affiche();
-}
-
-bool isValidMoveInput(string const & input) {
-    regex mouvmtpattern("[a-h][1-8][a-h][1-8]\\s*");
-    return regex_match(input,mouvmtpattern);
-}
-
-bool isValidSmallRookMove(string const & input) {
-    regex pattern("(O|o|0)-(O|o|0)\\s*");
-    return regex_match(input,pattern);
-}
-
-bool isValidBigRookMove(string const & input) {
-    regex pattern("(O|o|0)-(O|o|0)-(O|o|0)\\s*");
-    return regex_match(input,pattern);
-}
-
-bool isQuitInput(string const & input){
-    regex pattern("/quit\\s*");
-    return regex_match(input,pattern);
-}
-
-bool isDrawInput(string const & input){
-    regex pattern("/draw\\s*");
-    return regex_match(input,pattern);
-}
-
-bool isResignInput(string const & input){
-    regex pattern("/resign\\s*");
-    return regex_match(input,pattern);
-}
-
-bool isValidInput(string const & input){
-    return isValidMoveInput(input)
-        || isValidSmallRookMove(input)
-        || isValidBigRookMove(input)
-        || isQuitInput(input)
-        || isDrawInput(input)
-        || isResignInput(input);
-}
-
-bool isValidPromotion(string const & input){
-    return isValidQueenPromotion(input)
-        || isValidRookPromotion(input)
-        || isValidBishopPromotion(input)
-        || isValidKnightPromotion(input);
 }
 
 bool Jeu::coup() {

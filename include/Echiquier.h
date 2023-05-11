@@ -16,6 +16,7 @@
 
 #include "Piece.h"
 #include "Couleur.h"
+#include "Input.h"
 
 #include "King.h"
 #include "Queen.h"
@@ -123,14 +124,14 @@ public:
      */
     Square getKingSquare(Couleur color);
 
-    /*=========  SETTERS  =========*/
-
     /**
      * @brief Renvoi la pièce à la position pos
      * @param pos La position de la pièce
      * @return Le pointeur vers la pièce à la position pos
      */
     Piece *getPiece(Square pos);
+
+    /*=========  SETTERS  =========*/
 
     /**
      * @brief Place une pièce à la position spécifiée sur l'échiquier.
@@ -150,37 +151,5 @@ public:
      */
     void promote(Piece *p, string type);
 };
-
-/**
- * @brief Vérifie si la chaîne de caractères d'entrée correspond au format de promotion de la reine.
- *
- * @param input Chaîne de caractères à vérifier.
- * @return True si la chaîne de caractères correspond au format de promotion de la reine, sinon
- */
-bool isValidQueenPromotion(string const & input);
-
-/**
- * @brief Vérifie si la chaîne de caractères d'entrée correspond au format de promotion de la tour.
- *
- * @param input Chaîne de caractères à vérifier.
- * @return True si la chaîne de caractères correspond au format de promotion de la tour, sinon False.
- */
-bool isValidRookPromotion(string const & input);
-
-/**
- * @brief Vérifie si la chaîne de caractères d'entrée correspond au format de promotion du fou.
- *
- * @param input Chaîne de caractères à vérifier.
- * @return True si la chaîne de caractères correspond au format de promotion du fou, sinon False.
- */
-bool isValidBishopPromotion(string const & input);
-
-/**
- * @brief si la chaîne de caractères d'entrée correspond au format de promotion du cavalier.
- *
- * @param input Chaîne de caractères à vérifier.
- * @return True si la chaîne de caractères correspond au format de promotion du cavalier, sinon False.
- */
-bool isValidKnightPromotion(string const & input);
 
 #endif //ECHEC_ECHIQUIER_H

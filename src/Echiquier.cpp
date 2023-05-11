@@ -4,29 +4,7 @@
 
 #include "../include/Echiquier.h"
 
-#include <regex>
-
 #define BOARD_SIZE 8
-
-bool isValidQueenPromotion(string const & input){
-    regex pattern("(Q|q)\\s*");
-    return regex_match(input,pattern);
-}
-
-bool isValidRookPromotion(string const & input){
-    regex pattern("(R|r)\\s*");
-    return regex_match(input,pattern);
-}
-
-bool isValidBishopPromotion(string const & input){
-    regex pattern("(B|b)\\s*");
-    return regex_match(input,pattern);
-}
-
-bool isValidKnightPromotion(string const & input){
-    regex pattern("(N|n)\\s*");
-    return regex_match(input,pattern);
-}
 
 void Echiquier::allocMemEchiquier(){
     this->echiquier = new Piece**[BOARD_SIZE];
