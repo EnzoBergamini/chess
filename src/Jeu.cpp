@@ -16,7 +16,7 @@ Jeu::~Jeu() {
     delete chessboard;
 }
 
-void Jeu::affiche() {
+void Jeu::affiche() const{
     chessboard->affiche();
 }
 
@@ -79,7 +79,7 @@ bool Jeu::coup() {
     return true;
 }
 
-bool Jeu::isPathClear(Square start, Square end){
+bool Jeu::isPathClear(const Square& start, const Square& end) const{
     int start_line = start.getLine();
     int start_column = start.getColumn();
     int end_line = end.getLine();
@@ -167,7 +167,7 @@ bool Jeu::isPathClear(Square start, Square end){
     return true;
 }
 
-bool Jeu::movePiece(Square start, Square end, bool isPassingThroughAllowed) {
+bool Jeu::movePiece(const Square& start, const Square& end, bool isPassingThroughAllowed) {
 
     Piece *moving_piece = chessboard->getPiece(start);
     Piece *destination_piece = chessboard->getPiece(end);
@@ -272,11 +272,11 @@ bool Jeu::movePiece(Square start, Square end, bool isPassingThroughAllowed) {
     return true;
 }
 
-void Jeu::displayEndGame(string result) {
+void Jeu::displayEndGame(const string& result) const {
     cout << this->chessboard->canonicalPosition() << " " << result << endl;
 }
 
-bool Jeu::isKingInCheck(Couleur c){
+bool Jeu::isKingInCheck(const Couleur c) const {
     Square king_square = this->chessboard->getKingSquare(c);
     if (king_square == Square(-1, -1)){
         cerr << "Le roi n'a pas ete trouve" << endl;
@@ -286,7 +286,7 @@ bool Jeu::isKingInCheck(Couleur c){
     return this->isCapturable(king_square, c);
 }
 
-bool Jeu::isCapturable(Square square, Couleur c){
+bool Jeu::isCapturable(const Square& square, const Couleur c) const {
     for (int i = 0 ; i < BOARD_SIZE ; ++i){
         for (int j = 0 ; j < BOARD_SIZE ; ++j){
             Square current_square(i, j);
@@ -310,15 +310,15 @@ bool Jeu::isCapturable(Square square, Couleur c){
     return false;
 }
 
-void Jeu::setPlayer(Couleur c){
+void Jeu::setPlayer(const Couleur c){
     this->current_player = c;
 }
 
-Couleur Jeu::getPlayer(){
+Couleur Jeu::getPlayer() const {
     return this->current_player;
 }
 
-bool Jeu::isCheckMove(Square start, Square end ,Couleur c){
+bool Jeu::isCheckMove(const Square& start, const Square& end ,const Couleur c) const{
     Piece *start_piece = this->chessboard->getPiece(start);
     Piece *end_piece = this->chessboard->getPiece(end);
 
@@ -347,7 +347,7 @@ bool Jeu::isCheckMove(Square start, Square end ,Couleur c){
     }
 }
 
-bool Jeu::isTakingInPassing(Square start, Square end){
+bool Jeu::isTakingInPassing(const Square& start, const Square& end) const {
     if (this->getLastMove().empty() || this->getLastMove().size() < 4){
         return false;
     }
@@ -373,15 +373,15 @@ bool Jeu::isTakingInPassing(Square start, Square end){
     return false;
 }
 
-void Jeu::setLastMove(string move){
+void Jeu::setLastMove(const string& move){
     this->last_move = move;
 }
 
-string Jeu::getLastMove() {
+string Jeu::getLastMove() const {
     return this->last_move;
 }
 
-bool Jeu::smallRookMove(Couleur c) {
+bool Jeu::smallRookMove(const Couleur c){
     if (c == white){
         if(this->isPathClear(Square("e1"), Square("h1" ))
             && this->chessboard->getPiece(Square("e1")) != nullptr
@@ -414,7 +414,7 @@ bool Jeu::smallRookMove(Couleur c) {
     return false;
 }
 
-bool Jeu::bigRookMove(Couleur c) {
+bool Jeu::bigRookMove(const Couleur c){
     if (c == white){
         if(this->isPathClear(Square("e1"), Square("a1" ))
             && this->chessboard->getPiece(Square("e1")) != nullptr
@@ -447,7 +447,7 @@ bool Jeu::bigRookMove(Couleur c) {
     return false;
 }
 
-bool Jeu::isPromotion(){
+bool Jeu::isPromotion() const{
     for (int i = 0; i < 8; i++){
         Piece *piece1 = this->chessboard->getPiece(Square(0, i));
 

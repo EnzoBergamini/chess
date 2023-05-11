@@ -46,7 +46,7 @@ public:
     /**
      * @brief Affiche l'échiquier
      */
-    void affiche();
+    void affiche() const;
 
     /**
      * @brief Affiche un message de fin de partie avec le résultat et arrête le jeu.
@@ -62,7 +62,7 @@ public:
      *
      * @param result Résultat de la partie
      */
-    void displayEndGame(string result);
+    void displayEndGame(const string& result) const;
 
     /**
      * @brief Déplace une pièce d'une case de départ à une case d'arrivée sur l'échiquier.
@@ -84,7 +84,7 @@ public:
      * @param isPassingThroughAllowed Indique si le passage à travers d'autres pièces est autorisé.
      * @return Retourne true si le déplacement est réussi, sinon false.
      */
-    bool movePiece(Square start, Square end, bool isPassingThroughAllowed = false);
+    bool movePiece(const Square& start, const Square& end, bool isPassingThroughAllowed = false);
 
     /**
      * @brief cette fonction permet de gérer les coups des joueurs en alternance.
@@ -113,7 +113,7 @@ public:
      * @param end La case d'arrivée du chemin
      * @return true si le chemin est libre de toute pièce, false sinon
     */
-    bool isPathClear(Square start, Square end);
+    bool isPathClear(const Square& start, const Square& end) const;
 
     /**
      * @brief Vérifie si le roi du joueur de la couleur donnée est en échec.
@@ -121,7 +121,7 @@ public:
      * @param c Couleur du joueur
      * @return true si le roi est en échec, false sinon
      */
-    bool isKingInCheck(Couleur c);
+    bool isKingInCheck(const Couleur c) const;
 
     /**
      * @brief Vérifie si une piece a une position donnée est capturable.
@@ -130,7 +130,7 @@ public:
      * @param c couleur de la piece pour laquelle on veut savoir si elle est capturable
      * @return true si la piece est capturable, false sinon
      */
-    bool isCapturable(Square square, Couleur c);
+    bool isCapturable(const Square& square, const Couleur c) const;
 
     /**
      * @brief Vérifie si le mouvement d'une piece (le roi) va le mettre en échec.
@@ -141,7 +141,7 @@ public:
      *
      * @return true si le mouvement met le roi en échec, false sinon
      */
-    bool isCheckMove(Square start, Square end ,Couleur c);
+    bool isCheckMove(const Square& start, const Square& end ,const Couleur c) const;
 
     /**
      * @brief Vérifie si le mouvement est un petit roque.
@@ -149,14 +149,14 @@ public:
      * @param c couleur du joueur effectuant le roque
      * @return true si le mouvement est un petit roque, false sinon
      */
-    bool smallRookMove(Couleur c);
+    bool smallRookMove(const Couleur c);
 
     /**
      * @brief Vérifie si le mouvement est une promotion.
      *
      * @return true si le mouvement est une promotion, false sinon
      */
-    bool isPromotion();
+    bool isPromotion() const;
 
     /**
      * @brief Vérifie si le mouvement est un grand roque.
@@ -164,7 +164,7 @@ public:
      * @param c couleur du joueur effectuant le roque
      * @return true si le mouvement est un grand roque, false sinon
      */
-    bool bigRookMove(Couleur c);
+    bool bigRookMove(const Couleur c);
 
     /**
      * @brief Vérifie si le mouvement est une prise en passant.
@@ -172,7 +172,7 @@ public:
      * @param start position de la piece avant le mouvement
      * @param end position de la piece apres le mouvement
      */
-    bool isTakingInPassing(Square start, Square end);
+    bool isTakingInPassing(const Square& start, const Square& end) const;
 
     /*======================== SETTERS ========================*/
 
@@ -181,14 +181,14 @@ public:
      *
      * @param c Couleur (blanc ou white)
      */
-    void setPlayer(Couleur c);
+    void setPlayer(const Couleur c);
 
     /**
      * @brief Affecte la valeur de l'attribut lastMove.
      *
      * @param move le dernier mouvement effectué
      */
-    void setLastMove(string move);
+    void setLastMove(const string& move);
 
     /*======================== GETTERS ========================*/
 
@@ -197,14 +197,14 @@ public:
      *
      * @return Couleur (blanc ou white)
      */
-    Couleur getPlayer();
+    Couleur getPlayer() const;
 
     /**
      * @brief Récupère la valeur de l'attribut lastMove.
      *
      * @return le dernier mouvement effectué
     */
-    string getLastMove();
+    string getLastMove() const;
 };
 
 
