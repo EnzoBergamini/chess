@@ -10,7 +10,7 @@
 Rook::Rook(Couleur color, int id, Square pos) :
 Piece(color, (color == black) ? "\u265C" : "\u2656", id, pos) {}
 
-bool Rook::isLegalMove(Square dest, bool isCatch) {
+bool Rook::isLegalMove(Square dest, bool isCatch) const{
     Square start = this->position;
 
     if (dest.getLine() != start.getLine() && dest.getColumn() != start.getColumn()){

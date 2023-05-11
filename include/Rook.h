@@ -30,7 +30,7 @@ public:
      */
     Rook(Couleur color,int id, Square pos);
 
-    bool isLegalMove(Square dest, bool isCatch = false);
+    bool isLegalMove(Square dest, bool isCatch = false) const;
 
 };
 

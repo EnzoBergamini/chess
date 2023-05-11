@@ -21,23 +21,23 @@ void Piece::affiche(){
     cout << name;
 }
 
-Square Piece::getSquare() {
+Square Piece::getSquare() const{
     return this->position;
 }
 
-Couleur Piece::getColor() {
+Couleur Piece::getColor() const{
     return this->couleur;
 }
 
-string Piece::getName() {
+string Piece::getName() const{
     return this->name;
 }
 
-bool Piece::getCatch() {
+bool Piece::getCatch() const{
     return this->is_catch;
 }
 
-void Piece::setSquare(Square pos){
+void Piece::setSquare(Square& pos){
     this->position = pos;
 }
 
@@ -53,7 +53,7 @@ void Piece::displayInfo(){
     position.display();
 }
 
-bool Piece::isLegalMove(Square dest, bool isCatch) {
+bool Piece::isLegalMove(Square dest, bool isCatch) const{
     return true;
 }
 
@@ -61,11 +61,11 @@ void Piece::incrementMoveCount() {
     this->move_count++;
 }
 
-size_t Piece::getMoveCount() {
+size_t Piece::getMoveCount() const{
     return this->move_count;
 }
 
-int Piece::getId() {
+int Piece::getId() const{
     return this->id;
 }
 

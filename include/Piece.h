@@ -71,7 +71,7 @@ public:
      * @param isCatch Booléen pour savoir si la pièce capture une autre pièce
      * @return Le nombre de déplacement de la pièce
      */
-    virtual bool isLegalMove(Square dest, bool isCatch = false);
+    virtual bool isLegalMove(Square dest, bool isCatch = false) const;
 
     /*=========  GETTERS  =========*/
 
@@ -79,37 +79,37 @@ public:
      * @brief Renvoie la position de la pièce
      * @return La position de la pièce
      */
-    Square getSquare();
+    Square getSquare() const;
 
     /**
      * @brief Renvoie le nom de la pièce
      * @return Le nom de la pièce
      */
-    string getName();
+    string getName() const;
 
     /**
      * @brief Renvoie la couleur de la pièce
      * @return La couleur de la pièce
      */
-    Couleur getColor();
+    Couleur getColor() const;
 
     /**
      * @brief Renvoie l'identifiant de la pièce
      * @return L'identifiant de la pièce
      */
-    int getId();
+    int getId() const;
 
     /**
      * @brief Renvoie la valeur de is_catch
      * @return La valeur de is_catch
      */
-    bool getCatch();
+    bool getCatch() const;
 
     /**
      * @brief Renvoie le nombre de déplacement de la pièce
      * @return Le nombre de déplacement de la pièce
      */
-    size_t getMoveCount();
+    size_t getMoveCount() const;
 
     /*=========  SETTERS  =========*/
 
@@ -135,7 +135,7 @@ public:
      * @brief Applique sur l'attribut position de la piece la position passée en paramètre
      * @param pos Nouvelle position de la pièce
      */
-    void setSquare(Square pos);
+    void setSquare(Square& pos);
 };
 
 #endif //ECHEC_PIECE_H

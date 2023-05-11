@@ -31,7 +31,7 @@ public:
      */
     Bishop(Couleur c,int id,Square pos);
 
-    bool isLegalMove(Square dest, bool isCatch = false);
+    bool isLegalMove(Square dest, bool isCatch = false) const;
 
 };
 

@@ -10,7 +10,7 @@
 Pawn::Pawn(Couleur color, int id, Square pos) :
         Piece(color, (color == black) ? "\u265F" : "\u2659", id, pos) {}
 
-bool Pawn::isLegalMove(Square dest, bool isCatch) {
+bool Pawn::isLegalMove(Square dest, bool isCatch) const{
     if (isCatch){
         if (this->getColor() == white){
             if ((dest.getColumn() == this->position.getColumn() - 1

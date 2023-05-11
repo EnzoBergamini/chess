@@ -37,7 +37,7 @@ public:
      * @param dest case de destination
      * @param isCatch Booleen qui permet de savoir si ont est en position de catch (cas special pour le pion)
      */
-    bool isLegalMove(Square dest, bool isCatch = false);
+    bool isLegalMove(Square dest, bool isCatch = false) const;
 };
 
 
