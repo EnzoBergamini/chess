@@ -44,7 +44,7 @@ public:
     /**
      * @brief Affiche les coordonnées de la case
      */
-    void display();
+    void display() const;
 
     /**
      * @brief Renvoie la ligne de la case

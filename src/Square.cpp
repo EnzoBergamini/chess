@@ -25,7 +25,7 @@ int Square::getColumn() const { return column;}
 
 int Square::getLine() const { return line;}
 
-void Square::display(){
+void Square::display() const {
     cout << "Colonne : " << this->column << " ligne : " << this->line << endl;
 }
 
