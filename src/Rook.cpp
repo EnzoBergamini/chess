@@ -1,7 +1,9 @@
-//
-// Created by Enzo Bergamini on 27/04/2023.
-//
-
+/**
+ * @file Rook.cpp
+ *
+ * @author BERGAMINI Enzo
+ * @date 11/05/2023
+*/
 #include "../include/Piece.h"
 #include "../include/Rook.h"
 

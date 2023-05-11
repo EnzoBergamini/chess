@@ -54,10 +54,10 @@ Constructeur de la classe \mbox{\hyperlink{class_square}{Square}}.
 \end{DoxyParams}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{16                       \{}
-\DoxyCodeLine{17     \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}} = s[0] -\/ \textcolor{charliteral}{'a'};}
-\DoxyCodeLine{18     \mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}} = s[1] -\/ \textcolor{charliteral}{'0'} -\/ 1;}
-\DoxyCodeLine{19 \}}
+\DoxyCodeLine{19                       \{}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}} = s[0] -\/ \textcolor{charliteral}{'a'};}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}} = s[1] -\/ \textcolor{charliteral}{'0'} -\/ 1;}
+\DoxyCodeLine{22 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_square_a314d6f8841da7acb78bd2e8cd079ebc6}\label{class_square_a314d6f8841da7acb78bd2e8cd079ebc6}} 
@@ -79,7 +79,7 @@ Constructeur de la classe \mbox{\hyperlink{class_square}{Square}}.
 \end{DoxyParams}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{14         : \mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}}(\mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}}), \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}}(\mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}})\{\}}
+\DoxyCodeLine{17         : \mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}}(\mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}}), \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}}(\mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}})\{\}}
 
 \end{DoxyCode}
 
@@ -97,9 +97,9 @@ Affiche les coordonnées de la case.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{25                     \{}
-\DoxyCodeLine{26     cout << \textcolor{stringliteral}{"{}Colonne : "{}} << this-\/>\mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}} << \textcolor{stringliteral}{"{} ligne : "{}} << this-\/>\mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}} << endl;}
-\DoxyCodeLine{27 \}}
+\DoxyCodeLine{28                     \{}
+\DoxyCodeLine{29     cout << \textcolor{stringliteral}{"{}Colonne : "{}} << this-\/>\mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}} << \textcolor{stringliteral}{"{} ligne : "{}} << this-\/>\mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}} << endl;}
+\DoxyCodeLine{30 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}\label{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}} 
@@ -114,7 +114,7 @@ Renvoie la colonne de la case.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{21 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}};\}}
+\DoxyCodeLine{24 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_square_a572fbccc549f148942d85208ce80605f}{column}};\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_square_af6fc96300b5d4473325d843d628579cf}\label{class_square_af6fc96300b5d4473325d843d628579cf}} 
@@ -129,7 +129,7 @@ Renvoie la ligne de la case.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{23 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}};\}}
+\DoxyCodeLine{26 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}};\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_square_ae18fe910630c719a66a51099758e77fd}\label{class_square_ae18fe910630c719a66a51099758e77fd}} 
@@ -152,9 +152,9 @@ true si les cases sont égales, false sinon
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{29                                                 \{}
-\DoxyCodeLine{30     \textcolor{keywordflow}{return} (this-\/>\mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}} == other.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() \&\& this-\/>column == other.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}());}
-\DoxyCodeLine{31 \}}
+\DoxyCodeLine{32                                                 \{}
+\DoxyCodeLine{33     \textcolor{keywordflow}{return} (this-\/>\mbox{\hyperlink{class_square_af37b0659384cd9b61d594f64da5641e8}{line}} == other.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() \&\& this-\/>column == other.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}());}
+\DoxyCodeLine{34 \}}
 
 \end{DoxyCode}
 

@@ -91,8 +91,7 @@ $(document).ready(function(){initNavTree('_echiquier_8h.html',''); initResizable
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Data Structures</a>  </div>
   <div class="headertitle"><div class="title">Echiquier.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -104,6 +103,7 @@ $(document).ready(function(){initNavTree('_echiquier_8h.html',''); initResizable
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="_piece_8h_source.html">Piece.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_couleur_8h_source.html">Couleur.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_input_8h_source.html">Input.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_king_8h_source.html">King.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_queen_8h_source.html">Queen.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_bishop_8h_source.html">Bishop.h</a>&quot;</code><br />
@@ -118,152 +118,12 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_echiquier.html">Echiquier</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestion de l'échiquier du jeu d'échecs.  <a href="class_echiquier.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a98a825542e35f663a4d9845fe18ee023"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_echiquier_8h.html#a98a825542e35f663a4d9845fe18ee023">isValidQueenPromotion</a> (string const &amp;input)</td></tr>
-<tr class="memdesc:a98a825542e35f663a4d9845fe18ee023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si la chaîne de caractères d'entrée correspond au format de promotion de la reine.  <br /></td></tr>
-<tr class="separator:a98a825542e35f663a4d9845fe18ee023"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae49b6bb3e1ae7023e417b1bd03045148"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_echiquier_8h.html#ae49b6bb3e1ae7023e417b1bd03045148">isValidRookPromotion</a> (string const &amp;input)</td></tr>
-<tr class="memdesc:ae49b6bb3e1ae7023e417b1bd03045148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si la chaîne de caractères d'entrée correspond au format de promotion de la tour.  <br /></td></tr>
-<tr class="separator:ae49b6bb3e1ae7023e417b1bd03045148"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac50d40083d2dca3f675a9267853411c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_echiquier_8h.html#ac50d40083d2dca3f675a9267853411c2">isValidBishopPromotion</a> (string const &amp;input)</td></tr>
-<tr class="memdesc:ac50d40083d2dca3f675a9267853411c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si la chaîne de caractères d'entrée correspond au format de promotion du fou.  <br /></td></tr>
-<tr class="separator:ac50d40083d2dca3f675a9267853411c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19032eeb87a4ec79b0d9ce886ab75a03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_echiquier_8h.html#a19032eeb87a4ec79b0d9ce886ab75a03">isValidKnightPromotion</a> (string const &amp;input)</td></tr>
-<tr class="memdesc:a19032eeb87a4ec79b0d9ce886ab75a03"><td class="mdescLeft">&#160;</td><td class="mdescRight">si la chaîne de caractères d'entrée correspond au format de promotion du cavalier.  <br /></td></tr>
-<tr class="separator:a19032eeb87a4ec79b0d9ce886ab75a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Gestion de l'échiquier du jeu d'échecs. </p>
 <dl class="section author"><dt>Author</dt><dd>BERGAMINI Enzo </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>11/05/2023 </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="ac50d40083d2dca3f675a9267853411c2" name="ac50d40083d2dca3f675a9267853411c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac50d40083d2dca3f675a9267853411c2">&#9670;&#160;</a></span>isValidBishopPromotion()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool isValidBishopPromotion </td>
-          <td>(</td>
-          <td class="paramtype">string const &amp;&#160;</td>
-          <td class="paramname"><em>input</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Vérifie si la chaîne de caractères d'entrée correspond au format de promotion du fou. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">input</td><td>Chaîne de caractères à vérifier. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True si la chaîne de caractères correspond au format de promotion du fou, sinon False. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                                 {</div>
-<div class="line"><span class="lineno">   22</span>    regex pattern(<span class="stringliteral">&quot;(B|b)\\s*&quot;</span>);</div>
-<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">return</span> regex_match(input,pattern);</div>
-<div class="line"><span class="lineno">   24</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a19032eeb87a4ec79b0d9ce886ab75a03" name="a19032eeb87a4ec79b0d9ce886ab75a03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19032eeb87a4ec79b0d9ce886ab75a03">&#9670;&#160;</a></span>isValidKnightPromotion()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool isValidKnightPromotion </td>
-          <td>(</td>
-          <td class="paramtype">string const &amp;&#160;</td>
-          <td class="paramname"><em>input</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>si la chaîne de caractères d'entrée correspond au format de promotion du cavalier. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">input</td><td>Chaîne de caractères à vérifier. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True si la chaîne de caractères correspond au format de promotion du cavalier, sinon False. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                 {</div>
-<div class="line"><span class="lineno">   27</span>    regex pattern(<span class="stringliteral">&quot;(N|n)\\s*&quot;</span>);</div>
-<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">return</span> regex_match(input,pattern);</div>
-<div class="line"><span class="lineno">   29</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a98a825542e35f663a4d9845fe18ee023" name="a98a825542e35f663a4d9845fe18ee023"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98a825542e35f663a4d9845fe18ee023">&#9670;&#160;</a></span>isValidQueenPromotion()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool isValidQueenPromotion </td>
-          <td>(</td>
-          <td class="paramtype">string const &amp;&#160;</td>
-          <td class="paramname"><em>input</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Vérifie si la chaîne de caractères d'entrée correspond au format de promotion de la reine. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">input</td><td>Chaîne de caractères à vérifier. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True si la chaîne de caractères correspond au format de promotion de la reine, sinon </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>                                                {</div>
-<div class="line"><span class="lineno">   12</span>    regex pattern(<span class="stringliteral">&quot;(Q|q)\\s*&quot;</span>);</div>
-<div class="line"><span class="lineno">   13</span>    <span class="keywordflow">return</span> regex_match(input,pattern);</div>
-<div class="line"><span class="lineno">   14</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="ae49b6bb3e1ae7023e417b1bd03045148" name="ae49b6bb3e1ae7023e417b1bd03045148"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae49b6bb3e1ae7023e417b1bd03045148">&#9670;&#160;</a></span>isValidRookPromotion()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool isValidRookPromotion </td>
-          <td>(</td>
-          <td class="paramtype">string const &amp;&#160;</td>
-          <td class="paramname"><em>input</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Vérifie si la chaîne de caractères d'entrée correspond au format de promotion de la tour. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">input</td><td>Chaîne de caractères à vérifier. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True si la chaîne de caractères correspond au format de promotion de la tour, sinon False. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>                                               {</div>
-<div class="line"><span class="lineno">   17</span>    regex pattern(<span class="stringliteral">&quot;(R|r)\\s*&quot;</span>);</div>
-<div class="line"><span class="lineno">   18</span>    <span class="keywordflow">return</span> regex_match(input,pattern);</div>
-<div class="line"><span class="lineno">   19</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

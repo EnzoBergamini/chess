@@ -1,0 +1,368 @@
+\hypertarget{_input_8h}{}\doxysection{include/\+Input.h File Reference}
+\label{_input_8h}\index{include/Input.h@{include/Input.h}}
+
+
+Gestion des entrées utilisateur.  
+
+
+{\ttfamily \#include $<$regex$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_input_8h_a98a825542e35f663a4d9845fe18ee023}{is\+Valid\+Queen\+Promotion}} (string const \&input)
+\begin{DoxyCompactList}\small\item\em Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format de promotion de la reine. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_input_8h_ae49b6bb3e1ae7023e417b1bd03045148}{is\+Valid\+Rook\+Promotion}} (string const \&input)
+\begin{DoxyCompactList}\small\item\em Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format de promotion de la tour. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_input_8h_ac50d40083d2dca3f675a9267853411c2}{is\+Valid\+Bishop\+Promotion}} (string const \&input)
+\begin{DoxyCompactList}\small\item\em Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format de promotion du fou. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_input_8h_a19032eeb87a4ec79b0d9ce886ab75a03}{is\+Valid\+Knight\+Promotion}} (string const \&input)
+\begin{DoxyCompactList}\small\item\em si la chaîne de caractères d\textquotesingle{}entrée correspond au format de promotion du cavalier. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_input_8h_a1e00530b569554cc5f19750d3330c281}{is\+Valid\+Move\+Input}} (string const \&input)
+\begin{DoxyCompactList}\small\item\em Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format d\textquotesingle{}un coup valide. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_input_8h_ad73d51b7f71e4d68ae802c3dbba844ca}{is\+Valid\+Small\+Rook\+Move}} (string const \&input)
+\begin{DoxyCompactList}\small\item\em Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format d\textquotesingle{}un petit roque. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_input_8h_a35898c86c806c3145ca1db207e14b51f}{is\+Valid\+Big\+Rook\+Move}} (string const \&input)
+\begin{DoxyCompactList}\small\item\em Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format d\textquotesingle{}un grand roque. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_input_8h_ad7227221b4de6dc9f805a6031a0e3e48}{is\+Quit\+Input}} (string const \&input)
+\begin{DoxyCompactList}\small\item\em Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond a l\textquotesingle{}instruction de quitter. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_input_8h_a18473d9c77c3668e9acd8a8a9503e565}{is\+Draw\+Input}} (string const \&input)
+\begin{DoxyCompactList}\small\item\em Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond a l\textquotesingle{}instruction de demander un match nul. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_input_8h_a1af6c704c0f97292ab8db2cb5c435104}{is\+Resign\+Input}} (string const \&input)
+\begin{DoxyCompactList}\small\item\em Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond a l\textquotesingle{}instruction d\textquotesingle{}abandonner. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_input_8h_a9d1265ac709651f7702c7a5ba0a11238}{is\+Valid\+Input}} (string const \&input)
+\begin{DoxyCompactList}\small\item\em Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond a un format valide. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_input_8h_af0669257f4d91e82b9c6f6afec907a40}{is\+Valid\+Promotion}} (string const \&input)
+\begin{DoxyCompactList}\small\item\em Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond a un format de promotion valide. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gestion des entrées utilisateur. 
+
+\begin{DoxyAuthor}{Author}
+BERGAMINI Enzo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/05/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_input_8h_a18473d9c77c3668e9acd8a8a9503e565}\label{_input_8h_a18473d9c77c3668e9acd8a8a9503e565}} 
+\index{Input.h@{Input.h}!isDrawInput@{isDrawInput}}
+\index{isDrawInput@{isDrawInput}!Input.h@{Input.h}}
+\doxysubsubsection{\texorpdfstring{isDrawInput()}{isDrawInput()}}
+{\footnotesize\ttfamily bool is\+Draw\+Input (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond a l\textquotesingle{}instruction de demander un match nul. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Chaîne de caractères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la chaîne de caractères correspond au format de promotion, sinon False. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                                       \{}
+\DoxyCodeLine{51     regex pattern(\textcolor{stringliteral}{"{}/draw\(\backslash\)\(\backslash\)s*"{}});}
+\DoxyCodeLine{52     \textcolor{keywordflow}{return} regex\_match(input,pattern);}
+\DoxyCodeLine{53 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_input_8h_ad7227221b4de6dc9f805a6031a0e3e48}\label{_input_8h_ad7227221b4de6dc9f805a6031a0e3e48}} 
+\index{Input.h@{Input.h}!isQuitInput@{isQuitInput}}
+\index{isQuitInput@{isQuitInput}!Input.h@{Input.h}}
+\doxysubsubsection{\texorpdfstring{isQuitInput()}{isQuitInput()}}
+{\footnotesize\ttfamily bool is\+Quit\+Input (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond a l\textquotesingle{}instruction de quitter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Chaîne de caractères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la chaîne de caractères correspond au format de promotion, sinon False. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                                       \{}
+\DoxyCodeLine{46     regex pattern(\textcolor{stringliteral}{"{}/quit\(\backslash\)\(\backslash\)s*"{}});}
+\DoxyCodeLine{47     \textcolor{keywordflow}{return} regex\_match(input,pattern);}
+\DoxyCodeLine{48 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_input_8h_a1af6c704c0f97292ab8db2cb5c435104}\label{_input_8h_a1af6c704c0f97292ab8db2cb5c435104}} 
+\index{Input.h@{Input.h}!isResignInput@{isResignInput}}
+\index{isResignInput@{isResignInput}!Input.h@{Input.h}}
+\doxysubsubsection{\texorpdfstring{isResignInput()}{isResignInput()}}
+{\footnotesize\ttfamily bool is\+Resign\+Input (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond a l\textquotesingle{}instruction d\textquotesingle{}abandonner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Chaîne de caractères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la chaîne de caractères correspond au format de promotion, sinon False. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                                         \{}
+\DoxyCodeLine{57     regex pattern(\textcolor{stringliteral}{"{}/resign\(\backslash\)\(\backslash\)s*"{}});}
+\DoxyCodeLine{58     \textcolor{keywordflow}{return} regex\_match(input,pattern);}
+\DoxyCodeLine{59 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_input_8h_a35898c86c806c3145ca1db207e14b51f}\label{_input_8h_a35898c86c806c3145ca1db207e14b51f}} 
+\index{Input.h@{Input.h}!isValidBigRookMove@{isValidBigRookMove}}
+\index{isValidBigRookMove@{isValidBigRookMove}!Input.h@{Input.h}}
+\doxysubsubsection{\texorpdfstring{isValidBigRookMove()}{isValidBigRookMove()}}
+{\footnotesize\ttfamily bool is\+Valid\+Big\+Rook\+Move (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format d\textquotesingle{}un grand roque. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Chaîne de caractères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la chaîne de caractères correspond au format de promotion, sinon False. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40                                               \{}
+\DoxyCodeLine{41     regex pattern(\textcolor{stringliteral}{"{}(O|o|0)-\/(O|o|0)-\/(O|o|0)\(\backslash\)\(\backslash\)s*"{}});}
+\DoxyCodeLine{42     \textcolor{keywordflow}{return} regex\_match(input,pattern);}
+\DoxyCodeLine{43 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_input_8h_ac50d40083d2dca3f675a9267853411c2}\label{_input_8h_ac50d40083d2dca3f675a9267853411c2}} 
+\index{Input.h@{Input.h}!isValidBishopPromotion@{isValidBishopPromotion}}
+\index{isValidBishopPromotion@{isValidBishopPromotion}!Input.h@{Input.h}}
+\doxysubsubsection{\texorpdfstring{isValidBishopPromotion()}{isValidBishopPromotion()}}
+{\footnotesize\ttfamily bool is\+Valid\+Bishop\+Promotion (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format de promotion du fou. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Chaîne de caractères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la chaîne de caractères correspond au format de promotion du fou, sinon False. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20                                                  \{}
+\DoxyCodeLine{21     regex pattern(\textcolor{stringliteral}{"{}(B|b)\(\backslash\)\(\backslash\)s*"{}});}
+\DoxyCodeLine{22     \textcolor{keywordflow}{return} regex\_match(input,pattern);}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_input_8h_a9d1265ac709651f7702c7a5ba0a11238}\label{_input_8h_a9d1265ac709651f7702c7a5ba0a11238}} 
+\index{Input.h@{Input.h}!isValidInput@{isValidInput}}
+\index{isValidInput@{isValidInput}!Input.h@{Input.h}}
+\doxysubsubsection{\texorpdfstring{isValidInput()}{isValidInput()}}
+{\footnotesize\ttfamily bool is\+Valid\+Input (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond a un format valide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Chaîne de caractères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la chaîne de caractères correspond au format de promotion, sinon False. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                                        \{}
+\DoxyCodeLine{62     \textcolor{keywordflow}{return} \mbox{\hyperlink{_input_8cpp_a1e00530b569554cc5f19750d3330c281}{isValidMoveInput}}(input)}
+\DoxyCodeLine{63            || \mbox{\hyperlink{_input_8cpp_ad73d51b7f71e4d68ae802c3dbba844ca}{isValidSmallRookMove}}(input)}
+\DoxyCodeLine{64            || \mbox{\hyperlink{_input_8cpp_a35898c86c806c3145ca1db207e14b51f}{isValidBigRookMove}}(input)}
+\DoxyCodeLine{65            || \mbox{\hyperlink{_input_8cpp_ad7227221b4de6dc9f805a6031a0e3e48}{isQuitInput}}(input)}
+\DoxyCodeLine{66            || \mbox{\hyperlink{_input_8cpp_a18473d9c77c3668e9acd8a8a9503e565}{isDrawInput}}(input)}
+\DoxyCodeLine{67            || \mbox{\hyperlink{_input_8cpp_a1af6c704c0f97292ab8db2cb5c435104}{isResignInput}}(input);}
+\DoxyCodeLine{68 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_input_8h_a19032eeb87a4ec79b0d9ce886ab75a03}\label{_input_8h_a19032eeb87a4ec79b0d9ce886ab75a03}} 
+\index{Input.h@{Input.h}!isValidKnightPromotion@{isValidKnightPromotion}}
+\index{isValidKnightPromotion@{isValidKnightPromotion}!Input.h@{Input.h}}
+\doxysubsubsection{\texorpdfstring{isValidKnightPromotion()}{isValidKnightPromotion()}}
+{\footnotesize\ttfamily bool is\+Valid\+Knight\+Promotion (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+
+si la chaîne de caractères d\textquotesingle{}entrée correspond au format de promotion du cavalier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Chaîne de caractères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la chaîne de caractères correspond au format de promotion du cavalier, sinon False. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                                                  \{}
+\DoxyCodeLine{26     regex pattern(\textcolor{stringliteral}{"{}(N|n)\(\backslash\)\(\backslash\)s*"{}});}
+\DoxyCodeLine{27     \textcolor{keywordflow}{return} regex\_match(input,pattern);}
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_input_8h_a1e00530b569554cc5f19750d3330c281}\label{_input_8h_a1e00530b569554cc5f19750d3330c281}} 
+\index{Input.h@{Input.h}!isValidMoveInput@{isValidMoveInput}}
+\index{isValidMoveInput@{isValidMoveInput}!Input.h@{Input.h}}
+\doxysubsubsection{\texorpdfstring{isValidMoveInput()}{isValidMoveInput()}}
+{\footnotesize\ttfamily bool is\+Valid\+Move\+Input (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format d\textquotesingle{}un coup valide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Chaîne de caractères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la chaîne de caractères correspond au format de promotion, sinon False. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                                             \{}
+\DoxyCodeLine{31     regex mouvmtpattern(\textcolor{stringliteral}{"{}[a-\/h][1-\/8][a-\/h][1-\/8]\(\backslash\)\(\backslash\)s*"{}});}
+\DoxyCodeLine{32     \textcolor{keywordflow}{return} regex\_match(input,mouvmtpattern);}
+\DoxyCodeLine{33 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_input_8h_af0669257f4d91e82b9c6f6afec907a40}\label{_input_8h_af0669257f4d91e82b9c6f6afec907a40}} 
+\index{Input.h@{Input.h}!isValidPromotion@{isValidPromotion}}
+\index{isValidPromotion@{isValidPromotion}!Input.h@{Input.h}}
+\doxysubsubsection{\texorpdfstring{isValidPromotion()}{isValidPromotion()}}
+{\footnotesize\ttfamily bool is\+Valid\+Promotion (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond a un format de promotion valide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Chaîne de caractères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la chaîne de caractères correspond au format de promotion, sinon False. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70                                            \{}
+\DoxyCodeLine{71     \textcolor{keywordflow}{return} \mbox{\hyperlink{_input_8cpp_a98a825542e35f663a4d9845fe18ee023}{isValidQueenPromotion}}(input)}
+\DoxyCodeLine{72            || \mbox{\hyperlink{_input_8cpp_ae49b6bb3e1ae7023e417b1bd03045148}{isValidRookPromotion}}(input)}
+\DoxyCodeLine{73            || \mbox{\hyperlink{_input_8cpp_ac50d40083d2dca3f675a9267853411c2}{isValidBishopPromotion}}(input)}
+\DoxyCodeLine{74            || \mbox{\hyperlink{_input_8cpp_a19032eeb87a4ec79b0d9ce886ab75a03}{isValidKnightPromotion}}(input);}
+\DoxyCodeLine{75 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_input_8h_a98a825542e35f663a4d9845fe18ee023}\label{_input_8h_a98a825542e35f663a4d9845fe18ee023}} 
+\index{Input.h@{Input.h}!isValidQueenPromotion@{isValidQueenPromotion}}
+\index{isValidQueenPromotion@{isValidQueenPromotion}!Input.h@{Input.h}}
+\doxysubsubsection{\texorpdfstring{isValidQueenPromotion()}{isValidQueenPromotion()}}
+{\footnotesize\ttfamily bool is\+Valid\+Queen\+Promotion (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format de promotion de la reine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Chaîne de caractères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la chaîne de caractères correspond au format de promotion de la reine, sinon 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10                                                 \{}
+\DoxyCodeLine{11     regex pattern(\textcolor{stringliteral}{"{}(Q|q)\(\backslash\)\(\backslash\)s*"{}});}
+\DoxyCodeLine{12     \textcolor{keywordflow}{return} regex\_match(input,pattern);}
+\DoxyCodeLine{13 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_input_8h_ae49b6bb3e1ae7023e417b1bd03045148}\label{_input_8h_ae49b6bb3e1ae7023e417b1bd03045148}} 
+\index{Input.h@{Input.h}!isValidRookPromotion@{isValidRookPromotion}}
+\index{isValidRookPromotion@{isValidRookPromotion}!Input.h@{Input.h}}
+\doxysubsubsection{\texorpdfstring{isValidRookPromotion()}{isValidRookPromotion()}}
+{\footnotesize\ttfamily bool is\+Valid\+Rook\+Promotion (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format de promotion de la tour. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Chaîne de caractères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la chaîne de caractères correspond au format de promotion de la tour, sinon False. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15                                                \{}
+\DoxyCodeLine{16     regex pattern(\textcolor{stringliteral}{"{}(R|r)\(\backslash\)\(\backslash\)s*"{}});}
+\DoxyCodeLine{17     \textcolor{keywordflow}{return} regex\_match(input,pattern);}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_input_8h_ad73d51b7f71e4d68ae802c3dbba844ca}\label{_input_8h_ad73d51b7f71e4d68ae802c3dbba844ca}} 
+\index{Input.h@{Input.h}!isValidSmallRookMove@{isValidSmallRookMove}}
+\index{isValidSmallRookMove@{isValidSmallRookMove}!Input.h@{Input.h}}
+\doxysubsubsection{\texorpdfstring{isValidSmallRookMove()}{isValidSmallRookMove()}}
+{\footnotesize\ttfamily bool is\+Valid\+Small\+Rook\+Move (\begin{DoxyParamCaption}\item[{string const \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la chaîne de caractères d\textquotesingle{}entrée correspond au format d\textquotesingle{}un petit roque. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Chaîne de caractères à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si la chaîne de caractères correspond au format de promotion, sinon False. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                                                 \{}
+\DoxyCodeLine{36     regex pattern(\textcolor{stringliteral}{"{}(O|o|0)-\/(O|o|0)\(\backslash\)\(\backslash\)s*"{}});}
+\DoxyCodeLine{37     \textcolor{keywordflow}{return} regex\_match(input,pattern);}
+\DoxyCodeLine{38 \}}
+
+\end{DoxyCode}

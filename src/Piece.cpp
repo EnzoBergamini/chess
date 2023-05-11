@@ -1,7 +1,9 @@
-//
-// Created by Enzo Bergamini on 24/04/2023.
-//
-
+/**
+ * @file Piece.cpp
+ *
+ * @author BERGAMINI Enzo
+ * @date 11/05/2023
+*/
 #include <iostream>
 
 #include "../include/Piece.h"

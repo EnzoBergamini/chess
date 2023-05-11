@@ -156,10 +156,10 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>                      {</div>
-<div class="line"><span class="lineno">   17</span>    <a class="code hl_variable" href="class_square.html#a572fbccc549f148942d85208ce80605f">column</a> = s[0] - <span class="charliteral">&#39;a&#39;</span>;</div>
-<div class="line"><span class="lineno">   18</span>    <a class="code hl_variable" href="class_square.html#af37b0659384cd9b61d594f64da5641e8">line</a> = s[1] - <span class="charliteral">&#39;0&#39;</span> - 1;</div>
-<div class="line"><span class="lineno">   19</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>                      {</div>
+<div class="line"><span class="lineno">   20</span>    <a class="code hl_variable" href="class_square.html#a572fbccc549f148942d85208ce80605f">column</a> = s[0] - <span class="charliteral">&#39;a&#39;</span>;</div>
+<div class="line"><span class="lineno">   21</span>    <a class="code hl_variable" href="class_square.html#af37b0659384cd9b61d594f64da5641e8">line</a> = s[1] - <span class="charliteral">&#39;0&#39;</span> - 1;</div>
+<div class="line"><span class="lineno">   22</span>}</div>
 <div class="ttc" id="aclass_square_html_a572fbccc549f148942d85208ce80605f"><div class="ttname"><a href="class_square.html#a572fbccc549f148942d85208ce80605f">Square::column</a></div><div class="ttdeci">int column</div><div class="ttdef"><b>Definition:</b> Square.h:28</div></div>
 <div class="ttc" id="aclass_square_html_af37b0659384cd9b61d594f64da5641e8"><div class="ttname"><a href="class_square.html#af37b0659384cd9b61d594f64da5641e8">Square::line</a></div><div class="ttdeci">int line</div><div class="ttdef"><b>Definition:</b> Square.h:26</div></div>
 </div><!-- fragment -->
@@ -199,7 +199,7 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>        : <a class="code hl_variable" href="class_square.html#af37b0659384cd9b61d594f64da5641e8">line</a>(<a class="code hl_variable" href="class_square.html#af37b0659384cd9b61d594f64da5641e8">line</a>), <a class="code hl_variable" href="class_square.html#a572fbccc549f148942d85208ce80605f">column</a>(<a class="code hl_variable" href="class_square.html#a572fbccc549f148942d85208ce80605f">column</a>){}</div>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>        : <a class="code hl_variable" href="class_square.html#af37b0659384cd9b61d594f64da5641e8">line</a>(<a class="code hl_variable" href="class_square.html#af37b0659384cd9b61d594f64da5641e8">line</a>), <a class="code hl_variable" href="class_square.html#a572fbccc549f148942d85208ce80605f">column</a>(<a class="code hl_variable" href="class_square.html#a572fbccc549f148942d85208ce80605f">column</a>){}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -220,9 +220,9 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Affiche les coordonnées de la case. </p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>                    {</div>
-<div class="line"><span class="lineno">   26</span>    cout &lt;&lt; <span class="stringliteral">&quot;Colonne : &quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="class_square.html#a572fbccc549f148942d85208ce80605f">column</a> &lt;&lt; <span class="stringliteral">&quot; ligne : &quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="class_square.html#af37b0659384cd9b61d594f64da5641e8">line</a> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   27</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>                    {</div>
+<div class="line"><span class="lineno">   29</span>    cout &lt;&lt; <span class="stringliteral">&quot;Colonne : &quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="class_square.html#a572fbccc549f148942d85208ce80605f">column</a> &lt;&lt; <span class="stringliteral">&quot; ligne : &quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="class_square.html#af37b0659384cd9b61d594f64da5641e8">line</a> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   30</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -242,7 +242,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Renvoie la colonne de la case. </p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_square.html#a572fbccc549f148942d85208ce80605f">column</a>;}</div>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_square.html#a572fbccc549f148942d85208ce80605f">column</a>;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -262,7 +262,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Renvoie la ligne de la case. </p>
-<div class="fragment"><div class="line"><span class="lineno">   23</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_square.html#af37b0659384cd9b61d594f64da5641e8">line</a>;}</div>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_square.html#af37b0659384cd9b61d594f64da5641e8">line</a>;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -290,11 +290,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true si les cases sont égales, false sinon </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                                {</div>
-<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">return</span> (this-&gt;<a class="code hl_variable" href="class_square.html#af37b0659384cd9b61d594f64da5641e8">line</a> == other.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() &amp;&amp; this-&gt;column == other.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>());</div>
-<div class="line"><span class="lineno">   31</span>}</div>
-<div class="ttc" id="aclass_square_html_a8c17a73ee7627d8fbafceff1d22d09fc"><div class="ttname"><a href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">Square::getColumn</a></div><div class="ttdeci">int getColumn() const</div><div class="ttdoc">Renvoie la colonne de la case.</div><div class="ttdef"><b>Definition:</b> Square.cpp:21</div></div>
-<div class="ttc" id="aclass_square_html_af6fc96300b5d4473325d843d628579cf"><div class="ttname"><a href="class_square.html#af6fc96300b5d4473325d843d628579cf">Square::getLine</a></div><div class="ttdeci">int getLine() const</div><div class="ttdoc">Renvoie la ligne de la case.</div><div class="ttdef"><b>Definition:</b> Square.cpp:23</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>                                                {</div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">return</span> (this-&gt;<a class="code hl_variable" href="class_square.html#af37b0659384cd9b61d594f64da5641e8">line</a> == other.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() &amp;&amp; this-&gt;column == other.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>());</div>
+<div class="line"><span class="lineno">   34</span>}</div>
+<div class="ttc" id="aclass_square_html_a8c17a73ee7627d8fbafceff1d22d09fc"><div class="ttname"><a href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">Square::getColumn</a></div><div class="ttdeci">int getColumn() const</div><div class="ttdoc">Renvoie la colonne de la case.</div><div class="ttdef"><b>Definition:</b> Square.cpp:24</div></div>
+<div class="ttc" id="aclass_square_html_af6fc96300b5d4473325d843d628579cf"><div class="ttname"><a href="class_square.html#af6fc96300b5d4473325d843d628579cf">Square::getLine</a></div><div class="ttdeci">int getLine() const</div><div class="ttdoc">Renvoie la ligne de la case.</div><div class="ttdef"><b>Definition:</b> Square.cpp:26</div></div>
 </div><!-- fragment -->
 </div>
 </div>

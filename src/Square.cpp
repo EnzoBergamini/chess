@@ -1,6 +1,9 @@
-//
-// Created bline Enzo Bergamini on 24/04/2023.
-//
+/**
+ * @file Square.cpp
+ *
+ * @author BERGAMINI Enzo
+ * @date 11/05/2023
+*/
 
 #include "../include/Square.h"
 

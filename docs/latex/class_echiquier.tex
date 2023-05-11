@@ -63,45 +63,45 @@ Constructeur de la classe \mbox{\hyperlink{class_echiquier}{Echiquier}} et alloc
 
 \texorpdfstring{$<$}{<} Vecteur de pointeurs des pièces de l\textquotesingle{}échiquier 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{53                     \{}
-\DoxyCodeLine{54 }
-\DoxyCodeLine{55     this-\/>\mbox{\hyperlink{class_echiquier_a0a86cb1648b282b23188bd8f3228f00f}{allocMemEchiquier}}();}
-\DoxyCodeLine{56 }
-\DoxyCodeLine{57     this-\/>\mbox{\hyperlink{class_echiquier_a89f34d19638e92c536e1c4a8a393e93b}{initEchiquier}}();}
-\DoxyCodeLine{58 }
-\DoxyCodeLine{59     \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}}] = \{}
-\DoxyCodeLine{60             \textcolor{keyword}{new} \mbox{\hyperlink{class_rook}{Rook}}    (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}},  0, \mbox{\hyperlink{class_square}{Square}}(0,0)),}
-\DoxyCodeLine{61             \textcolor{keyword}{new} \mbox{\hyperlink{class_knight}{Knight}}(\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}},  1, \mbox{\hyperlink{class_square}{Square}}(0,1)),}
-\DoxyCodeLine{62             \textcolor{keyword}{new} \mbox{\hyperlink{class_bishop}{Bishop}}     (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}},  2, \mbox{\hyperlink{class_square}{Square}}(0,2)),}
-\DoxyCodeLine{63             \textcolor{keyword}{new} \mbox{\hyperlink{class_queen}{Queen}}    (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}},  3, \mbox{\hyperlink{class_square}{Square}}(0,3)),}
-\DoxyCodeLine{64             \textcolor{keyword}{new} \mbox{\hyperlink{class_king}{King}}     (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}},  4, \mbox{\hyperlink{class_square}{Square}}(0,4)),}
-\DoxyCodeLine{65             \textcolor{keyword}{new} \mbox{\hyperlink{class_bishop}{Bishop}}     (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}},  5, \mbox{\hyperlink{class_square}{Square}}(0,5)),}
-\DoxyCodeLine{66             \textcolor{keyword}{new} \mbox{\hyperlink{class_knight}{Knight}}(\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}},  6, \mbox{\hyperlink{class_square}{Square}}(0,6)),}
-\DoxyCodeLine{67             \textcolor{keyword}{new} \mbox{\hyperlink{class_rook}{Rook}}    (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}},  7, \mbox{\hyperlink{class_square}{Square}}(0,7))}
-\DoxyCodeLine{68     \};}
-\DoxyCodeLine{69 }
-\DoxyCodeLine{70     \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}] = \{}
-\DoxyCodeLine{71             \textcolor{keyword}{new} \mbox{\hyperlink{class_rook}{Rook}}    (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}},  8, \mbox{\hyperlink{class_square}{Square}}(7,0)),}
-\DoxyCodeLine{72             \textcolor{keyword}{new} \mbox{\hyperlink{class_knight}{Knight}}(\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}},  9, \mbox{\hyperlink{class_square}{Square}}(7,1)),}
-\DoxyCodeLine{73             \textcolor{keyword}{new} \mbox{\hyperlink{class_bishop}{Bishop}}     (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}, 10, \mbox{\hyperlink{class_square}{Square}}(7,2)),}
-\DoxyCodeLine{74             \textcolor{keyword}{new} \mbox{\hyperlink{class_queen}{Queen}}    (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}, 11, \mbox{\hyperlink{class_square}{Square}}(7,3)),}
-\DoxyCodeLine{75             \textcolor{keyword}{new} \mbox{\hyperlink{class_king}{King}}     (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}, 12, \mbox{\hyperlink{class_square}{Square}}(7,4)),}
-\DoxyCodeLine{76             \textcolor{keyword}{new} \mbox{\hyperlink{class_bishop}{Bishop}}     (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}, 13, \mbox{\hyperlink{class_square}{Square}}(7,5)),}
-\DoxyCodeLine{77             \textcolor{keyword}{new} \mbox{\hyperlink{class_knight}{Knight}}(\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}, 14, \mbox{\hyperlink{class_square}{Square}}(7,6)),}
-\DoxyCodeLine{78             \textcolor{keyword}{new} \mbox{\hyperlink{class_rook}{Rook}}    (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}, 15, \mbox{\hyperlink{class_square}{Square}}(7,7)),}
-\DoxyCodeLine{79     \};}
-\DoxyCodeLine{80 }
-\DoxyCodeLine{81     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0;i<8;i++) \{}
-\DoxyCodeLine{82         \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}}].push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{class_pawn}{Pawn}}(\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}}, 16+i, \mbox{\hyperlink{class_square}{Square}}(1,i)));}
-\DoxyCodeLine{83         \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}].push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{class_pawn}{Pawn}}(\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}, 24+i, \mbox{\hyperlink{class_square}{Square}}(6,i)));}
-\DoxyCodeLine{84     \}}
-\DoxyCodeLine{85 }
-\DoxyCodeLine{86     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} p : \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}}])}
-\DoxyCodeLine{87         this-\/>\mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(p, p-\/>getSquare());}
-\DoxyCodeLine{88     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} p : \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}])}
-\DoxyCodeLine{89         this-\/>\mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(p, p-\/>getSquare());}
-\DoxyCodeLine{90 }
-\DoxyCodeLine{91 \}}
+\DoxyCodeLine{34                     \{}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     this-\/>\mbox{\hyperlink{class_echiquier_a0a86cb1648b282b23188bd8f3228f00f}{allocMemEchiquier}}();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     this-\/>\mbox{\hyperlink{class_echiquier_a89f34d19638e92c536e1c4a8a393e93b}{initEchiquier}}();}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}}] = \{}
+\DoxyCodeLine{41             \textcolor{keyword}{new} \mbox{\hyperlink{class_rook}{Rook}}    (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}},  0, \mbox{\hyperlink{class_square}{Square}}(0,0)),}
+\DoxyCodeLine{42             \textcolor{keyword}{new} \mbox{\hyperlink{class_knight}{Knight}}(\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}},  1, \mbox{\hyperlink{class_square}{Square}}(0,1)),}
+\DoxyCodeLine{43             \textcolor{keyword}{new} \mbox{\hyperlink{class_bishop}{Bishop}}     (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}},  2, \mbox{\hyperlink{class_square}{Square}}(0,2)),}
+\DoxyCodeLine{44             \textcolor{keyword}{new} \mbox{\hyperlink{class_queen}{Queen}}    (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}},  3, \mbox{\hyperlink{class_square}{Square}}(0,3)),}
+\DoxyCodeLine{45             \textcolor{keyword}{new} \mbox{\hyperlink{class_king}{King}}     (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}},  4, \mbox{\hyperlink{class_square}{Square}}(0,4)),}
+\DoxyCodeLine{46             \textcolor{keyword}{new} \mbox{\hyperlink{class_bishop}{Bishop}}     (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}},  5, \mbox{\hyperlink{class_square}{Square}}(0,5)),}
+\DoxyCodeLine{47             \textcolor{keyword}{new} \mbox{\hyperlink{class_knight}{Knight}}(\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}},  6, \mbox{\hyperlink{class_square}{Square}}(0,6)),}
+\DoxyCodeLine{48             \textcolor{keyword}{new} \mbox{\hyperlink{class_rook}{Rook}}    (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}},  7, \mbox{\hyperlink{class_square}{Square}}(0,7))}
+\DoxyCodeLine{49     \};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}] = \{}
+\DoxyCodeLine{52             \textcolor{keyword}{new} \mbox{\hyperlink{class_rook}{Rook}}    (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}},  8, \mbox{\hyperlink{class_square}{Square}}(7,0)),}
+\DoxyCodeLine{53             \textcolor{keyword}{new} \mbox{\hyperlink{class_knight}{Knight}}(\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}},  9, \mbox{\hyperlink{class_square}{Square}}(7,1)),}
+\DoxyCodeLine{54             \textcolor{keyword}{new} \mbox{\hyperlink{class_bishop}{Bishop}}     (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}, 10, \mbox{\hyperlink{class_square}{Square}}(7,2)),}
+\DoxyCodeLine{55             \textcolor{keyword}{new} \mbox{\hyperlink{class_queen}{Queen}}    (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}, 11, \mbox{\hyperlink{class_square}{Square}}(7,3)),}
+\DoxyCodeLine{56             \textcolor{keyword}{new} \mbox{\hyperlink{class_king}{King}}     (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}, 12, \mbox{\hyperlink{class_square}{Square}}(7,4)),}
+\DoxyCodeLine{57             \textcolor{keyword}{new} \mbox{\hyperlink{class_bishop}{Bishop}}     (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}, 13, \mbox{\hyperlink{class_square}{Square}}(7,5)),}
+\DoxyCodeLine{58             \textcolor{keyword}{new} \mbox{\hyperlink{class_knight}{Knight}}(\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}, 14, \mbox{\hyperlink{class_square}{Square}}(7,6)),}
+\DoxyCodeLine{59             \textcolor{keyword}{new} \mbox{\hyperlink{class_rook}{Rook}}    (\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}, 15, \mbox{\hyperlink{class_square}{Square}}(7,7)),}
+\DoxyCodeLine{60     \};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i=0;i<8;i++) \{}
+\DoxyCodeLine{63         \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}}].push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{class_pawn}{Pawn}}(\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}}, 16+i, \mbox{\hyperlink{class_square}{Square}}(1,i)));}
+\DoxyCodeLine{64         \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}].push\_back(\textcolor{keyword}{new} \mbox{\hyperlink{class_pawn}{Pawn}}(\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}, 24+i, \mbox{\hyperlink{class_square}{Square}}(6,i)));}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} p : \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}}])}
+\DoxyCodeLine{68         this-\/>\mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(p, p-\/>getSquare());}
+\DoxyCodeLine{69     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} p : \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}])}
+\DoxyCodeLine{70         this-\/>\mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(p, p-\/>getSquare());}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_echiquier_af0b910349d14c53551997a8e5a9cbd3f}\label{class_echiquier_af0b910349d14c53551997a8e5a9cbd3f}} 
@@ -116,16 +116,16 @@ Destructeur de la classe \mbox{\hyperlink{class_echiquier}{Echiquier}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{136                      \{}
-\DoxyCodeLine{137     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& p : \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}}])}
-\DoxyCodeLine{138         \textcolor{keyword}{delete} p;}
-\DoxyCodeLine{139     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& p : \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}])}
-\DoxyCodeLine{140         \textcolor{keyword}{delete} p;}
-\DoxyCodeLine{141     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}; ++i) \{}
-\DoxyCodeLine{142         \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}}[i];}
-\DoxyCodeLine{143     \}}
-\DoxyCodeLine{144     \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}};}
-\DoxyCodeLine{145 \}}
+\DoxyCodeLine{117                      \{}
+\DoxyCodeLine{118     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& p : \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}}])}
+\DoxyCodeLine{119         \textcolor{keyword}{delete} p;}
+\DoxyCodeLine{120     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& p : \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[\mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}])}
+\DoxyCodeLine{121         \textcolor{keyword}{delete} p;}
+\DoxyCodeLine{122     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}; ++i) \{}
+\DoxyCodeLine{123         \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}}[i];}
+\DoxyCodeLine{124     \}}
+\DoxyCodeLine{125     \textcolor{keyword}{delete}[] this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}};}
+\DoxyCodeLine{126 \}}
 
 \end{DoxyCode}
 
@@ -143,30 +143,30 @@ Affiche l\textquotesingle{}échiquier.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{147                         \{}
-\DoxyCodeLine{148     \textcolor{keywordtype}{string} space5 = string(5,\textcolor{charliteral}{' '});}
-\DoxyCodeLine{149     cout << endl;}
-\DoxyCodeLine{150     cout << \textcolor{stringliteral}{"{}     a     b     c     d     e     f     g     h    "{}}<< endl;}
-\DoxyCodeLine{151     cout << \textcolor{stringliteral}{"{}  +-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+"{}} << endl;}
-\DoxyCodeLine{152     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i(\mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}-\/1);i>=0;i-\/-\/) \{}
-\DoxyCodeLine{153         cout << i+1 << \textcolor{stringliteral}{"{} "{}}; \textcolor{comment}{// numérotation ligne dans affichage}}
-\DoxyCodeLine{154         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j(0);j<\mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}};j++) \{}
-\DoxyCodeLine{155             cout << \textcolor{stringliteral}{"{}|"{}} ;}
-\DoxyCodeLine{156 \textcolor{comment}{//            cout << "{}\(\backslash\)u0020\(\backslash\)u0020"{};}}
-\DoxyCodeLine{157 \textcolor{comment}{//            cout << i << "{}/"{} << j;}}
-\DoxyCodeLine{158 \textcolor{comment}{//            cout << "{}\(\backslash\)u0020"{} << "{} "{};}}
-\DoxyCodeLine{159             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}}[i][j]) \{}
-\DoxyCodeLine{160                 cout << \textcolor{stringliteral}{"{}\(\backslash\)u0020\(\backslash\)u0020"{}};  \textcolor{comment}{//U+0020 est un esapce utf-\/8 taille police}}
-\DoxyCodeLine{161                 \mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}}[i][j]-\/>\mbox{\hyperlink{class_piece_a2cb195ab09042354c6694e1899143d0a}{affiche}}();}
-\DoxyCodeLine{162                 cout << \textcolor{stringliteral}{"{}\(\backslash\)u0020"{}} << \textcolor{stringliteral}{"{} "{}};}
-\DoxyCodeLine{163             \}}
-\DoxyCodeLine{164             \textcolor{keywordflow}{else}}
-\DoxyCodeLine{165                 cout << space5;  \textcolor{comment}{// 2 ascii spaces}}
-\DoxyCodeLine{166         \}}
-\DoxyCodeLine{167         cout << \textcolor{stringliteral}{"{}|\(\backslash\)n  +-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+"{}};}
-\DoxyCodeLine{168         cout << endl;}
-\DoxyCodeLine{169     \}}
-\DoxyCodeLine{170 \}}
+\DoxyCodeLine{128                         \{}
+\DoxyCodeLine{129     \textcolor{keywordtype}{string} space5 = string(5,\textcolor{charliteral}{' '});}
+\DoxyCodeLine{130     cout << endl;}
+\DoxyCodeLine{131     cout << \textcolor{stringliteral}{"{}     a     b     c     d     e     f     g     h    "{}}<< endl;}
+\DoxyCodeLine{132     cout << \textcolor{stringliteral}{"{}  +-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+"{}} << endl;}
+\DoxyCodeLine{133     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i(\mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}-\/1);i>=0;i-\/-\/) \{}
+\DoxyCodeLine{134         cout << i+1 << \textcolor{stringliteral}{"{} "{}}; \textcolor{comment}{// numérotation ligne dans affichage}}
+\DoxyCodeLine{135         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j(0);j<\mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}};j++) \{}
+\DoxyCodeLine{136             cout << \textcolor{stringliteral}{"{}|"{}} ;}
+\DoxyCodeLine{137 \textcolor{comment}{//            cout << "{}\(\backslash\)u0020\(\backslash\)u0020"{};}}
+\DoxyCodeLine{138 \textcolor{comment}{//            cout << i << "{}/"{} << j;}}
+\DoxyCodeLine{139 \textcolor{comment}{//            cout << "{}\(\backslash\)u0020"{} << "{} "{};}}
+\DoxyCodeLine{140             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}}[i][j]) \{}
+\DoxyCodeLine{141                 cout << \textcolor{stringliteral}{"{}\(\backslash\)u0020\(\backslash\)u0020"{}};  \textcolor{comment}{//U+0020 est un esapce utf-\/8 taille police}}
+\DoxyCodeLine{142                 \mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}}[i][j]-\/>\mbox{\hyperlink{class_piece_a2cb195ab09042354c6694e1899143d0a}{affiche}}();}
+\DoxyCodeLine{143                 cout << \textcolor{stringliteral}{"{}\(\backslash\)u0020"{}} << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{144             \}}
+\DoxyCodeLine{145             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{146                 cout << space5;  \textcolor{comment}{// 2 ascii spaces}}
+\DoxyCodeLine{147         \}}
+\DoxyCodeLine{148         cout << \textcolor{stringliteral}{"{}|\(\backslash\)n  +-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+-\/-\/-\/-\/-\/+"{}};}
+\DoxyCodeLine{149         cout << endl;}
+\DoxyCodeLine{150     \}}
+\DoxyCodeLine{151 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_echiquier_a0a86cb1648b282b23188bd8f3228f00f}\label{class_echiquier_a0a86cb1648b282b23188bd8f3228f00f}} 
@@ -181,12 +181,12 @@ Alloue la mémoire pour l\textquotesingle{}échiquier.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{31                                  \{}
-\DoxyCodeLine{32     this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_piece}{Piece}}**[\mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}];}
-\DoxyCodeLine{33     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}; ++i) \{}
-\DoxyCodeLine{34         this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}}[i] = \textcolor{keyword}{new} \mbox{\hyperlink{class_piece}{Piece}}*[\mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}];}
-\DoxyCodeLine{35     \}}
-\DoxyCodeLine{36 \}}
+\DoxyCodeLine{12                                  \{}
+\DoxyCodeLine{13     this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_piece}{Piece}}**[\mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}];}
+\DoxyCodeLine{14     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}; ++i) \{}
+\DoxyCodeLine{15         this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}}[i] = \textcolor{keyword}{new} \mbox{\hyperlink{class_piece}{Piece}}*[\mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}];}
+\DoxyCodeLine{16     \}}
+\DoxyCodeLine{17 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_echiquier_a95b723dedb19611870202079b6219ebc}\label{class_echiquier_a95b723dedb19611870202079b6219ebc}} 
@@ -206,20 +206,20 @@ Une chaîne de caractères contenant la représentation canonique de la position
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{215                                    \{}
-\DoxyCodeLine{216     \textcolor{keywordtype}{string} output;}
-\DoxyCodeLine{217     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row(1); row<=\mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}; row++)\{}
-\DoxyCodeLine{218         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{char} col(\textcolor{charliteral}{'a'});col<=\textcolor{charliteral}{'h'};col++) \{}
-\DoxyCodeLine{219             \mbox{\hyperlink{class_square}{Square}} square(col+to\_string(row));}
-\DoxyCodeLine{220             \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_echiquier_a4b904d96330b0e9c9f61801a6316e4a8}{getPiece}}(square) != \textcolor{keyword}{nullptr})}
-\DoxyCodeLine{221                 \textcolor{comment}{// get pieces with theit PGN names,}}
-\DoxyCodeLine{222                 \textcolor{comment}{// true -\/> with P for pawns, true -\/> w/b for colors.}}
-\DoxyCodeLine{223                 output += \mbox{\hyperlink{class_echiquier_a3d1043f35aad8753e4a7bb4cf50c0cfe}{pgnPieceName}}(\mbox{\hyperlink{class_echiquier_a4b904d96330b0e9c9f61801a6316e4a8}{getPiece}}(square)-\/>getName(),\textcolor{keyword}{true},\textcolor{keyword}{true});}
-\DoxyCodeLine{224             output += \textcolor{stringliteral}{"{},"{}};}
-\DoxyCodeLine{225         \}}
-\DoxyCodeLine{226     \}}
-\DoxyCodeLine{227     \textcolor{keywordflow}{return} output;}
-\DoxyCodeLine{228 \}}
+\DoxyCodeLine{196                                    \{}
+\DoxyCodeLine{197     \textcolor{keywordtype}{string} output;}
+\DoxyCodeLine{198     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row(1); row<=\mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}; row++)\{}
+\DoxyCodeLine{199         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{char} col(\textcolor{charliteral}{'a'});col<=\textcolor{charliteral}{'h'};col++) \{}
+\DoxyCodeLine{200             \mbox{\hyperlink{class_square}{Square}} square(col+to\_string(row));}
+\DoxyCodeLine{201             \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_echiquier_a4b904d96330b0e9c9f61801a6316e4a8}{getPiece}}(square) != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{202                 \textcolor{comment}{// get pieces with theit PGN names,}}
+\DoxyCodeLine{203                 \textcolor{comment}{// true -\/> with P for pawns, true -\/> w/b for colors.}}
+\DoxyCodeLine{204                 output += \mbox{\hyperlink{class_echiquier_a3d1043f35aad8753e4a7bb4cf50c0cfe}{pgnPieceName}}(\mbox{\hyperlink{class_echiquier_a4b904d96330b0e9c9f61801a6316e4a8}{getPiece}}(square)-\/>getName(),\textcolor{keyword}{true},\textcolor{keyword}{true});}
+\DoxyCodeLine{205             output += \textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{206         \}}
+\DoxyCodeLine{207     \}}
+\DoxyCodeLine{208     \textcolor{keywordflow}{return} output;}
+\DoxyCodeLine{209 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_echiquier_a902679adc01ad653e6b1f26d532cc994}\label{class_echiquier_a902679adc01ad653e6b1f26d532cc994}} 
@@ -244,12 +244,12 @@ La case où se trouve le roi de la couleur spécifiée.
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{230                                             \{}
-\DoxyCodeLine{231     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} p : this-\/>\mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[color])}
-\DoxyCodeLine{232         \textcolor{keywordflow}{if} (p-\/>getName() == \textcolor{stringliteral}{"{}\(\backslash\)u2654"{}} || p-\/>getName() == \textcolor{stringliteral}{"{}\(\backslash\)u265A"{}})}
-\DoxyCodeLine{233             \textcolor{keywordflow}{return} p-\/>getSquare();}
-\DoxyCodeLine{234     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_square}{Square}}(-\/1,-\/1);}
-\DoxyCodeLine{235 \}}
+\DoxyCodeLine{211                                             \{}
+\DoxyCodeLine{212     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} p : this-\/>\mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[color])}
+\DoxyCodeLine{213         \textcolor{keywordflow}{if} (p-\/>getName() == \textcolor{stringliteral}{"{}\(\backslash\)u2654"{}} || p-\/>getName() == \textcolor{stringliteral}{"{}\(\backslash\)u265A"{}})}
+\DoxyCodeLine{214             \textcolor{keywordflow}{return} p-\/>getSquare();}
+\DoxyCodeLine{215     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_square}{Square}}(-\/1,-\/1);}
+\DoxyCodeLine{216 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_echiquier_a4b904d96330b0e9c9f61801a6316e4a8}\label{class_echiquier_a4b904d96330b0e9c9f61801a6316e4a8}} 
@@ -272,9 +272,9 @@ Le pointeur vers la pièce à la position pos
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{181                                     \{}
-\DoxyCodeLine{182     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}}[pos.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}()][pos.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}()];}
-\DoxyCodeLine{183 \}}
+\DoxyCodeLine{162                                     \{}
+\DoxyCodeLine{163     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}}[pos.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}()][pos.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}()];}
+\DoxyCodeLine{164 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_echiquier_a89f34d19638e92c536e1c4a8a393e93b}\label{class_echiquier_a89f34d19638e92c536e1c4a8a393e93b}} 
@@ -289,13 +289,13 @@ Initialise l\textquotesingle{}échiquier avec des pointeurs null et sue les piè
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{38                              \{}
-\DoxyCodeLine{39     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}; ++i) \{}
-\DoxyCodeLine{40         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}; ++j) \{}
-\DoxyCodeLine{41             this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}}[i][j] = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{42         \}}
-\DoxyCodeLine{43     \}}
-\DoxyCodeLine{44 \}}
+\DoxyCodeLine{19                              \{}
+\DoxyCodeLine{20     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}; ++i) \{}
+\DoxyCodeLine{21         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{_echiquier_8cpp_a1db39eb31d1315ce982608fe25587b6d}{BOARD\_SIZE}}; ++j) \{}
+\DoxyCodeLine{22             this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}}[i][j] = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{23         \}}
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_echiquier_a057559a46a8532d3cbe5af9c37ea273f}\label{class_echiquier_a057559a46a8532d3cbe5af9c37ea273f}} 
@@ -319,14 +319,14 @@ Cette fonction déplace une pièce de la position {\ttfamily pos\+\_\+start} à 
 \end{DoxyParams}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{172                                                           \{}
-\DoxyCodeLine{173     \mbox{\hyperlink{class_piece}{Piece}} *end\_piece = this-\/>\mbox{\hyperlink{class_echiquier_a4b904d96330b0e9c9f61801a6316e4a8}{getPiece}}(pos\_end);}
-\DoxyCodeLine{174     \textcolor{keywordflow}{if} (end\_piece != \textcolor{keyword}{nullptr})\{}
-\DoxyCodeLine{175         end\_piece-\/>\mbox{\hyperlink{class_piece_a41141cc6e42ca4a47d57a2c16d6f7727}{setCatch}}(\textcolor{keyword}{true});}
-\DoxyCodeLine{176     \}}
-\DoxyCodeLine{177     this-\/>\mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(this-\/>\mbox{\hyperlink{class_echiquier_a4b904d96330b0e9c9f61801a6316e4a8}{getPiece}}(pos\_start), pos\_end);}
-\DoxyCodeLine{178     this-\/>\mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(\textcolor{keyword}{nullptr}, pos\_start);}
-\DoxyCodeLine{179 \}}
+\DoxyCodeLine{153                                                           \{}
+\DoxyCodeLine{154     \mbox{\hyperlink{class_piece}{Piece}} *end\_piece = this-\/>\mbox{\hyperlink{class_echiquier_a4b904d96330b0e9c9f61801a6316e4a8}{getPiece}}(pos\_end);}
+\DoxyCodeLine{155     \textcolor{keywordflow}{if} (end\_piece != \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{156         end\_piece-\/>\mbox{\hyperlink{class_piece_a41141cc6e42ca4a47d57a2c16d6f7727}{setCatch}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{157     \}}
+\DoxyCodeLine{158     this-\/>\mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(this-\/>\mbox{\hyperlink{class_echiquier_a4b904d96330b0e9c9f61801a6316e4a8}{getPiece}}(pos\_start), pos\_end);}
+\DoxyCodeLine{159     this-\/>\mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(\textcolor{keyword}{nullptr}, pos\_start);}
+\DoxyCodeLine{160 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_echiquier_a3d1043f35aad8753e4a7bb4cf50c0cfe}\label{class_echiquier_a3d1043f35aad8753e4a7bb4cf50c0cfe}} 
@@ -355,35 +355,35 @@ Le nom PGN de la pièce correspondant au symbole Unicode donné, ou une chaîne 
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{185                                                                                 \{}
-\DoxyCodeLine{186 }
-\DoxyCodeLine{187     \textcolor{keywordtype}{string} psymb;}
-\DoxyCodeLine{188     \textcolor{keywordflow}{if}      (name==\textcolor{stringliteral}{"{}\(\backslash\)u2656"{}}) psymb=\textcolor{stringliteral}{"{}R"{}};  \textcolor{comment}{// Rook W}}
-\DoxyCodeLine{189     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name==\textcolor{stringliteral}{"{}\(\backslash\)u2658"{}}) psymb=\textcolor{stringliteral}{"{}N"{}};  \textcolor{comment}{// Knight W}}
-\DoxyCodeLine{190     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name==\textcolor{stringliteral}{"{}\(\backslash\)u2657"{}}) psymb=\textcolor{stringliteral}{"{}B"{}};  \textcolor{comment}{// Bishop W}}
-\DoxyCodeLine{191     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name==\textcolor{stringliteral}{"{}\(\backslash\)u2655"{}}) psymb=\textcolor{stringliteral}{"{}Q"{}};  \textcolor{comment}{// Queen W}}
-\DoxyCodeLine{192     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name==\textcolor{stringliteral}{"{}\(\backslash\)u2654"{}}) psymb=\textcolor{stringliteral}{"{}K"{}};  \textcolor{comment}{// King W}}
-\DoxyCodeLine{193     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name.rfind(\textcolor{stringliteral}{"{}\(\backslash\)u2659"{}},0)==0 \&\& view\_pawn) psymb= \textcolor{stringliteral}{"{}P"{}}; \textcolor{comment}{// Pawn W}}
-\DoxyCodeLine{194     \textcolor{keywordflow}{if} (psymb.size()>0) \{ \textcolor{comment}{// one of the white piece has been found}}
-\DoxyCodeLine{195         \textcolor{keywordflow}{if} (view\_color)}
-\DoxyCodeLine{196             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}w"{}}+psymb;}
-\DoxyCodeLine{197         \textcolor{keywordflow}{else}}
-\DoxyCodeLine{198             \textcolor{keywordflow}{return} psymb;}
-\DoxyCodeLine{199     \}}
-\DoxyCodeLine{200     \textcolor{keywordflow}{if}      (name==\textcolor{stringliteral}{"{}\(\backslash\)u265C"{}}) psymb= \textcolor{stringliteral}{"{}R"{}};  \textcolor{comment}{// Rook B}}
-\DoxyCodeLine{201     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name==\textcolor{stringliteral}{"{}\(\backslash\)u265E"{}}) psymb= \textcolor{stringliteral}{"{}N"{}};  \textcolor{comment}{// Knight B}}
-\DoxyCodeLine{202     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name==\textcolor{stringliteral}{"{}\(\backslash\)u265D"{}}) psymb= \textcolor{stringliteral}{"{}B"{}};  \textcolor{comment}{// Bishop B}}
-\DoxyCodeLine{203     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name==\textcolor{stringliteral}{"{}\(\backslash\)u265B"{}}) psymb= \textcolor{stringliteral}{"{}Q"{}};  \textcolor{comment}{// Queen B}}
-\DoxyCodeLine{204     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name==\textcolor{stringliteral}{"{}\(\backslash\)u265A"{}}) psymb= \textcolor{stringliteral}{"{}K"{}};  \textcolor{comment}{// King B}}
-\DoxyCodeLine{205     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name.rfind(\textcolor{stringliteral}{"{}\(\backslash\)u265F"{}},0)==0 \&\& view\_pawn) psymb= \textcolor{stringliteral}{"{}P"{}}; \textcolor{comment}{// Pawn B}}
-\DoxyCodeLine{206     \textcolor{keywordflow}{if} (psymb.size()>0) \{ \textcolor{comment}{// one of the black piece has been found}}
-\DoxyCodeLine{207         \textcolor{keywordflow}{if} (view\_color)}
-\DoxyCodeLine{208             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}b"{}}+psymb;}
-\DoxyCodeLine{209         \textcolor{keywordflow}{else}}
-\DoxyCodeLine{210             \textcolor{keywordflow}{return} psymb;}
-\DoxyCodeLine{211     \}}
-\DoxyCodeLine{212     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{213 \}}
+\DoxyCodeLine{166                                                                                 \{}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168     \textcolor{keywordtype}{string} psymb;}
+\DoxyCodeLine{169     \textcolor{keywordflow}{if}      (name==\textcolor{stringliteral}{"{}\(\backslash\)u2656"{}}) psymb=\textcolor{stringliteral}{"{}R"{}};  \textcolor{comment}{// Rook W}}
+\DoxyCodeLine{170     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name==\textcolor{stringliteral}{"{}\(\backslash\)u2658"{}}) psymb=\textcolor{stringliteral}{"{}N"{}};  \textcolor{comment}{// Knight W}}
+\DoxyCodeLine{171     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name==\textcolor{stringliteral}{"{}\(\backslash\)u2657"{}}) psymb=\textcolor{stringliteral}{"{}B"{}};  \textcolor{comment}{// Bishop W}}
+\DoxyCodeLine{172     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name==\textcolor{stringliteral}{"{}\(\backslash\)u2655"{}}) psymb=\textcolor{stringliteral}{"{}Q"{}};  \textcolor{comment}{// Queen W}}
+\DoxyCodeLine{173     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name==\textcolor{stringliteral}{"{}\(\backslash\)u2654"{}}) psymb=\textcolor{stringliteral}{"{}K"{}};  \textcolor{comment}{// King W}}
+\DoxyCodeLine{174     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name.rfind(\textcolor{stringliteral}{"{}\(\backslash\)u2659"{}},0)==0 \&\& view\_pawn) psymb= \textcolor{stringliteral}{"{}P"{}}; \textcolor{comment}{// Pawn W}}
+\DoxyCodeLine{175     \textcolor{keywordflow}{if} (psymb.size()>0) \{ \textcolor{comment}{// one of the white piece has been found}}
+\DoxyCodeLine{176         \textcolor{keywordflow}{if} (view\_color)}
+\DoxyCodeLine{177             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}w"{}}+psymb;}
+\DoxyCodeLine{178         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{179             \textcolor{keywordflow}{return} psymb;}
+\DoxyCodeLine{180     \}}
+\DoxyCodeLine{181     \textcolor{keywordflow}{if}      (name==\textcolor{stringliteral}{"{}\(\backslash\)u265C"{}}) psymb= \textcolor{stringliteral}{"{}R"{}};  \textcolor{comment}{// Rook B}}
+\DoxyCodeLine{182     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name==\textcolor{stringliteral}{"{}\(\backslash\)u265E"{}}) psymb= \textcolor{stringliteral}{"{}N"{}};  \textcolor{comment}{// Knight B}}
+\DoxyCodeLine{183     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name==\textcolor{stringliteral}{"{}\(\backslash\)u265D"{}}) psymb= \textcolor{stringliteral}{"{}B"{}};  \textcolor{comment}{// Bishop B}}
+\DoxyCodeLine{184     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name==\textcolor{stringliteral}{"{}\(\backslash\)u265B"{}}) psymb= \textcolor{stringliteral}{"{}Q"{}};  \textcolor{comment}{// Queen B}}
+\DoxyCodeLine{185     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name==\textcolor{stringliteral}{"{}\(\backslash\)u265A"{}}) psymb= \textcolor{stringliteral}{"{}K"{}};  \textcolor{comment}{// King B}}
+\DoxyCodeLine{186     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (name.rfind(\textcolor{stringliteral}{"{}\(\backslash\)u265F"{}},0)==0 \&\& view\_pawn) psymb= \textcolor{stringliteral}{"{}P"{}}; \textcolor{comment}{// Pawn B}}
+\DoxyCodeLine{187     \textcolor{keywordflow}{if} (psymb.size()>0) \{ \textcolor{comment}{// one of the black piece has been found}}
+\DoxyCodeLine{188         \textcolor{keywordflow}{if} (view\_color)}
+\DoxyCodeLine{189             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}b"{}}+psymb;}
+\DoxyCodeLine{190         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{191             \textcolor{keywordflow}{return} psymb;}
+\DoxyCodeLine{192     \}}
+\DoxyCodeLine{193     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{194 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}\label{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}} 
@@ -405,12 +405,12 @@ Pose une pièce p sur l\textquotesingle{}échiquier a la position pos.
 \end{DoxyParams}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{46                                               \{}
-\DoxyCodeLine{47     \textcolor{keywordflow}{if}(p != \textcolor{keyword}{nullptr})\{}
-\DoxyCodeLine{48         p-\/>\mbox{\hyperlink{class_piece_a9e7dcfadfc9403e2dd3f547e909b4a0d}{setSquare}}(pos);}
-\DoxyCodeLine{49     \}}
-\DoxyCodeLine{50     this-\/>\mbox{\hyperlink{class_echiquier_aa84fd99ba6d112b1c25274626788fd40}{setPiece}}(p, pos);}
-\DoxyCodeLine{51 \}}
+\DoxyCodeLine{27                                               \{}
+\DoxyCodeLine{28     \textcolor{keywordflow}{if}(p != \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{29         p-\/>\mbox{\hyperlink{class_piece_a9e7dcfadfc9403e2dd3f547e909b4a0d}{setSquare}}(pos);}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31     this-\/>\mbox{\hyperlink{class_echiquier_aa84fd99ba6d112b1c25274626788fd40}{setPiece}}(p, pos);}
+\DoxyCodeLine{32 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_echiquier_abc48262f09a9bafd2f44ae2fb775ca0c}\label{class_echiquier_abc48262f09a9bafd2f44ae2fb775ca0c}} 
@@ -432,48 +432,48 @@ Promouvoir un pion en une reine, tour, fou ou cavalier.
 \end{DoxyParams}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{93                                                 \{}
-\DoxyCodeLine{94     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_echiquier_8h_a98a825542e35f663a4d9845fe18ee023}{isValidQueenPromotion}}(type))\{}
-\DoxyCodeLine{95         \mbox{\hyperlink{class_queen}{Queen}} *new\_piece = \textcolor{keyword}{new} \mbox{\hyperlink{class_queen}{Queen}}(piece-\/>getColor(), piece-\/>getId(), piece-\/>getSquare());}
-\DoxyCodeLine{96         new\_piece-\/>\mbox{\hyperlink{class_piece_aed26d90f2be60e333690705e7dc3a16b}{setMoveCount}}(piece-\/>getMoveCount());}
-\DoxyCodeLine{97         new\_piece-\/>\mbox{\hyperlink{class_piece_a41141cc6e42ca4a47d57a2c16d6f7727}{setCatch}}(piece-\/>getCatch());}
-\DoxyCodeLine{98 }
-\DoxyCodeLine{99         replace(\mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[piece-\/>getColor()].begin(), \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[piece-\/>getColor()].end(), piece, (\mbox{\hyperlink{class_piece}{Piece}} *)new\_piece);}
-\DoxyCodeLine{100 }
-\DoxyCodeLine{101         this-\/>\mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(new\_piece, new\_piece-\/>\mbox{\hyperlink{class_piece_a62dde2259273255833993698723fcef1}{getSquare}}());}
-\DoxyCodeLine{102 }
-\DoxyCodeLine{103     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{_echiquier_8h_ae49b6bb3e1ae7023e417b1bd03045148}{isValidRookPromotion}}(type))\{}
-\DoxyCodeLine{104         \mbox{\hyperlink{class_rook}{Rook}} *new\_piece = \textcolor{keyword}{new} \mbox{\hyperlink{class_rook}{Rook}}(piece-\/>getColor(), piece-\/>getId(), piece-\/>getSquare());}
-\DoxyCodeLine{105         new\_piece-\/>\mbox{\hyperlink{class_piece_aed26d90f2be60e333690705e7dc3a16b}{setMoveCount}}(piece-\/>getMoveCount());}
-\DoxyCodeLine{106         new\_piece-\/>\mbox{\hyperlink{class_piece_a41141cc6e42ca4a47d57a2c16d6f7727}{setCatch}}(piece-\/>getCatch());}
-\DoxyCodeLine{107 }
-\DoxyCodeLine{108         replace(\mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[piece-\/>getColor()].begin(), \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[piece-\/>getColor()].end(), piece, (\mbox{\hyperlink{class_piece}{Piece}} *)new\_piece);}
-\DoxyCodeLine{109 }
-\DoxyCodeLine{110         this-\/>\mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(new\_piece, new\_piece-\/>\mbox{\hyperlink{class_piece_a62dde2259273255833993698723fcef1}{getSquare}}());}
-\DoxyCodeLine{111 }
-\DoxyCodeLine{112     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{_echiquier_8h_ac50d40083d2dca3f675a9267853411c2}{isValidBishopPromotion}}(type))\{}
-\DoxyCodeLine{113         \mbox{\hyperlink{class_bishop}{Bishop}} *new\_piece = \textcolor{keyword}{new} \mbox{\hyperlink{class_bishop}{Bishop}}(piece-\/>getColor(), piece-\/>getId(), piece-\/>getSquare());}
-\DoxyCodeLine{114         new\_piece-\/>\mbox{\hyperlink{class_piece_aed26d90f2be60e333690705e7dc3a16b}{setMoveCount}}(piece-\/>getMoveCount());}
-\DoxyCodeLine{115         new\_piece-\/>\mbox{\hyperlink{class_piece_a41141cc6e42ca4a47d57a2c16d6f7727}{setCatch}}(piece-\/>getCatch());}
-\DoxyCodeLine{116 }
-\DoxyCodeLine{117         replace(\mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[piece-\/>getColor()].begin(), \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[piece-\/>getColor()].end(), piece, (\mbox{\hyperlink{class_piece}{Piece}} *)new\_piece);}
-\DoxyCodeLine{118 }
-\DoxyCodeLine{119         this-\/>\mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(new\_piece, new\_piece-\/>\mbox{\hyperlink{class_piece_a62dde2259273255833993698723fcef1}{getSquare}}());}
-\DoxyCodeLine{120 }
-\DoxyCodeLine{121     \} \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{122         \mbox{\hyperlink{class_knight}{Knight}} *new\_piece = \textcolor{keyword}{new} \mbox{\hyperlink{class_knight}{Knight}}(piece-\/>getColor(), piece-\/>getId(), piece-\/>getSquare());}
-\DoxyCodeLine{123         new\_piece-\/>\mbox{\hyperlink{class_piece_aed26d90f2be60e333690705e7dc3a16b}{setMoveCount}}(piece-\/>getMoveCount());}
-\DoxyCodeLine{124         new\_piece-\/>\mbox{\hyperlink{class_piece_a41141cc6e42ca4a47d57a2c16d6f7727}{setCatch}}(piece-\/>getCatch());}
-\DoxyCodeLine{125 }
-\DoxyCodeLine{126         replace(\mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[piece-\/>getColor()].begin(), \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[piece-\/>getColor()].end(), piece, (\mbox{\hyperlink{class_piece}{Piece}} *)new\_piece);}
-\DoxyCodeLine{127 }
-\DoxyCodeLine{128         this-\/>\mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(new\_piece, new\_piece-\/>\mbox{\hyperlink{class_piece_a62dde2259273255833993698723fcef1}{getSquare}}());}
-\DoxyCodeLine{129 }
-\DoxyCodeLine{130     \}}
-\DoxyCodeLine{131 }
-\DoxyCodeLine{132     \textcolor{keyword}{delete} piece;}
-\DoxyCodeLine{133 }
-\DoxyCodeLine{134 \}}
+\DoxyCodeLine{74                                                 \{}
+\DoxyCodeLine{75     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_input_8cpp_a98a825542e35f663a4d9845fe18ee023}{isValidQueenPromotion}}(type))\{}
+\DoxyCodeLine{76         \mbox{\hyperlink{class_queen}{Queen}} *new\_piece = \textcolor{keyword}{new} \mbox{\hyperlink{class_queen}{Queen}}(piece-\/>getColor(), piece-\/>getId(), piece-\/>getSquare());}
+\DoxyCodeLine{77         new\_piece-\/>\mbox{\hyperlink{class_piece_aed26d90f2be60e333690705e7dc3a16b}{setMoveCount}}(piece-\/>getMoveCount());}
+\DoxyCodeLine{78         new\_piece-\/>\mbox{\hyperlink{class_piece_a41141cc6e42ca4a47d57a2c16d6f7727}{setCatch}}(piece-\/>getCatch());}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80         replace(\mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[piece-\/>getColor()].begin(), \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[piece-\/>getColor()].end(), piece, (\mbox{\hyperlink{class_piece}{Piece}} *)new\_piece);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82         this-\/>\mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(new\_piece, new\_piece-\/>\mbox{\hyperlink{class_piece_a62dde2259273255833993698723fcef1}{getSquare}}());}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{_input_8cpp_ae49b6bb3e1ae7023e417b1bd03045148}{isValidRookPromotion}}(type))\{}
+\DoxyCodeLine{85         \mbox{\hyperlink{class_rook}{Rook}} *new\_piece = \textcolor{keyword}{new} \mbox{\hyperlink{class_rook}{Rook}}(piece-\/>getColor(), piece-\/>getId(), piece-\/>getSquare());}
+\DoxyCodeLine{86         new\_piece-\/>\mbox{\hyperlink{class_piece_aed26d90f2be60e333690705e7dc3a16b}{setMoveCount}}(piece-\/>getMoveCount());}
+\DoxyCodeLine{87         new\_piece-\/>\mbox{\hyperlink{class_piece_a41141cc6e42ca4a47d57a2c16d6f7727}{setCatch}}(piece-\/>getCatch());}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89         replace(\mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[piece-\/>getColor()].begin(), \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[piece-\/>getColor()].end(), piece, (\mbox{\hyperlink{class_piece}{Piece}} *)new\_piece);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91         this-\/>\mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(new\_piece, new\_piece-\/>\mbox{\hyperlink{class_piece_a62dde2259273255833993698723fcef1}{getSquare}}());}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{_input_8cpp_ac50d40083d2dca3f675a9267853411c2}{isValidBishopPromotion}}(type))\{}
+\DoxyCodeLine{94         \mbox{\hyperlink{class_bishop}{Bishop}} *new\_piece = \textcolor{keyword}{new} \mbox{\hyperlink{class_bishop}{Bishop}}(piece-\/>getColor(), piece-\/>getId(), piece-\/>getSquare());}
+\DoxyCodeLine{95         new\_piece-\/>\mbox{\hyperlink{class_piece_aed26d90f2be60e333690705e7dc3a16b}{setMoveCount}}(piece-\/>getMoveCount());}
+\DoxyCodeLine{96         new\_piece-\/>\mbox{\hyperlink{class_piece_a41141cc6e42ca4a47d57a2c16d6f7727}{setCatch}}(piece-\/>getCatch());}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98         replace(\mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[piece-\/>getColor()].begin(), \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[piece-\/>getColor()].end(), piece, (\mbox{\hyperlink{class_piece}{Piece}} *)new\_piece);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100         this-\/>\mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(new\_piece, new\_piece-\/>\mbox{\hyperlink{class_piece_a62dde2259273255833993698723fcef1}{getSquare}}());}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102     \} \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{103         \mbox{\hyperlink{class_knight}{Knight}} *new\_piece = \textcolor{keyword}{new} \mbox{\hyperlink{class_knight}{Knight}}(piece-\/>getColor(), piece-\/>getId(), piece-\/>getSquare());}
+\DoxyCodeLine{104         new\_piece-\/>\mbox{\hyperlink{class_piece_aed26d90f2be60e333690705e7dc3a16b}{setMoveCount}}(piece-\/>getMoveCount());}
+\DoxyCodeLine{105         new\_piece-\/>\mbox{\hyperlink{class_piece_a41141cc6e42ca4a47d57a2c16d6f7727}{setCatch}}(piece-\/>getCatch());}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107         replace(\mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[piece-\/>getColor()].begin(), \mbox{\hyperlink{class_echiquier_a8b1ca00d548faf45d7e8f0311c0f9e03}{pieces}}[piece-\/>getColor()].end(), piece, (\mbox{\hyperlink{class_piece}{Piece}} *)new\_piece);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109         this-\/>\mbox{\hyperlink{class_echiquier_a0dd4f28bcf2a051e3dad13b4f5e977fd}{posePiece}}(new\_piece, new\_piece-\/>\mbox{\hyperlink{class_piece_a62dde2259273255833993698723fcef1}{getSquare}}());}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111     \}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \textcolor{keyword}{delete} piece;}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_echiquier_aa84fd99ba6d112b1c25274626788fd40}\label{class_echiquier_aa84fd99ba6d112b1c25274626788fd40}} 
@@ -497,9 +497,9 @@ Cette méthode place la pièce spécifiée à la position spécifiée sur l\text
 \end{DoxyParams}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{237                                             \{}
-\DoxyCodeLine{238     this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}}[pos.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}()][pos.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}()] = p;}
-\DoxyCodeLine{239 \}}
+\DoxyCodeLine{218                                             \{}
+\DoxyCodeLine{219     this-\/>\mbox{\hyperlink{class_echiquier_a06d89554f0e7d40c2772638a69ea840a}{echiquier}}[pos.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}()][pos.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}()] = p;}
+\DoxyCodeLine{220 \}}
 
 \end{DoxyCode}
 

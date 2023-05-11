@@ -2,6 +2,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
     [ "Bishop.cpp", "_bishop_8cpp.html", null ],
     [ "Echiquier.cpp", "_echiquier_8cpp.html", "_echiquier_8cpp" ],
+    [ "Input.cpp", "_input_8cpp.html", "_input_8cpp" ],
     [ "Jeu.cpp", "_jeu_8cpp.html", "_jeu_8cpp" ],
     [ "King.cpp", "_king_8cpp.html", null ],
     [ "Knight.cpp", "_knight_8cpp.html", null ],

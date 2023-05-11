@@ -50,8 +50,8 @@ Constructeur de la classe \mbox{\hyperlink{class_pawn}{Pawn}}.
 \end{DoxyParams}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{7                                             :}
-\DoxyCodeLine{8         \mbox{\hyperlink{class_piece}{Piece}}(color, (color == \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}) ? \textcolor{stringliteral}{"{}\(\backslash\)u265F"{}} : \textcolor{stringliteral}{"{}\(\backslash\)u2659"{}}, \textcolor{keywordtype}{id}, pos) \{\}}
+\DoxyCodeLine{10                                             :}
+\DoxyCodeLine{11         \mbox{\hyperlink{class_piece}{Piece}}(color, (color == \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}) ? \textcolor{stringliteral}{"{}\(\backslash\)u265F"{}} : \textcolor{stringliteral}{"{}\(\backslash\)u2659"{}}, \textcolor{keywordtype}{id}, pos) \{\}}
 
 \end{DoxyCode}
 
@@ -80,59 +80,59 @@ Reimplemented from \mbox{\hyperlink{class_piece_ab3632d34db33cadcb4588d4a2ed462a
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{10                                                 \{}
-\DoxyCodeLine{11     \textcolor{keywordflow}{if} (isCatch)\{}
-\DoxyCodeLine{12         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_piece_aac2d0cbc937be575fd07f2e15872d5e7}{getColor}}() == \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}})\{}
-\DoxyCodeLine{13             \textcolor{keywordflow}{if} ((dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() -\/ 1}
-\DoxyCodeLine{14                 \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() + 1) \textcolor{comment}{// diagonale gauche}}
-\DoxyCodeLine{15                 || (dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() + 1}
-\DoxyCodeLine{16                 \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() + 1) \textcolor{comment}{// diagonale droite}}
-\DoxyCodeLine{17                 )\{}
-\DoxyCodeLine{18                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{19             \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{20                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{21             \}}
-\DoxyCodeLine{22         \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{23             \textcolor{keywordflow}{if} ((dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() -\/ 1}
-\DoxyCodeLine{24                  \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() -\/ 1) \textcolor{comment}{// diagonale gauche}}
-\DoxyCodeLine{25                 || (dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() + 1}
-\DoxyCodeLine{26                     \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() -\/ 1) \textcolor{comment}{// diagonale droite}}
-\DoxyCodeLine{27                 )\{}
-\DoxyCodeLine{28                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{29             \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{30                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{31             \}}
-\DoxyCodeLine{32         \}}
-\DoxyCodeLine{33     \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{34         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_piece_aac2d0cbc937be575fd07f2e15872d5e7}{getColor}}() == \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}})\{}
-\DoxyCodeLine{35             \textcolor{keywordflow}{if} ((dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() \textcolor{comment}{// deplacement vertical}}
-\DoxyCodeLine{36                  \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() + 1) \textcolor{comment}{// avance d'une case}}
-\DoxyCodeLine{37                 )\{}
-\DoxyCodeLine{38                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{39             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_piece_aff7b906b404884f191dde8cf6cea6fe5}{getMoveCount}}() == 0}
-\DoxyCodeLine{40                       \&\& dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() \textcolor{comment}{// deplacement vertical}}
-\DoxyCodeLine{41                       \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() + 2 \textcolor{comment}{// avance de deux cases}}
-\DoxyCodeLine{42                       )\{}
-\DoxyCodeLine{43                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{44             \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{45                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{46             \}}
-\DoxyCodeLine{47         \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{48             \textcolor{keywordflow}{if} ((dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() \textcolor{comment}{// deplacement vertical}}
-\DoxyCodeLine{49                  \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() -\/ 1) \textcolor{comment}{// avance d'une case}}
-\DoxyCodeLine{50                 )\{}
-\DoxyCodeLine{51                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{52             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_piece_aff7b906b404884f191dde8cf6cea6fe5}{getMoveCount}}() == 0}
-\DoxyCodeLine{53                       \&\& dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() \textcolor{comment}{// deplacement vertical}}
-\DoxyCodeLine{54                       \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() -\/ 2 \textcolor{comment}{// avance de deux cases}}
-\DoxyCodeLine{55                     )\{}
-\DoxyCodeLine{56                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{57             \}\textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{58                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{59             \}}
-\DoxyCodeLine{60         \}}
-\DoxyCodeLine{61     \}}
-\DoxyCodeLine{62 \}}
+\DoxyCodeLine{13                                                 \{}
+\DoxyCodeLine{14     \textcolor{keywordflow}{if} (isCatch)\{}
+\DoxyCodeLine{15         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_piece_aac2d0cbc937be575fd07f2e15872d5e7}{getColor}}() == \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}})\{}
+\DoxyCodeLine{16             \textcolor{keywordflow}{if} ((dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() -\/ 1}
+\DoxyCodeLine{17                 \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() + 1) \textcolor{comment}{// diagonale gauche}}
+\DoxyCodeLine{18                 || (dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() + 1}
+\DoxyCodeLine{19                 \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() + 1) \textcolor{comment}{// diagonale droite}}
+\DoxyCodeLine{20                 )\{}
+\DoxyCodeLine{21                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{22             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{23                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{24             \}}
+\DoxyCodeLine{25         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{26             \textcolor{keywordflow}{if} ((dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() -\/ 1}
+\DoxyCodeLine{27                  \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() -\/ 1) \textcolor{comment}{// diagonale gauche}}
+\DoxyCodeLine{28                 || (dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() + 1}
+\DoxyCodeLine{29                     \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() -\/ 1) \textcolor{comment}{// diagonale droite}}
+\DoxyCodeLine{30                 )\{}
+\DoxyCodeLine{31                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{32             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{33                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{34             \}}
+\DoxyCodeLine{35         \}}
+\DoxyCodeLine{36     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{37         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_piece_aac2d0cbc937be575fd07f2e15872d5e7}{getColor}}() == \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b}{white}})\{}
+\DoxyCodeLine{38             \textcolor{keywordflow}{if} ((dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() \textcolor{comment}{// deplacement vertical}}
+\DoxyCodeLine{39                  \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() + 1) \textcolor{comment}{// avance d'une case}}
+\DoxyCodeLine{40                 )\{}
+\DoxyCodeLine{41                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{42             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_piece_aff7b906b404884f191dde8cf6cea6fe5}{getMoveCount}}() == 0}
+\DoxyCodeLine{43                       \&\& dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() \textcolor{comment}{// deplacement vertical}}
+\DoxyCodeLine{44                       \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() + 2 \textcolor{comment}{// avance de deux cases}}
+\DoxyCodeLine{45                       )\{}
+\DoxyCodeLine{46                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{47             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{48                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{49             \}}
+\DoxyCodeLine{50         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{51             \textcolor{keywordflow}{if} ((dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() \textcolor{comment}{// deplacement vertical}}
+\DoxyCodeLine{52                  \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() -\/ 1) \textcolor{comment}{// avance d'une case}}
+\DoxyCodeLine{53                 )\{}
+\DoxyCodeLine{54                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{55             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{class_piece_aff7b906b404884f191dde8cf6cea6fe5}{getMoveCount}}() == 0}
+\DoxyCodeLine{56                       \&\& dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() == this-\/>position.getColumn() \textcolor{comment}{// deplacement vertical}}
+\DoxyCodeLine{57                       \&\& dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() == this-\/>position.getLine() -\/ 2 \textcolor{comment}{// avance de deux cases}}
+\DoxyCodeLine{58                     )\{}
+\DoxyCodeLine{59                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{60             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{61                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{62             \}}
+\DoxyCodeLine{63         \}}
+\DoxyCodeLine{64     \}}
+\DoxyCodeLine{65 \}}
 
 \end{DoxyCode}
 

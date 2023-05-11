@@ -1,6 +1,13 @@
-//
-// Created by Enzo Bergamini on 11/05/2023.
-//
+/**
+ * @file Input.h
+ *
+ * @brief Gestion des entrées utilisateur
+ *
+ * Utilisation des expression "regex" pour vérifier la validité des entrées utilisateur.
+ *
+ * @author BERGAMINI Enzo
+ * @date 11/05/2023
+*/
 
 #ifndef ECHEC_INPUT_H
 #define ECHEC_INPUT_H

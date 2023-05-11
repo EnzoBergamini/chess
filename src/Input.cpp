@@ -1,7 +1,9 @@
-//
-// Created by Enzo Bergamini on 11/05/2023.
-//
-
+/**
+ * @file Input.cpp
+ *
+ * @author BERGAMINI Enzo
+ * @date 11/05/2023
+*/
 #include "../include/Input.h"
 
 

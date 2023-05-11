@@ -228,8 +228,8 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>                                            :</div>
-<div class="line"><span class="lineno">    8</span>        <a class="code hl_class" href="class_piece.html">Piece</a>(color, (color == <a class="code hl_enumvalue" href="_couleur_8h.html#aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212">black</a>) ? <span class="stringliteral">&quot;\u265F&quot;</span> : <span class="stringliteral">&quot;\u2659&quot;</span>, <span class="keywordtype">id</span>, pos) {}</div>
+<div class="fragment"><div class="line"><span class="lineno">   10</span>                                            :</div>
+<div class="line"><span class="lineno">   11</span>        <a class="code hl_class" href="class_piece.html">Piece</a>(color, (color == <a class="code hl_enumvalue" href="_couleur_8h.html#aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212">black</a>) ? <span class="stringliteral">&quot;\u265F&quot;</span> : <span class="stringliteral">&quot;\u2659&quot;</span>, <span class="keywordtype">id</span>, pos) {}</div>
 <div class="ttc" id="a_couleur_8h_html_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212"><div class="ttname"><a href="_couleur_8h.html#aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212">black</a></div><div class="ttdeci">@ black</div><div class="ttdef"><b>Definition:</b> Couleur.h:23</div></div>
 <div class="ttc" id="aclass_piece_html"><div class="ttname"><a href="class_piece.html">Piece</a></div><div class="ttdoc">Gestion des pièces du jeu d'échecs.</div><div class="ttdef"><b>Definition:</b> Piece.h:24</div></div>
 </div><!-- fragment -->
@@ -280,64 +280,64 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="class_piece.html#ab3632d34db33cadcb4588d4a2ed462a4">Piece</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   10</span>                                                {</div>
-<div class="line"><span class="lineno">   11</span>    <span class="keywordflow">if</span> (isCatch){</div>
-<div class="line"><span class="lineno">   12</span>        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_function" href="class_piece.html#aac2d0cbc937be575fd07f2e15872d5e7">getColor</a>() == <a class="code hl_enumvalue" href="_couleur_8h.html#aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b">white</a>){</div>
-<div class="line"><span class="lineno">   13</span>            <span class="keywordflow">if</span> ((dest.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>() == this-&gt;position.getColumn() - 1</div>
-<div class="line"><span class="lineno">   14</span>                &amp;&amp; dest.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() == this-&gt;position.getLine() + 1) <span class="comment">// diagonale gauche</span></div>
-<div class="line"><span class="lineno">   15</span>                || (dest.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>() == this-&gt;position.getColumn() + 1</div>
-<div class="line"><span class="lineno">   16</span>                &amp;&amp; dest.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() == this-&gt;position.getLine() + 1) <span class="comment">// diagonale droite</span></div>
-<div class="line"><span class="lineno">   17</span>                ){</div>
-<div class="line"><span class="lineno">   18</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   19</span>            }<span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">   20</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   21</span>            }</div>
-<div class="line"><span class="lineno">   22</span>        }<span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">   23</span>            <span class="keywordflow">if</span> ((dest.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>() == this-&gt;position.getColumn() - 1</div>
-<div class="line"><span class="lineno">   24</span>                 &amp;&amp; dest.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() == this-&gt;position.getLine() - 1) <span class="comment">// diagonale gauche</span></div>
-<div class="line"><span class="lineno">   25</span>                || (dest.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>() == this-&gt;position.getColumn() + 1</div>
-<div class="line"><span class="lineno">   26</span>                    &amp;&amp; dest.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() == this-&gt;position.getLine() - 1) <span class="comment">// diagonale droite</span></div>
-<div class="line"><span class="lineno">   27</span>                ){</div>
-<div class="line"><span class="lineno">   28</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   29</span>            }<span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">   30</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   31</span>            }</div>
-<div class="line"><span class="lineno">   32</span>        }</div>
-<div class="line"><span class="lineno">   33</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_function" href="class_piece.html#aac2d0cbc937be575fd07f2e15872d5e7">getColor</a>() == <a class="code hl_enumvalue" href="_couleur_8h.html#aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b">white</a>){</div>
-<div class="line"><span class="lineno">   35</span>            <span class="keywordflow">if</span> ((dest.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>() == this-&gt;position.getColumn() <span class="comment">// deplacement vertical</span></div>
-<div class="line"><span class="lineno">   36</span>                 &amp;&amp; dest.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() == this-&gt;position.getLine() + 1) <span class="comment">// avance d&#39;une case</span></div>
-<div class="line"><span class="lineno">   37</span>                ){</div>
-<div class="line"><span class="lineno">   38</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   39</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;<a class="code hl_function" href="class_piece.html#aff7b906b404884f191dde8cf6cea6fe5">getMoveCount</a>() == 0</div>
-<div class="line"><span class="lineno">   40</span>                      &amp;&amp; dest.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>() == this-&gt;position.getColumn() <span class="comment">// deplacement vertical</span></div>
-<div class="line"><span class="lineno">   41</span>                      &amp;&amp; dest.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() == this-&gt;position.getLine() + 2 <span class="comment">// avance de deux cases</span></div>
-<div class="line"><span class="lineno">   42</span>                      ){</div>
-<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   44</span>            }<span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">   45</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   46</span>            }</div>
-<div class="line"><span class="lineno">   47</span>        }<span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">if</span> ((dest.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>() == this-&gt;position.getColumn() <span class="comment">// deplacement vertical</span></div>
-<div class="line"><span class="lineno">   49</span>                 &amp;&amp; dest.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() == this-&gt;position.getLine() - 1) <span class="comment">// avance d&#39;une case</span></div>
-<div class="line"><span class="lineno">   50</span>                ){</div>
-<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   52</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;<a class="code hl_function" href="class_piece.html#aff7b906b404884f191dde8cf6cea6fe5">getMoveCount</a>() == 0</div>
-<div class="line"><span class="lineno">   53</span>                      &amp;&amp; dest.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>() == this-&gt;position.getColumn() <span class="comment">// deplacement vertical</span></div>
-<div class="line"><span class="lineno">   54</span>                      &amp;&amp; dest.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() == this-&gt;position.getLine() - 2 <span class="comment">// avance de deux cases</span></div>
-<div class="line"><span class="lineno">   55</span>                    ){</div>
-<div class="line"><span class="lineno">   56</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   57</span>            }<span class="keywordflow">else</span>{</div>
-<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   59</span>            }</div>
-<div class="line"><span class="lineno">   60</span>        }</div>
-<div class="line"><span class="lineno">   61</span>    }</div>
-<div class="line"><span class="lineno">   62</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>                                                {</div>
+<div class="line"><span class="lineno">   14</span>    <span class="keywordflow">if</span> (isCatch){</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_function" href="class_piece.html#aac2d0cbc937be575fd07f2e15872d5e7">getColor</a>() == <a class="code hl_enumvalue" href="_couleur_8h.html#aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b">white</a>){</div>
+<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">if</span> ((dest.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>() == this-&gt;position.getColumn() - 1</div>
+<div class="line"><span class="lineno">   17</span>                &amp;&amp; dest.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() == this-&gt;position.getLine() + 1) <span class="comment">// diagonale gauche</span></div>
+<div class="line"><span class="lineno">   18</span>                || (dest.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>() == this-&gt;position.getColumn() + 1</div>
+<div class="line"><span class="lineno">   19</span>                &amp;&amp; dest.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() == this-&gt;position.getLine() + 1) <span class="comment">// diagonale droite</span></div>
+<div class="line"><span class="lineno">   20</span>                ){</div>
+<div class="line"><span class="lineno">   21</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   22</span>            }<span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">   23</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   24</span>            }</div>
+<div class="line"><span class="lineno">   25</span>        }<span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">   26</span>            <span class="keywordflow">if</span> ((dest.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>() == this-&gt;position.getColumn() - 1</div>
+<div class="line"><span class="lineno">   27</span>                 &amp;&amp; dest.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() == this-&gt;position.getLine() - 1) <span class="comment">// diagonale gauche</span></div>
+<div class="line"><span class="lineno">   28</span>                || (dest.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>() == this-&gt;position.getColumn() + 1</div>
+<div class="line"><span class="lineno">   29</span>                    &amp;&amp; dest.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() == this-&gt;position.getLine() - 1) <span class="comment">// diagonale droite</span></div>
+<div class="line"><span class="lineno">   30</span>                ){</div>
+<div class="line"><span class="lineno">   31</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   32</span>            }<span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">   33</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   34</span>            }</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="line"><span class="lineno">   36</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (this-&gt;<a class="code hl_function" href="class_piece.html#aac2d0cbc937be575fd07f2e15872d5e7">getColor</a>() == <a class="code hl_enumvalue" href="_couleur_8h.html#aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b">white</a>){</div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> ((dest.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>() == this-&gt;position.getColumn() <span class="comment">// deplacement vertical</span></div>
+<div class="line"><span class="lineno">   39</span>                 &amp;&amp; dest.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() == this-&gt;position.getLine() + 1) <span class="comment">// avance d&#39;une case</span></div>
+<div class="line"><span class="lineno">   40</span>                ){</div>
+<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   42</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;<a class="code hl_function" href="class_piece.html#aff7b906b404884f191dde8cf6cea6fe5">getMoveCount</a>() == 0</div>
+<div class="line"><span class="lineno">   43</span>                      &amp;&amp; dest.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>() == this-&gt;position.getColumn() <span class="comment">// deplacement vertical</span></div>
+<div class="line"><span class="lineno">   44</span>                      &amp;&amp; dest.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() == this-&gt;position.getLine() + 2 <span class="comment">// avance de deux cases</span></div>
+<div class="line"><span class="lineno">   45</span>                      ){</div>
+<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   47</span>            }<span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">   48</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   49</span>            }</div>
+<div class="line"><span class="lineno">   50</span>        }<span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">if</span> ((dest.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>() == this-&gt;position.getColumn() <span class="comment">// deplacement vertical</span></div>
+<div class="line"><span class="lineno">   52</span>                 &amp;&amp; dest.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() == this-&gt;position.getLine() - 1) <span class="comment">// avance d&#39;une case</span></div>
+<div class="line"><span class="lineno">   53</span>                ){</div>
+<div class="line"><span class="lineno">   54</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   55</span>            }<span class="keywordflow">else</span> <span class="keywordflow">if</span> (this-&gt;<a class="code hl_function" href="class_piece.html#aff7b906b404884f191dde8cf6cea6fe5">getMoveCount</a>() == 0</div>
+<div class="line"><span class="lineno">   56</span>                      &amp;&amp; dest.<a class="code hl_function" href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">getColumn</a>() == this-&gt;position.getColumn() <span class="comment">// deplacement vertical</span></div>
+<div class="line"><span class="lineno">   57</span>                      &amp;&amp; dest.<a class="code hl_function" href="class_square.html#af6fc96300b5d4473325d843d628579cf">getLine</a>() == this-&gt;position.getLine() - 2 <span class="comment">// avance de deux cases</span></div>
+<div class="line"><span class="lineno">   58</span>                    ){</div>
+<div class="line"><span class="lineno">   59</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   60</span>            }<span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">   61</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   62</span>            }</div>
+<div class="line"><span class="lineno">   63</span>        }</div>
+<div class="line"><span class="lineno">   64</span>    }</div>
+<div class="line"><span class="lineno">   65</span>}</div>
 <div class="ttc" id="a_couleur_8h_html_aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b"><div class="ttname"><a href="_couleur_8h.html#aa304d0ca681f782b1d7735da33037dd7a455cfc2fb4cfce1159cc9bfd63b3947b">white</a></div><div class="ttdeci">@ white</div><div class="ttdef"><b>Definition:</b> Couleur.h:23</div></div>
-<div class="ttc" id="aclass_piece_html_aac2d0cbc937be575fd07f2e15872d5e7"><div class="ttname"><a href="class_piece.html#aac2d0cbc937be575fd07f2e15872d5e7">Piece::getColor</a></div><div class="ttdeci">Couleur getColor()</div><div class="ttdoc">Renvoie la couleur de la pièce.</div><div class="ttdef"><b>Definition:</b> Piece.cpp:26</div></div>
-<div class="ttc" id="aclass_piece_html_aff7b906b404884f191dde8cf6cea6fe5"><div class="ttname"><a href="class_piece.html#aff7b906b404884f191dde8cf6cea6fe5">Piece::getMoveCount</a></div><div class="ttdeci">size_t getMoveCount()</div><div class="ttdoc">Renvoie le nombre de déplacement de la pièce.</div><div class="ttdef"><b>Definition:</b> Piece.cpp:62</div></div>
-<div class="ttc" id="aclass_square_html_a8c17a73ee7627d8fbafceff1d22d09fc"><div class="ttname"><a href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">Square::getColumn</a></div><div class="ttdeci">int getColumn() const</div><div class="ttdoc">Renvoie la colonne de la case.</div><div class="ttdef"><b>Definition:</b> Square.cpp:21</div></div>
-<div class="ttc" id="aclass_square_html_af6fc96300b5d4473325d843d628579cf"><div class="ttname"><a href="class_square.html#af6fc96300b5d4473325d843d628579cf">Square::getLine</a></div><div class="ttdeci">int getLine() const</div><div class="ttdoc">Renvoie la ligne de la case.</div><div class="ttdef"><b>Definition:</b> Square.cpp:23</div></div>
+<div class="ttc" id="aclass_piece_html_aac2d0cbc937be575fd07f2e15872d5e7"><div class="ttname"><a href="class_piece.html#aac2d0cbc937be575fd07f2e15872d5e7">Piece::getColor</a></div><div class="ttdeci">Couleur getColor()</div><div class="ttdoc">Renvoie la couleur de la pièce.</div><div class="ttdef"><b>Definition:</b> Piece.cpp:28</div></div>
+<div class="ttc" id="aclass_piece_html_aff7b906b404884f191dde8cf6cea6fe5"><div class="ttname"><a href="class_piece.html#aff7b906b404884f191dde8cf6cea6fe5">Piece::getMoveCount</a></div><div class="ttdeci">size_t getMoveCount()</div><div class="ttdoc">Renvoie le nombre de déplacement de la pièce.</div><div class="ttdef"><b>Definition:</b> Piece.cpp:64</div></div>
+<div class="ttc" id="aclass_square_html_a8c17a73ee7627d8fbafceff1d22d09fc"><div class="ttname"><a href="class_square.html#a8c17a73ee7627d8fbafceff1d22d09fc">Square::getColumn</a></div><div class="ttdeci">int getColumn() const</div><div class="ttdoc">Renvoie la colonne de la case.</div><div class="ttdef"><b>Definition:</b> Square.cpp:24</div></div>
+<div class="ttc" id="aclass_square_html_af6fc96300b5d4473325d843d628579cf"><div class="ttname"><a href="class_square.html#af6fc96300b5d4473325d843d628579cf">Square::getLine</a></div><div class="ttdeci">int getLine() const</div><div class="ttdoc">Renvoie la ligne de la case.</div><div class="ttdef"><b>Definition:</b> Square.cpp:26</div></div>
 </div><!-- fragment -->
 </div>
 </div>

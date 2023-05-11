@@ -233,7 +233,7 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   14</span>    : <a class="code hl_variable" href="class_piece.html#ac40cffee50da10a50361ff4791fdd528">id</a>(<span class="keywordtype">id</span>), <a class="code hl_variable" href="class_piece.html#a4cfa0ffac54632f92ac06f50b72e9335">name</a>(<a class="code hl_variable" href="class_piece.html#a4cfa0ffac54632f92ac06f50b72e9335">name</a>), <a class="code hl_variable" href="class_piece.html#abeb58424f566e8b3bcf514c731570cf8">couleur</a>(c), <a class="code hl_variable" href="class_piece.html#a3bfe047bbab090fa920f2ed4d8453a59">position</a>(<a class="code hl_variable" href="class_piece.html#a3bfe047bbab090fa920f2ed4d8453a59">position</a>), <a class="code hl_variable" href="class_piece.html#a5556d6a3db34ca7c6d486d2f9ceae0c9">move_count</a>(0), <a class="code hl_variable" href="class_piece.html#abf9583545849b0ad01cffeed5d9740e0">is_catch</a>(<span class="keyword">false</span>){}</div>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    : <a class="code hl_variable" href="class_piece.html#ac40cffee50da10a50361ff4791fdd528">id</a>(<span class="keywordtype">id</span>), <a class="code hl_variable" href="class_piece.html#a4cfa0ffac54632f92ac06f50b72e9335">name</a>(<a class="code hl_variable" href="class_piece.html#a4cfa0ffac54632f92ac06f50b72e9335">name</a>), <a class="code hl_variable" href="class_piece.html#abeb58424f566e8b3bcf514c731570cf8">couleur</a>(c), <a class="code hl_variable" href="class_piece.html#a3bfe047bbab090fa920f2ed4d8453a59">position</a>(<a class="code hl_variable" href="class_piece.html#a3bfe047bbab090fa920f2ed4d8453a59">position</a>), <a class="code hl_variable" href="class_piece.html#a5556d6a3db34ca7c6d486d2f9ceae0c9">move_count</a>(0), <a class="code hl_variable" href="class_piece.html#abf9583545849b0ad01cffeed5d9740e0">is_catch</a>(<span class="keyword">false</span>){}</div>
 <div class="ttc" id="aclass_piece_html_a3bfe047bbab090fa920f2ed4d8453a59"><div class="ttname"><a href="class_piece.html#a3bfe047bbab090fa920f2ed4d8453a59">Piece::position</a></div><div class="ttdeci">Square position</div><div class="ttdef"><b>Definition:</b> Piece.h:32</div></div>
 <div class="ttc" id="aclass_piece_html_a4cfa0ffac54632f92ac06f50b72e9335"><div class="ttname"><a href="class_piece.html#a4cfa0ffac54632f92ac06f50b72e9335">Piece::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> Piece.h:28</div></div>
 <div class="ttc" id="aclass_piece_html_a5556d6a3db34ca7c6d486d2f9ceae0c9"><div class="ttname"><a href="class_piece.html#a5556d6a3db34ca7c6d486d2f9ceae0c9">Piece::move_count</a></div><div class="ttdeci">size_t move_count</div><div class="ttdef"><b>Definition:</b> Piece.h:34</div></div>
@@ -267,7 +267,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Destructeur de la classe <a class="el" href="class_piece.html" title="Gestion des pièces du jeu d&#39;échecs.">Piece</a>. </p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>{}</div>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -288,9 +288,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Affiche la nom pièce. </p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>                   {</div>
-<div class="line"><span class="lineno">   19</span>    cout &lt;&lt; <a class="code hl_variable" href="class_piece.html#a4cfa0ffac54632f92ac06f50b72e9335">name</a>;</div>
-<div class="line"><span class="lineno">   20</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>                   {</div>
+<div class="line"><span class="lineno">   21</span>    cout &lt;&lt; <a class="code hl_variable" href="class_piece.html#a4cfa0ffac54632f92ac06f50b72e9335">name</a>;</div>
+<div class="line"><span class="lineno">   22</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -310,14 +310,14 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Affiche les informations de la pièce. </p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                       {</div>
-<div class="line"><span class="lineno">   47</span>    cout &lt;&lt; <span class="stringliteral">&quot;Piece : &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_piece.html#a4cfa0ffac54632f92ac06f50b72e9335">name</a> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   48</span>    cout &lt;&lt; <span class="stringliteral">&quot;Id : &quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   49</span>    cout &lt;&lt; <span class="stringliteral">&quot;Couleur : &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_piece.html#abeb58424f566e8b3bcf514c731570cf8">couleur</a> &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   50</span>    cout &lt;&lt; <span class="stringliteral">&quot;Position : &quot;</span>;</div>
-<div class="line"><span class="lineno">   51</span>    <a class="code hl_variable" href="class_piece.html#a3bfe047bbab090fa920f2ed4d8453a59">position</a>.<a class="code hl_function" href="class_square.html#a4ebb68d15086673ac19fab67ac419083">display</a>();</div>
-<div class="line"><span class="lineno">   52</span>}</div>
-<div class="ttc" id="aclass_square_html_a4ebb68d15086673ac19fab67ac419083"><div class="ttname"><a href="class_square.html#a4ebb68d15086673ac19fab67ac419083">Square::display</a></div><div class="ttdeci">void display()</div><div class="ttdoc">Affiche les coordonnées de la case.</div><div class="ttdef"><b>Definition:</b> Square.cpp:25</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>                       {</div>
+<div class="line"><span class="lineno">   49</span>    cout &lt;&lt; <span class="stringliteral">&quot;Piece : &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_piece.html#a4cfa0ffac54632f92ac06f50b72e9335">name</a> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   50</span>    cout &lt;&lt; <span class="stringliteral">&quot;Id : &quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   51</span>    cout &lt;&lt; <span class="stringliteral">&quot;Couleur : &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_piece.html#abeb58424f566e8b3bcf514c731570cf8">couleur</a> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   52</span>    cout &lt;&lt; <span class="stringliteral">&quot;Position : &quot;</span>;</div>
+<div class="line"><span class="lineno">   53</span>    <a class="code hl_variable" href="class_piece.html#a3bfe047bbab090fa920f2ed4d8453a59">position</a>.<a class="code hl_function" href="class_square.html#a4ebb68d15086673ac19fab67ac419083">display</a>();</div>
+<div class="line"><span class="lineno">   54</span>}</div>
+<div class="ttc" id="aclass_square_html_a4ebb68d15086673ac19fab67ac419083"><div class="ttname"><a href="class_square.html#a4ebb68d15086673ac19fab67ac419083">Square::display</a></div><div class="ttdeci">void display()</div><div class="ttdoc">Affiche les coordonnées de la case.</div><div class="ttdef"><b>Definition:</b> Square.cpp:28</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -338,9 +338,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Renvoie la valeur de is_catch. </p>
 <dl class="section return"><dt>Returns</dt><dd>La valeur de is_catch </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                     {</div>
-<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_piece.html#abf9583545849b0ad01cffeed5d9740e0">is_catch</a>;</div>
-<div class="line"><span class="lineno">   36</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>                     {</div>
+<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_piece.html#abf9583545849b0ad01cffeed5d9740e0">is_catch</a>;</div>
+<div class="line"><span class="lineno">   38</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -361,9 +361,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Renvoie la couleur de la pièce. </p>
 <dl class="section return"><dt>Returns</dt><dd>La couleur de la pièce </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                        {</div>
-<div class="line"><span class="lineno">   27</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_piece.html#abeb58424f566e8b3bcf514c731570cf8">couleur</a>;</div>
-<div class="line"><span class="lineno">   28</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>                        {</div>
+<div class="line"><span class="lineno">   29</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_piece.html#abeb58424f566e8b3bcf514c731570cf8">couleur</a>;</div>
+<div class="line"><span class="lineno">   30</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -384,9 +384,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Renvoie l'identifiant de la pièce. </p>
 <dl class="section return"><dt>Returns</dt><dd>L'identifiant de la pièce </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>                 {</div>
-<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_piece.html#ac40cffee50da10a50361ff4791fdd528">id</a>;</div>
-<div class="line"><span class="lineno">   68</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>                 {</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_piece.html#ac40cffee50da10a50361ff4791fdd528">id</a>;</div>
+<div class="line"><span class="lineno">   70</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -407,9 +407,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Renvoie le nombre de déplacement de la pièce. </p>
 <dl class="section return"><dt>Returns</dt><dd>Le nombre de déplacement de la pièce </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   62</span>                           {</div>
-<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_piece.html#a5556d6a3db34ca7c6d486d2f9ceae0c9">move_count</a>;</div>
-<div class="line"><span class="lineno">   64</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>                           {</div>
+<div class="line"><span class="lineno">   65</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_piece.html#a5556d6a3db34ca7c6d486d2f9ceae0c9">move_count</a>;</div>
+<div class="line"><span class="lineno">   66</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -430,9 +430,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Renvoie le nom de la pièce. </p>
 <dl class="section return"><dt>Returns</dt><dd>Le nom de la pièce </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   30</span>                      {</div>
-<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_piece.html#a4cfa0ffac54632f92ac06f50b72e9335">name</a>;</div>
-<div class="line"><span class="lineno">   32</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>                      {</div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_piece.html#a4cfa0ffac54632f92ac06f50b72e9335">name</a>;</div>
+<div class="line"><span class="lineno">   34</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -453,9 +453,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Renvoie la position de la pièce. </p>
 <dl class="section return"><dt>Returns</dt><dd>La position de la pièce </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                        {</div>
-<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_piece.html#a3bfe047bbab090fa920f2ed4d8453a59">position</a>;</div>
-<div class="line"><span class="lineno">   24</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>                        {</div>
+<div class="line"><span class="lineno">   25</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="class_piece.html#a3bfe047bbab090fa920f2ed4d8453a59">position</a>;</div>
+<div class="line"><span class="lineno">   26</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -475,9 +475,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Incrémente le nombre de déplacement de la pièce. </p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>                               {</div>
-<div class="line"><span class="lineno">   59</span>    this-&gt;<a class="code hl_variable" href="class_piece.html#a5556d6a3db34ca7c6d486d2f9ceae0c9">move_count</a>++;</div>
-<div class="line"><span class="lineno">   60</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>                               {</div>
+<div class="line"><span class="lineno">   61</span>    this-&gt;<a class="code hl_variable" href="class_piece.html#a5556d6a3db34ca7c6d486d2f9ceae0c9">move_count</a>++;</div>
+<div class="line"><span class="lineno">   62</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -526,9 +526,9 @@ Protected Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Le nombre de déplacement de la pièce </dd></dl>
 
 <p>Reimplemented in <a class="el" href="class_bishop.html#a3b7c861ac2dcc999fa9901484ca36f7a">Bishop</a>, <a class="el" href="class_king.html#a5868aaaabaaab5449259c31379284325">King</a>, <a class="el" href="class_knight.html#a4c4f7d74a8b29ec9ea19d9b79568a33d">Knight</a>, <a class="el" href="class_pawn.html#aad03bbbc80bfbef0aaecaaeacfc43816">Pawn</a>, <a class="el" href="class_queen.html#a976426c3c66fadf919c5be44000bad95">Queen</a>, and <a class="el" href="class_rook.html#a52f744f40177588ccb3732d527abdaff">Rook</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                 {</div>
-<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   56</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>                                                 {</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   58</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -555,9 +555,9 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>                                 {</div>
-<div class="line"><span class="lineno">   43</span>    this-&gt;<a class="code hl_variable" href="class_piece.html#abf9583545849b0ad01cffeed5d9740e0">is_catch</a> = isCatch;</div>
-<div class="line"><span class="lineno">   44</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>                                 {</div>
+<div class="line"><span class="lineno">   45</span>    this-&gt;<a class="code hl_variable" href="class_piece.html#abf9583545849b0ad01cffeed5d9740e0">is_catch</a> = isCatch;</div>
+<div class="line"><span class="lineno">   46</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -584,9 +584,9 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>                        {</div>
-<div class="line"><span class="lineno">   71</span>    this-&gt;<span class="keywordtype">id</span> = <a class="code hl_variable" href="class_piece.html#ac40cffee50da10a50361ff4791fdd528">id</a>;</div>
-<div class="line"><span class="lineno">   72</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                        {</div>
+<div class="line"><span class="lineno">   73</span>    this-&gt;<span class="keywordtype">id</span> = <a class="code hl_variable" href="class_piece.html#ac40cffee50da10a50361ff4791fdd528">id</a>;</div>
+<div class="line"><span class="lineno">   74</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -613,9 +613,9 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>                                     {</div>
-<div class="line"><span class="lineno">   75</span>    this-&gt;<a class="code hl_variable" href="class_piece.html#a5556d6a3db34ca7c6d486d2f9ceae0c9">move_count</a> = count;</div>
-<div class="line"><span class="lineno">   76</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>                                     {</div>
+<div class="line"><span class="lineno">   77</span>    this-&gt;<a class="code hl_variable" href="class_piece.html#a5556d6a3db34ca7c6d486d2f9ceae0c9">move_count</a> = count;</div>
+<div class="line"><span class="lineno">   78</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -642,9 +642,9 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>                               {</div>
-<div class="line"><span class="lineno">   39</span>    this-&gt;<a class="code hl_variable" href="class_piece.html#a3bfe047bbab090fa920f2ed4d8453a59">position</a> = pos;</div>
-<div class="line"><span class="lineno">   40</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>                               {</div>
+<div class="line"><span class="lineno">   41</span>    this-&gt;<a class="code hl_variable" href="class_piece.html#a3bfe047bbab090fa920f2ed4d8453a59">position</a> = pos;</div>
+<div class="line"><span class="lineno">   42</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -50,7 +50,7 @@ Constructeur de la classe \mbox{\hyperlink{class_knight}{Knight}}.
 \end{DoxyParams}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{8     : \mbox{\hyperlink{class_piece}{Piece}}(color,(color == \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}) ? \textcolor{stringliteral}{"{}\(\backslash\)u265E"{}} : \textcolor{stringliteral}{"{}\(\backslash\)u2658"{}},\textcolor{keywordtype}{id},pos)\{\}}
+\DoxyCodeLine{11     : \mbox{\hyperlink{class_piece}{Piece}}(color,(color == \mbox{\hyperlink{_couleur_8h_aa304d0ca681f782b1d7735da33037dd7a6ee70ecd4fbc2b71b6a5b642c3b1c212}{black}}) ? \textcolor{stringliteral}{"{}\(\backslash\)u265E"{}} : \textcolor{stringliteral}{"{}\(\backslash\)u2658"{}},\textcolor{keywordtype}{id},pos)\{\}}
 
 \end{DoxyCode}
 
@@ -82,13 +82,13 @@ Reimplemented from \mbox{\hyperlink{class_piece_ab3632d34db33cadcb4588d4a2ed462a
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{10                                                  \{}
-\DoxyCodeLine{11     \textcolor{keywordflow}{if} (((abs(dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() -\/ this-\/>position.getLine()) == 2) \&\& (abs(dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() -\/ this-\/>position.getColumn()) == 1))}
-\DoxyCodeLine{12         || ((abs(dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() -\/ this-\/>position.getLine()) == 1) \&\& (abs(dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() -\/ this-\/>position.getColumn()) == 2)))\{}
-\DoxyCodeLine{13         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{14     \}}
-\DoxyCodeLine{15     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{16 \}}
+\DoxyCodeLine{13                                                  \{}
+\DoxyCodeLine{14     \textcolor{keywordflow}{if} (((abs(dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() -\/ this-\/>position.getLine()) == 2) \&\& (abs(dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() -\/ this-\/>position.getColumn()) == 1))}
+\DoxyCodeLine{15         || ((abs(dest.\mbox{\hyperlink{class_square_af6fc96300b5d4473325d843d628579cf}{getLine}}() -\/ this-\/>position.getLine()) == 1) \&\& (abs(dest.\mbox{\hyperlink{class_square_a8c17a73ee7627d8fbafceff1d22d09fc}{getColumn}}() -\/ this-\/>position.getColumn()) == 2)))\{}
+\DoxyCodeLine{16         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{17     \}}
+\DoxyCodeLine{18     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{19 \}}
 
 \end{DoxyCode}
 

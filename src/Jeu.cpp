@@ -1,6 +1,9 @@
-//
-// Created by Enzo Bergamini on 24/04/2023.
-//
+/**
+ * @file Jeu.cpp
+ *
+ * @author BERGAMINI Enzo
+ * @date 11/05/2023
+*/
 
 #include "../include/Jeu.h"
 
