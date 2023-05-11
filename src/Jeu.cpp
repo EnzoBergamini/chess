@@ -30,6 +30,15 @@ bool Jeu::coup() {
         do {
             if (this->isKingInCheck(this->current_player)){
                 cout << "Le roi est en échec" << endl;
+                if (this->isMat()){
+                    cout << "Le roi est en échec et mat" << endl;
+                    if (this->getPlayer() == white){
+                        this->displayEndGame("0-1");
+                    }else{
+                        this->displayEndGame("1-0");
+                    }
+                    return false;
+                }
             }
             getline(cin, input);
 
@@ -167,36 +176,27 @@ bool Jeu::isPathClear(const Square& start, const Square& end) const{
     return true;
 }
 
-bool Jeu::movePiece(const Square& start, const Square& end, bool isPassingThroughAllowed) {
-
+bool Jeu::isMoveLegal(const Square& start, const Square& end, bool isPassingThroughAllowed, bool quiet) const{
     Piece *moving_piece = chessboard->getPiece(start);
     Piece *destination_piece = chessboard->getPiece(end);
 
     /*===== Vérification si la piece existe ======*/
     if (moving_piece == nullptr){
-        cout << "Il n'y a pas de piece a cette position" << endl;
+        if (!quiet){
+            cout << "Il n'y a pas de piece a cette position" << endl;
+        }
         return false;
     }
 
+    /*===== Vérification si la piece est a la bonne couleur ======*/
     if (moving_piece->getColor() != current_player){
-        cout << "Ce n'est pas votre piece !" << endl;
+        if (!quiet){
+            cout << "Ce n'est pas votre piece !" << endl;
+        }
         return false;
     }
 
     const char *class_name = typeid(*moving_piece).name() + 1;
-
-    /*===== Vérification si c'est une prise en passant ======*/
-
-    if (strcmp(class_name, "Pawn") == 0){
-        if (this->isTakingInPassing(start, end)){
-            cout << "Prise en passant" << endl;
-            this->chessboard->posePiece(nullptr, Square(this->getLastMove().substr(2,2)));
-            this->chessboard->movePiece(start, end);
-            moving_piece->incrementMoveCount();
-            return true;
-        }
-    }
-
 
     /*===== Vérification de la validité des coups ======*/
 
@@ -205,22 +205,30 @@ bool Jeu::movePiece(const Square& start, const Square& end, bool isPassingThroug
             if (destination_piece->getColor() != moving_piece->getColor()){
                 if (strcmp(class_name, "Pawn") == 0){
                     if (!moving_piece->isLegalMove(end, true)) {
-                        cout << "Le coup n'est pas valide : mouvement non valide" << endl;
+                        if (!quiet){
+                            cout << "Le coup n'est pas valide : mouvement non valide" << endl;
+                        }
                         return false;
                     }
                 }else{
                     if (!moving_piece->isLegalMove(end)) {
-                        cout << "Le coup n'est pas valide : mouvement non valide" << endl;
+                        if (!quiet){
+                            cout << "Le coup n'est pas valide : mouvement non valide" << endl;
+                        }
                         return false;
                     }
                 }
             } else{
-                cout << "Il y a deja une piece de la meme couleur a cette position" << endl;
+                if (!quiet){
+                    cout << "Il y a deja une piece de la meme couleur a cette position" << endl;
+                }
                 return false;
             }
         }else{
             if (!moving_piece->isLegalMove(end)) {
-                cout << "Le coup n'est pas valide : mouvement non valide" << endl;
+                if (!quiet){
+                    cout << "Le coup n'est pas valide : mouvement non valide" << endl;
+                }
                 return false;
             }
         }
@@ -234,7 +242,9 @@ bool Jeu::movePiece(const Square& start, const Square& end, bool isPassingThroug
         || strcmp(class_name, "Bishop") == 0
         || strcmp(class_name, "Rook") == 0){
         if (!this->isPathClear(start, end) && !isPassingThroughAllowed){
-            cout << "Le chemin n'est pas libre" << endl;
+            if (!quiet){
+                cout << "Le chemin n'est pas libre" << endl;
+            }
             return false;
         }
     }
@@ -242,10 +252,41 @@ bool Jeu::movePiece(const Square& start, const Square& end, bool isPassingThroug
     /*===== Vérification si le joueur se place en echec ======*/
 
     if (this->isCheckMove(start, end ,this->getPlayer())){
-        cout << "Le coup n'est pas valide vous etes en echec" << endl;
+        if (!quiet){
+            cout << "Le coup n'est pas valide vous vous placé en echec" << endl;
+        }
         return false;
     }
 
+    return true;
+}
+
+bool Jeu::movePiece(const Square& start, const Square& end, bool isPassingThroughAllowed) {
+
+
+    Piece *moving_piece = chessboard->getPiece(start);
+
+
+    /*===== Vérification si c'est une prise en passant ======*/
+
+    const char *class_name = typeid(*moving_piece).name() + 1;
+
+    if (strcmp(class_name, "Pawn") == 0){
+        if (this->isTakingInPassing(start, end)){
+            cout << "Prise en passant" << endl;
+            this->chessboard->posePiece(nullptr, Square(this->getLastMove().substr(2,2)));
+            this->chessboard->movePiece(start, end);
+            moving_piece->incrementMoveCount();
+            return true;
+        }
+    }
+
+    /*===== Vérification si le coup est valide ======*/
+
+    if (!this->isMoveLegal(start, end, isPassingThroughAllowed)){
+        return false;
+    }
+    
     this->chessboard->movePiece(start, end);
     moving_piece->incrementMoveCount();
 
@@ -468,4 +509,22 @@ bool Jeu::isPromotion() const{
         }
     }
     return false;
+}
+
+bool Jeu::isMat() const{
+    for (int i = 0; i < BOARD_SIZE; ++i) {
+        for (int j = 0; j < BOARD_SIZE; ++j) {
+            for (int k = 0; k < BOARD_SIZE; ++k) {
+                for (int l = 0; l < BOARD_SIZE; ++l) {
+                    if (!(i == k && j== l)
+                        && this->isMoveLegal(Square(i, j), Square(k, l), false, true)
+                        ){
+
+                        return false;
+                    }
+                }
+            }
+        }
+    }
+    return true;
 }

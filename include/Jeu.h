@@ -104,6 +104,8 @@ public:
 
     /*======================== Vérifications ========================*/
 
+    bool isMoveLegal(const Square& start, const Square& end, bool isPassingThroughAllowed, bool quiet = false) const;
+
     /**
      * @brief Vérifie si le chemin entre deux cases est libre de toute pièce
      * Cette méthode vérifie si le chemin entre la case de départ et la case d'arrivée est libre de toute pièce.
@@ -173,6 +175,8 @@ public:
      * @param end position de la piece apres le mouvement
      */
     bool isTakingInPassing(const Square& start, const Square& end) const;
+
+    bool isMat() const;
 
     /*======================== SETTERS ========================*/
 
