@@ -54,6 +54,8 @@ void Piece::displayInfo(){
 }
 
 bool Piece::isLegalMove(Square dest, bool isCatch) const{
+    (void) dest; // Ici pas utilisé
+    (void) isCatch; // Ici pas utilisé
     return true;
 }
 

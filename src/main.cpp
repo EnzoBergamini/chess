@@ -23,7 +23,7 @@
 
 int main() {
     Jeu jeu;
-    bool stop = false;
+    bool stop;
 
     do {
         jeu.affiche();

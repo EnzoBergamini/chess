@@ -12,6 +12,7 @@ King::King(Couleur color,int id,Square pos)
 }
 
 bool King::isLegalMove(Square dest, bool isCatch) const{
+    (void) isCatch; // Ici pas utilisé
     if ((abs(dest.getColumn() - this->position.getColumn()) > 1)
         || (abs(dest.getLine() - this->position.getLine()) > 1)){
         return false;

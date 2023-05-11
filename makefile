@@ -1,5 +1,5 @@
 CC := g++
-CFLAGS ?= -Wall -Werror -g -std=c++11
+CFLAGS ?= -Wall -Werror -Wextra -g -std=c++11
 LDLIBS ?= -lm
 EXEC = chess
 
