@@ -37,6 +37,7 @@ Echiquier::Echiquier(){
 
     this->initEchiquier();
 
+    // Initialisation des pièces blanches
     pieces[white] = {
             new Rook    (white,  0, Square(0,0)),
             new Knight(white,  1, Square(0,1)),
@@ -48,6 +49,7 @@ Echiquier::Echiquier(){
             new Rook    (white,  7, Square(0,7))
     };
 
+    // Initialisation des pièces noires
     pieces[black] = {
             new Rook    (black,  8, Square(7,0)),
             new Knight(black,  9, Square(7,1)),
@@ -59,11 +61,13 @@ Echiquier::Echiquier(){
             new Rook    (black, 15, Square(7,7)),
     };
 
+    // Initialisation des pions
     for (size_t i=0;i<8;i++) {
         pieces[white].push_back(new Pawn(white, 16+i, Square(1,i)));
         pieces[black].push_back(new Pawn(black, 24+i, Square(6,i)));
     }
 
+    // Pose des pièces sur l'échiquier
     for (auto p : pieces[white])
         this->posePiece(p, p->getSquare());
     for (auto p : pieces[black])
@@ -72,40 +76,57 @@ Echiquier::Echiquier(){
 }
 
 void Echiquier::promote(Piece *piece, const string& type){
-    if(isValidQueenPromotion(type)){
+    if(isValidQueenPromotion(type)){ // Si la promotion est une reine
+
+        // On crée une nouvelle reine qui prend les caractéristiques de la pièce à promouvoir
         Queen *new_piece = new Queen(piece->getColor(), piece->getId(), piece->getSquare());
         new_piece->setMoveCount(piece->getMoveCount());
         new_piece->setCatch(piece->getCatch());
 
+        // On remplace la pièce à promouvoir par la nouvelle reine dans le vecteur de pièces
         replace(pieces[piece->getColor()].begin(), pieces[piece->getColor()].end(), piece, (Piece *)new_piece);
 
+        // On pose la nouvelle reine sur l'échiquier
         this->posePiece(new_piece, new_piece->getSquare());
 
-    } else if(isValidRookPromotion(type)){
+    } else if(isValidRookPromotion(type)){ // Si la promotion est une tour
+
+        // On crée une nouvelle tour qui prend les caractéristiques de la pièce à promouvoir
         Rook *new_piece = new Rook(piece->getColor(), piece->getId(), piece->getSquare());
         new_piece->setMoveCount(piece->getMoveCount());
         new_piece->setCatch(piece->getCatch());
 
+        // On remplace la pièce à promouvoir par la nouvelle tour dans le vecteur de pièces
         replace(pieces[piece->getColor()].begin(), pieces[piece->getColor()].end(), piece, (Piece *)new_piece);
 
+        // On pose la nouvelle tour sur l'échiquier
         this->posePiece(new_piece, new_piece->getSquare());
 
-    } else if(isValidBishopPromotion(type)){
+    } else if(isValidBishopPromotion(type)){ // Si la promotion est un fou
+
+        // On crée un nouveau fou qui prend les caractéristiques de la pièce à promouvoir
         Bishop *new_piece = new Bishop(piece->getColor(), piece->getId(), piece->getSquare());
         new_piece->setMoveCount(piece->getMoveCount());
         new_piece->setCatch(piece->getCatch());
 
+        // On remplace la pièce à promouvoir par le nouveau fou dans le vecteur de pièces
         replace(pieces[piece->getColor()].begin(), pieces[piece->getColor()].end(), piece, (Piece *)new_piece);
 
+
+        // On pose le nouveau fou sur l'échiquier
         this->posePiece(new_piece, new_piece->getSquare());
 
-    } else{
+    } else{ // Si la promotion est un cavalier
+
+        // On crée un nouveau cavalier qui prend les caractéristiques de la pièce à promouvoir
         Knight *new_piece = new Knight(piece->getColor(), piece->getId(), piece->getSquare());
         new_piece->setMoveCount(piece->getMoveCount());
         new_piece->setCatch(piece->getCatch());
 
+        // On remplace la pièce à promouvoir par le nouveau cavalier dans le vecteur de pièces
         replace(pieces[piece->getColor()].begin(), pieces[piece->getColor()].end(), piece, (Piece *)new_piece);
 
+        // On pose le nouveau cavalier sur l'échiquier
         this->posePiece(new_piece, new_piece->getSquare());
 
     }
@@ -134,9 +155,6 @@ void Echiquier::affiche() const {
         cout << i+1 << " "; // numérotation ligne dans affichage
         for (int j(0);j<BOARD_SIZE;j++) {
             cout << "|" ;
-//            cout << "\u0020\u0020";
-//            cout << i << "/" << j;
-//            cout << "\u0020" << " ";
             if (echiquier[i][j]) {
                 cout << "\u0020\u0020";  //U+0020 est un esapce utf-8 taille police
                 echiquier[i][j]->affiche();

@@ -24,10 +24,15 @@ bool Jeu::coup() {
     string input;
     bool stop = false;
 
+    // affichage du joueur courant
     cout << "C'est au joueur " << ((current_player == white) ? "blanc" : "noir") << " de jouer" << endl;
 
+    // boucle du coup en cours s'arrête si une action est effectuée
     do {
+        // boucle de coup si le joueur est en échec
         do {
+
+
             if (this->isKingInCheck(this->current_player)){
                 if (!this->isMovePossible()){
                     cout << "Le roi est en échec et mat" << endl;
@@ -49,12 +54,14 @@ bool Jeu::coup() {
 
             getline(cin, input);
 
+            // boucle de vérification de l'input
             while (!isValidInput(input)) {
                 cout << "L'input n'est pas valide" << endl;
                 cout << "Coup ? (eg a2a3) " << endl;
                 getline(cin, input);
             }
 
+            // si l'input est valide, on dirige vers la bonne fonction
             if (isQuitInput(input)){
                 cout << "quit" << endl;
                 this->displayEndGame("?-?");
@@ -304,6 +311,7 @@ bool Jeu::movePiece(const Square& start, const Square& end, bool isPassingThroug
 
         getline(cin, promotion);
 
+        // On verifie que la promotion est valide
         while (!isValidPromotion(promotion)){
             cout << "L'input n'est pas valide" << endl;
             cout << "Promotion ? (eg Q) " << endl;
@@ -332,6 +340,7 @@ bool Jeu::isKingInCheck(const Couleur c) const {
 }
 
 bool Jeu::isCapturable(const Square& square, const Couleur c) const {
+    // boucle sur toutes les cases de l'echiquier
     for (int i = 0 ; i < BOARD_SIZE ; ++i){
         for (int j = 0 ; j < BOARD_SIZE ; ++j){
             Square current_square(i, j);
@@ -403,9 +412,10 @@ bool Jeu::isTakingInPassing(const Square& start, const Square& end) const {
 
     if (last_move_piece != nullptr && strcmp(typeid(*last_move_piece).name() + 1, "Pawn") == 0){
         if (last_move_piece->getMoveCount() == 1){
+            // si le dernier coup a ete un deplacement de 2 cases en vertical d'un pion
             if (last_move_start.getLine() == last_move_end.getLine() + 2
                 || last_move_start.getLine() == last_move_end.getLine() - 2){
-                if (last_move_piece->getSquare().getColumn() == end.getColumn()
+                if (last_move_piece->getSquare().getColumn() == end.getColumn() // si le pion qui a bouge est sur la meme colonne que le pion qui doit bouger
                     && abs(start.getLine() - end.getLine()) == abs(start.getColumn() - end.getColumn()) // si le pion se deplace en diagonale
                     && abs(last_move_end.getLine() - end.getLine()) != 0 // si le pion ne se retouve par sur la meme ligne que le pion qui a bouge
                     ){
@@ -516,6 +526,7 @@ bool Jeu::isPromotion() const{
 }
 
 bool Jeu::isMovePossible() const {
+    // on vérifie que n'importe quelle pièce peut bouger et que ce mouvement est légal
     for (int i = 0; i < BOARD_SIZE; ++i) {
         for (int j = 0; j < BOARD_SIZE; ++j) {
             for (int k = 0; k < BOARD_SIZE; ++k) {

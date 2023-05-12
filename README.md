@@ -31,3 +31,34 @@ des format des coordonnées.
 
 * **Jeu** : Classe qui représente le jeu d'échecs. Elle posséde un échiquier 
 et permet le déroulement du jeu.
+
+---
+
+## Fonctionnement du programme
+
+### Compilation
+
+Pour compiler le programme il faut utiliser la commande `make` dans le
+répertoire du projet ou se situe le makefile. Cela va créer un exécutable `echecs` dans le répertoire
+`bin`.
+```bash
+make
+```
+
+### Exécution
+
+Pour exécuter le programme il faut utiliser la commande `./bin/echecs` dans le
+répertoire du projet.
+```bash
+./bin/echecs
+```
+
+### Tester le programme
+
+Pour tester le programme il faut utiliser le script `test-level.sh` dans le
+répertoire du projet. Il va tester le programme avec les différents niveaux
+de difficulté et afficher le résultat dans le terminal.
+```bash
+./test-level.sh <level [1-4]> ./bin/echecs
+```
+
