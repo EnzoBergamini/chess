@@ -30,7 +30,7 @@ bool Jeu::coup() {
         do {
             if (this->isKingInCheck(this->current_player)){
                 cout << "Le roi est en échec" << endl;
-                if (this->isMat()){
+                if (!this->isMovePossible()){
                     cout << "Le roi est en échec et mat" << endl;
                     if (this->getPlayer() == white){
                         this->displayEndGame("0-1");
@@ -40,6 +40,13 @@ bool Jeu::coup() {
                     return false;
                 }
             }
+
+            if (!this->isMovePossible()){
+                cout << "situation de pat" << endl;
+                this->displayEndGame("1/2-1/2");
+                return false;
+            }
+
             getline(cin, input);
 
             while (!isValidInput(input)) {
@@ -286,7 +293,7 @@ bool Jeu::movePiece(const Square& start, const Square& end, bool isPassingThroug
     if (!this->isMoveLegal(start, end, isPassingThroughAllowed)){
         return false;
     }
-    
+
     this->chessboard->movePiece(start, end);
     moving_piece->incrementMoveCount();
 
@@ -511,7 +518,7 @@ bool Jeu::isPromotion() const{
     return false;
 }
 
-bool Jeu::isMat() const{
+bool Jeu::isMovePossible() const {
     for (int i = 0; i < BOARD_SIZE; ++i) {
         for (int j = 0; j < BOARD_SIZE; ++j) {
             for (int k = 0; k < BOARD_SIZE; ++k) {
@@ -520,11 +527,11 @@ bool Jeu::isMat() const{
                         && this->isMoveLegal(Square(i, j), Square(k, l), false, true)
                         ){
 
-                        return false;
+                        return true;
                     }
                 }
             }
         }
     }
-    return true;
+    return false;
 }

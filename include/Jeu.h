@@ -104,6 +104,14 @@ public:
 
     /*======================== Vérifications ========================*/
 
+    /**
+     * @brief Vérifie si le coup est valide
+     * @param start la case de départ
+     * @param end la case d'arrivée
+     * @param isPassingThroughAllowed  indique si le passage à travers d'autres pièces est autorisé
+     * @param quiet  indique si la méthode doit afficher des messages ou non
+     * @return true si le coup est valide, false sinon
+     */
     bool isMoveLegal(const Square& start, const Square& end, bool isPassingThroughAllowed, bool quiet = false) const;
 
     /**
@@ -176,7 +184,11 @@ public:
      */
     bool isTakingInPassing(const Square& start, const Square& end) const;
 
-    bool isMat() const;
+    /**
+     * @brief Vérifie si le joueur peut effectuer un mouvement.
+     * @return true si le joueur courant peut effectuer un mouvement, false sinon
+     */
+    bool isMovePossible() const;
 
     /*======================== SETTERS ========================*/
 
