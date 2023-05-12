@@ -29,7 +29,6 @@ bool Jeu::coup() {
     do {
         do {
             if (this->isKingInCheck(this->current_player)){
-                cout << "Le roi est en échec" << endl;
                 if (!this->isMovePossible()){
                     cout << "Le roi est en échec et mat" << endl;
                     if (this->getPlayer() == white){
@@ -39,6 +38,7 @@ bool Jeu::coup() {
                     }
                     return false;
                 }
+                cout << "Le roi est en échec" << endl;
             }
 
             if (!this->isMovePossible()){
@@ -72,13 +72,10 @@ bool Jeu::coup() {
                 }
                 return false;
             }else if (isValidSmallRookMove(input)){
-                cout << "small rook move" << endl;
                 stop = this->smallRookMove(this->current_player);
             }else if (isValidBigRookMove(input)){
-                cout << "big rook move" << endl;
                 stop = this->bigRookMove(this->current_player);
             }else{
-                cout << "move" << endl;
                 stop = this->movePiece(Square(input.substr(0,2)),
                                        Square(input.substr(2,2))
                 );
